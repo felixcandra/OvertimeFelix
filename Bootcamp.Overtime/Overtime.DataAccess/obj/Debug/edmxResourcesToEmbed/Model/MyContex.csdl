@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OvertimeDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="username" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="first_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="last_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="sub_district" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="district" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="province" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="postal_code" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="salary" Type="Int32" />
+    <Property Name="phone" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+    <Property Name="position_id" Type="Int32" />
+    <Property Name="isDelete" Type="Boolean" />
+    <Property Name="createDate" Type="DateTimeOffset" Precision="7" />
+    <Property Name="updateDate" Type="DateTimeOffset" Precision="7" />
+    <Property Name="deleteDate" Type="DateTimeOffset" Precision="7" />
+    <NavigationProperty Name="Position" Relationship="Self.FK_Employees_ToPosition" FromRole="Employees" ToRole="Position" />
+    <NavigationProperty Name="Overtimes" Relationship="Self.FK_Overtimes_ToEmployee" FromRole="Employees" ToRole="Overtimes" />
+  </EntityType>
+  <EntityType Name="Overtime">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="check_in" Type="DateTimeOffset" Precision="7" />
+    <Property Name="check_out" Type="DateTimeOffset" Precision="7" />
+    <Property Name="overtime_salary" Type="Int32" />
+    <Property Name="difference" Type="Int32" />
+    <Property Name="employee_id" Type="Int32" />
+    <Property Name="createDate" Type="DateTimeOffset" Precision="7" />
+    <NavigationProperty Name="Employee" Relationship="Self.FK_Overtimes_ToEmployee" FromRole="Overtimes" ToRole="Employees" />
+  </EntityType>
+  <EntityType Name="Param">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="value" Type="Int32" />
+    <Property Name="name" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Position">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="isDelete" Type="Boolean" />
+    <Property Name="createDate" Type="DateTimeOffset" Precision="7" />
+    <Property Name="updateDate" Type="DateTimeOffset" Precision="7" />
+    <Property Name="deleteDate" Type="DateTimeOffset" Precision="7" />
+    <NavigationProperty Name="Employees" Relationship="Self.FK_Employees_ToPosition" FromRole="Position" ToRole="Employees" />
+  </EntityType>
+  <Association Name="FK_Employees_ToPosition">
+    <End Role="Position" Type="Self.Position" Multiplicity="0..1" />
+    <End Role="Employees" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Position">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Employees">
+        <PropertyRef Name="position_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Overtimes_ToEmployee">
+    <End Role="Employees" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="Overtimes" Type="Self.Overtime" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Overtimes">
+        <PropertyRef Name="employee_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MyContex" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Employees" EntityType="Self.Employee" />
+    <EntitySet Name="Overtimes" EntityType="Self.Overtime" />
+    <EntitySet Name="Params" EntityType="Self.Param" />
+    <EntitySet Name="Positions" EntityType="Self.Position" />
+    <AssociationSet Name="FK_Employees_ToPosition" Association="Self.FK_Employees_ToPosition">
+      <End Role="Position" EntitySet="Positions" />
+      <End Role="Employees" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Overtimes_ToEmployee" Association="Self.FK_Overtimes_ToEmployee">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="Overtimes" EntitySet="Overtimes" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

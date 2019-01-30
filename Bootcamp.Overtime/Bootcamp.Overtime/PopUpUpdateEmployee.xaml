@@ -1,0 +1,39 @@
+﻿<Window x:Class="Bootcamp.Overtime.PopUpUpdateEmployee"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bootcamp.Overtime"
+        mc:Ignorable="d"
+        Title="PopUpUpdateEmployee" Height="390.722" Width="375.258">
+    <Grid>
+        <Label x:Name="Username" Content="Username" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="7,21,0,0"/>
+        <TextBox x:Name="UsernameTextbox" HorizontalAlignment="Left" Height="23" Margin="78,24,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="85"/>
+        <Label x:Name="Password" Content="Password&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="183,21,0,0"/>
+        <TextBox x:Name="PasswordTextbox" HorizontalAlignment="Left" Height="23" Margin="261,24,-54,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="85"/>
+        <Label x:Name="FirstName" Content="First Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="7,66,0,0"/>
+        <TextBox x:Name="FirstNameTextbox" HorizontalAlignment="Left" Height="23" Margin="78,69,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="85"/>
+        <Label x:Name="LastName" Content="Last Name&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="183,66,0,0"/>
+        <TextBox x:Name="LastNameTextbox" HorizontalAlignment="Left" Height="23" Margin="261,69,-54,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="85"/>
+        <Label x:Name="Address" Content="Address" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="7,114,0,0"/>
+        <TextBox x:Name="AddressTextbox" HorizontalAlignment="Left" Height="23" Margin="78,117,-54,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="268"/>
+        <Label x:Name="SubDistrict" Content="Sub District" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="7,156,0,0"/>
+        <TextBox x:Name="SubDistrictTextbox" HorizontalAlignment="Left" Height="23" Margin="78,159,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="85"/>
+        <Label x:Name="District" Content="District" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="183,156,0,0"/>
+        <TextBox x:Name="DistrictTextbox" HorizontalAlignment="Left" Height="23" Margin="261,159,-54,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="85"/>
+        <Label x:Name="Province" Content="Province" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="7,195,0,0"/>
+        <TextBox x:Name="ProvinceTextbox" HorizontalAlignment="Left" Height="23" Margin="78,198,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="85"/>
+        <Label x:Name="PostalCode" Content="Postal Code" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="183,195,0,0"/>
+        <TextBox x:Name="PostalTextbox" HorizontalAlignment="Left" Height="23" Margin="261,198,-54,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="85"/>
+        <Label x:Name="Salary" Content="Salary" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="7,234,0,0"/>
+        <TextBox x:Name="SalaryTextbox" HorizontalAlignment="Left" Height="23" Margin="78,237,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="85"/>
+        <Label x:Name="Phone" Content="Phone" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="183,234,0,0"/>
+        <TextBox x:Name="PhoneTextbox" HorizontalAlignment="Left" Height="23" Margin="261,237,-54,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="85"/>
+        <Label x:Name="SubDistrict_Copy2" Content="Position" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="7,276,0,-33"/>
+        <ComboBox x:Name="PositionCombo" HorizontalAlignment="Left" VerticalAlignment="Top" Width="85" Margin="78,276,0,-29"/>
+        <Button x:Name="SaveButton" Content="Save" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Margin="235,304,-54,-75" Height="40" Click="SaveButton_Click"/>
+        <Label x:Name="ID" Content="ID" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="183,272,0,0"/>
+        <TextBox x:Name="IdTextbox" HorizontalAlignment="Left" Height="23" Margin="261,275,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="85"/>
+
+    </Grid>
+</Window>

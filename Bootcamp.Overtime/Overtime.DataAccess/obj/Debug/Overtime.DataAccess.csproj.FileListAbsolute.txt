@@ -1,0 +1,29 @@
+C:\Users\RahmatMwn\Documents\Visual Studio 2015\Projects\Git\OvertimeApplication\Bootcamp.Overtime\Overtime.DataAccess\bin\Debug\Overtime.DataAccess.exe.config
+C:\Users\RahmatMwn\Documents\Visual Studio 2015\Projects\Git\OvertimeApplication\Bootcamp.Overtime\Overtime.DataAccess\bin\Debug\Overtime.DataAccess.exe
+C:\Users\RahmatMwn\Documents\Visual Studio 2015\Projects\Git\OvertimeApplication\Bootcamp.Overtime\Overtime.DataAccess\bin\Debug\Overtime.DataAccess.pdb
+C:\Users\RahmatMwn\Documents\Visual Studio 2015\Projects\Git\OvertimeApplication\Bootcamp.Overtime\Overtime.DataAccess\bin\Debug\EntityFramework.dll
+C:\Users\RahmatMwn\Documents\Visual Studio 2015\Projects\Git\OvertimeApplication\Bootcamp.Overtime\Overtime.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\RahmatMwn\Documents\Visual Studio 2015\Projects\Git\OvertimeApplication\Bootcamp.Overtime\Overtime.DataAccess\bin\Debug\EntityFramework.xml
+C:\Users\RahmatMwn\Documents\Visual Studio 2015\Projects\Git\OvertimeApplication\Bootcamp.Overtime\Overtime.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\RahmatMwn\Documents\Visual Studio 2015\Projects\Git\OvertimeApplication\Bootcamp.Overtime\Overtime.DataAccess\obj\Debug\Overtime.DataAccess.exe
+C:\Users\RahmatMwn\Documents\Visual Studio 2015\Projects\Git\OvertimeApplication\Bootcamp.Overtime\Overtime.DataAccess\obj\Debug\Overtime.DataAccess.pdb
+D:\New folder (2)\Overtime\OvertimeApplication\Bootcamp.Overtime\Overtime.DataAccess\bin\Debug\Overtime.DataAccess.exe.config
+D:\New folder (2)\Overtime\OvertimeApplication\Bootcamp.Overtime\Overtime.DataAccess\obj\Debug\Overtime.DataAccess.exe
+D:\New folder (2)\Overtime\OvertimeApplication\Bootcamp.Overtime\Overtime.DataAccess\obj\Debug\Overtime.DataAccess.pdb
+D:\New folder (2)\Overtime\OvertimeApplication\Bootcamp.Overtime\Overtime.DataAccess\bin\Debug\Overtime.DataAccess.exe
+D:\New folder (2)\Overtime\OvertimeApplication\Bootcamp.Overtime\Overtime.DataAccess\bin\Debug\Overtime.DataAccess.pdb
+D:\New folder (2)\Overtime\OvertimeApplication\Bootcamp.Overtime\Overtime.DataAccess\bin\Debug\EntityFramework.dll
+D:\New folder (2)\Overtime\OvertimeApplication\Bootcamp.Overtime\Overtime.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+D:\New folder (2)\Overtime\OvertimeApplication\Bootcamp.Overtime\Overtime.DataAccess\bin\Debug\EntityFramework.xml
+D:\New folder (2)\Overtime\OvertimeApplication\Bootcamp.Overtime\Overtime.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+D:\New folder (2)\Overtime\OvertimeApplication\Bootcamp.Overtime\Overtime.DataAccess\obj\Debug\Overtime.DataAccess.csprojResolveAssemblyReference.cache
+E:\Kerja\Bootcamp\OvertimeApplication\Overtime\OvertimeApplication\Bootcamp.Overtime\Overtime.DataAccess\bin\Debug\Overtime.DataAccess.exe.config
+E:\Kerja\Bootcamp\OvertimeApplication\Overtime\OvertimeApplication\Bootcamp.Overtime\Overtime.DataAccess\obj\Debug\Overtime.DataAccess.exe
+E:\Kerja\Bootcamp\OvertimeApplication\Overtime\OvertimeApplication\Bootcamp.Overtime\Overtime.DataAccess\obj\Debug\Overtime.DataAccess.pdb
+E:\Kerja\Bootcamp\OvertimeApplication\Overtime\OvertimeApplication\Bootcamp.Overtime\Overtime.DataAccess\bin\Debug\Overtime.DataAccess.exe
+E:\Kerja\Bootcamp\OvertimeApplication\Overtime\OvertimeApplication\Bootcamp.Overtime\Overtime.DataAccess\bin\Debug\Overtime.DataAccess.pdb
+E:\Kerja\Bootcamp\OvertimeApplication\Overtime\OvertimeApplication\Bootcamp.Overtime\Overtime.DataAccess\bin\Debug\EntityFramework.dll
+E:\Kerja\Bootcamp\OvertimeApplication\Overtime\OvertimeApplication\Bootcamp.Overtime\Overtime.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+E:\Kerja\Bootcamp\OvertimeApplication\Overtime\OvertimeApplication\Bootcamp.Overtime\Overtime.DataAccess\bin\Debug\EntityFramework.xml
+E:\Kerja\Bootcamp\OvertimeApplication\Overtime\OvertimeApplication\Bootcamp.Overtime\Overtime.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+E:\Kerja\Bootcamp\OvertimeApplication\Overtime\OvertimeApplication\Bootcamp.Overtime\Overtime.DataAccess\obj\Debug\Overtime.DataAccess.csprojResolveAssemblyReference.cache
