@@ -29,7 +29,7 @@ namespace Overtime.Common.Interface.Master
 
         public List<Employees> Get()
         {
-            var getAll = _context.Employees.Where(x => x.isDelete != true).ToList();
+            var getAll = _context.Employees.Where(x => x.isDelete == false).ToList();
             return getAll;
         }
 
@@ -55,6 +55,7 @@ namespace Overtime.Common.Interface.Master
             employee.phone = employeeParam.phone;
             employee.position_id = employeeParam.position_id;
             employee.createDate = DateTimeOffset.Now.LocalDateTime;
+            employee.isDelete = false;
             _context.Employees.Add(employee);
             result = _context.SaveChanges();
             if(result > 0)
@@ -101,11 +102,9 @@ namespace Overtime.Common.Interface.Master
         public bool Update(int? id, EmployeeParam employeeParam)
         {
             var result = 0;
-            Employees employee = Get(id);
+            var employee = Get(id);
             employee.first_name = employeeParam.first_name;
             employee.last_name = employeeParam.last_name;
-            employee.username = employeeParam.username;
-            employee.password = employeeParam.password;
             employee.address = employeeParam.address;
             employee.sub_district = employeeParam.sub_district;
             employee.district = employeeParam.district;

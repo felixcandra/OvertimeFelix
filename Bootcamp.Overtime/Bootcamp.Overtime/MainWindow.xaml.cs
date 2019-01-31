@@ -39,34 +39,28 @@ namespace Bootcamp.Overtime
         private void InsertButton_Click(object sender, RoutedEventArgs e)
         {
             new PopUpInsertEmployee().Show();
+            this.Hide();
         }
 
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
         {
-            //using(PopUpUpdateEmployee popupdate = new PopUpUpdateEmployee())
-            //{
-            //    if(popupdate.ShowDialog() == DialogResult.OK)
-            //    {
-            //        employeeParam.Id = savedId;
-            //    }
-            //}
-            //new PopUpUpdateEmployee().ShowDialog();
+
             PopUpUpdateEmployee popup = new PopUpUpdateEmployee();
             object item = EmployeeGrid.SelectedItem;
-            popup.IdTextbox.Text = (EmployeeGrid.SelectedCells[0].Column.GetCellContent(item) as TextBlock).Text;
-            popup.UsernameTextbox.Text = (EmployeeGrid.SelectedCells[1].Column.GetCellContent(item) as TextBlock).Text;
-            popup.PasswordTextbox.Text = (EmployeeGrid.SelectedCells[2].Column.GetCellContent(item) as TextBlock).Text; 
-            popup.FirstNameTextbox.Text = (EmployeeGrid.SelectedCells[3].Column.GetCellContent(item) as TextBlock).Text; 
-            popup.LastNameTextbox.Text = (EmployeeGrid.SelectedCells[4].Column.GetCellContent(item) as TextBlock).Text; 
-            popup.AddressTextbox.Text = (EmployeeGrid.SelectedCells[5].Column.GetCellContent(item) as TextBlock).Text; 
-            popup.SubDistrictTextbox.Text = (EmployeeGrid.SelectedCells[6].Column.GetCellContent(item) as TextBlock).Text; 
-            popup.DistrictTextbox.Text = (EmployeeGrid.SelectedCells[7].Column.GetCellContent(item) as TextBlock).Text; 
-            popup.ProvinceTextbox.Text = (EmployeeGrid.SelectedCells[8].Column.GetCellContent(item) as TextBlock).Text; 
-            popup.PostalTextbox.Text = (EmployeeGrid.SelectedCells[9].Column.GetCellContent(item) as TextBlock).Text; 
-            popup.PhoneTextbox.Text = (EmployeeGrid.SelectedCells[10].Column.GetCellContent(item) as TextBlock).Text; 
-            popup.SalaryTextbox.Text = (EmployeeGrid.SelectedCells[11].Column.GetCellContent(item) as TextBlock).Text; 
-            popup.PositionCombo.SelectedValue = (EmployeeGrid.SelectedCells[12].Column.GetCellContent(item) as TextBlock).Text; 
+            popup.id = (EmployeeGrid.SelectedCells[0].Column.GetCellContent(item) as TextBlock).Text;
+            popup.FirstNameTextbox.Text = (EmployeeGrid.SelectedCells[1].Column.GetCellContent(item) as TextBlock).Text; 
+            popup.LastNameTextbox.Text = (EmployeeGrid.SelectedCells[2].Column.GetCellContent(item) as TextBlock).Text; 
+            popup.AddressTextbox.Text = (EmployeeGrid.SelectedCells[3].Column.GetCellContent(item) as TextBlock).Text; 
+            popup.SubDistrictTextbox.Text = (EmployeeGrid.SelectedCells[4].Column.GetCellContent(item) as TextBlock).Text; 
+            popup.DistrictTextbox.Text = (EmployeeGrid.SelectedCells[5].Column.GetCellContent(item) as TextBlock).Text; 
+            popup.ProvinceTextbox.Text = (EmployeeGrid.SelectedCells[6].Column.GetCellContent(item) as TextBlock).Text; 
+            popup.PostalTextbox.Text = (EmployeeGrid.SelectedCells[7].Column.GetCellContent(item) as TextBlock).Text; 
+            popup.PhoneTextbox.Text = (EmployeeGrid.SelectedCells[8].Column.GetCellContent(item) as TextBlock).Text; 
+            popup.SalaryTextbox.Text = (EmployeeGrid.SelectedCells[9].Column.GetCellContent(item) as TextBlock).Text;
+            popup.position =(EmployeeGrid.SelectedCells[10].Column.GetCellContent(item) as TextBlock).Text;             
             popup.Show();
+            this.Hide();
+            //LoadGrid();
         }
 
         private void EmployeeGrid_SelectedCellsChanged(object sender, SelectedCellsChangedEventArgs e)
@@ -83,7 +77,7 @@ namespace Bootcamp.Overtime
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBoxResult result = MessageBox.Show("Yakin ingin hapus?","Peringatan", MessageBoxButton.YesNo);
+            MessageBoxResult result = MessageBox.Show("Are you sure want to delete this employee?","WARNING", MessageBoxButton.YesNo);
             if (result == MessageBoxResult.Yes)
             {
                 object item = EmployeeGrid.SelectedItem;
@@ -96,6 +90,12 @@ namespace Bootcamp.Overtime
         private void SearchButton_Click(object sender, RoutedEventArgs e)
         {
             EmployeeGrid.ItemsSource = _employeeService.Search(SearchTextBox.Text, SearchcomboBox.Text);
+        }
+
+
+        public void LoadGrid()
+        {
+            EmployeeGrid.ItemsSource = _employeeService.Get();
         }
     }
 }

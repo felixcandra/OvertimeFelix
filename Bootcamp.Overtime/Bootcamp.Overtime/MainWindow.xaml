@@ -6,16 +6,16 @@
         xmlns:local="clr-namespace:Bootcamp.Overtime"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="790.807"
-        Loaded="Window_Loaded_1">
+        Loaded="Window_Loaded_1"
+        >
+
     <Grid HorizontalAlignment="Left" Width="781">
         <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="299" Margin="10,10,0,0" VerticalAlignment="Top" Width="771">
             <TabItem Header="Employee">
                 <Grid Background="#FFE5E5E5">
-                    <DataGrid x:Name="EmployeeGrid" AutoGenerateColumns="False" SelectedCellsChanged="EmployeeGrid_SelectedCellsChanged" HorizontalAlignment="Left" Margin="10,138,0,0" VerticalAlignment="Top" Height="123" Width="755">
+                    <DataGrid x:Name="EmployeeGrid" AutoGenerateColumns="False" SelectedCellsChanged="EmployeeGrid_SelectedCellsChanged" HorizontalAlignment="Left" Margin="10,59,0,0" VerticalAlignment="Top" Height="202" Width="745">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Id" Binding="{Binding Path=Id}"/>
-                            <DataGridTextColumn Header="Username" Binding="{Binding Path=username}"/>
-                            <DataGridTextColumn Header="Password" Binding="{Binding Path=password}"/>
                             <DataGridTextColumn Header="First Name" Binding="{Binding Path=first_name}"/>
                             <DataGridTextColumn Header="Last Name" Binding="{Binding Path=last_name}"/>
                             <DataGridTextColumn Header="Address" Binding="{Binding Path=address}"/>
@@ -28,12 +28,12 @@
                             <DataGridTextColumn Header="Positon" Binding="{Binding Path=Position.name}"/>
                         </DataGrid.Columns>
                     </DataGrid>
-                    <Button x:Name="InsertButton" Content="Insert" HorizontalAlignment="Left" Margin="29,106,0,0" VerticalAlignment="Top" Width="75" Click="InsertButton_Click"/>
-                    <Button x:Name="UpdateButton" Content="Update" HorizontalAlignment="Left" Margin="123,106,0,0" VerticalAlignment="Top" Width="75" Click="UpdateButton_Click"/>
-                    <Button x:Name="DeleteButton" Content="Delete" HorizontalAlignment="Left" Margin="220,106,0,0" VerticalAlignment="Top" Width="75" Click="DeleteButton_Click"/>
-                    <TextBox x:Name="SearchTextBox" HorizontalAlignment="Left" Height="23" Margin="507,106,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="166"/>
-                    <Button x:Name="SearchButton" Content="Search" HorizontalAlignment="Left" Margin="680,106,0,0" VerticalAlignment="Top" Width="75" Click="SearchButton_Click"/>
-                    <ComboBox x:Name="SearchcomboBox" HorizontalAlignment="Left" Margin="368,106,0,0" VerticalAlignment="Top" Width="120">
+                    <Button x:Name="InsertButton" Content="Insert" HorizontalAlignment="Left" Margin="10,21,0,0" VerticalAlignment="Top" Width="75" Click="InsertButton_Click"/>
+                    <Button x:Name="UpdateButton" Content="Update" HorizontalAlignment="Left" Margin="104,21,0,0" VerticalAlignment="Top" Width="75" Click="UpdateButton_Click"/>
+                    <Button x:Name="DeleteButton" Content="Delete" HorizontalAlignment="Left" Margin="201,21,0,0" VerticalAlignment="Top" Width="75" Click="DeleteButton_Click"/>
+                    <TextBox x:Name="SearchTextBox" HorizontalAlignment="Left" Height="23" Margin="488,21,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="166"/>
+                    <Button x:Name="SearchButton" Content="Search" HorizontalAlignment="Left" Margin="661,21,0,0" VerticalAlignment="Top" Width="75" Click="SearchButton_Click"/>
+                    <ComboBox x:Name="SearchcomboBox" HorizontalAlignment="Left" Margin="349,21,0,0" VerticalAlignment="Top" Width="120">
                         <ComboBoxItem Content="Id" HorizontalAlignment="Left" Width="118"/>
                         <ComboBoxItem Content="First Name" HorizontalAlignment="Left" Width="118"/>
                         <ComboBoxItem Content="Last Name" HorizontalAlignment="Left" Width="118"/>
