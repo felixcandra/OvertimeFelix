@@ -47,7 +47,7 @@ namespace Bootcamp.Overtime
                 var postal = PostalTextbox.Text;
                 var salary = Convert.ToInt32(SalaryTextbox.Text);
                 var phone = PhoneTextbox.Text;
-                var position = Convert.ToInt32(PositionCombo.Text);
+                var position = Convert.ToInt16(PositionCombo.SelectedValue);
 
                 if (string.IsNullOrWhiteSpace(username) == true)
                 {
@@ -94,10 +94,15 @@ namespace Bootcamp.Overtime
                     employeeParam.postal_code = postal;
                     employeeParam.salary = salary;
                     employeeParam.position_id = position;
-                    _employeeService.Insert(employeeParam);
+                    _employeeService.Update(Convert.ToInt16(IdTextbox.Text), employeeParam);
                 }
 
             }
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            PositionCombo.ItemsSource = _positionService.Get();
         }
     }
 }

@@ -25,18 +25,16 @@ namespace Bootcamp.Overtime
     {
         iEmployeeService _employeeService = new EmployeeService();
         EmployeeParam employeeParam = new EmployeeParam();
-        string selectedId;
+        
         public int? savedId = 0;
+
+        public object SubDistrictTextbox { get; private set; }
+
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            
-
-        }
 
         private void InsertButton_Click(object sender, RoutedEventArgs e)
         {
@@ -54,20 +52,50 @@ namespace Bootcamp.Overtime
             //}
             //new PopUpUpdateEmployee().ShowDialog();
             PopUpUpdateEmployee popup = new PopUpUpdateEmployee();
-            popup.IdTextbox.Text = savedId.ToString();
+            object item = EmployeeGrid.SelectedItem;
+            popup.IdTextbox.Text = (EmployeeGrid.SelectedCells[0].Column.GetCellContent(item) as TextBlock).Text;
+            popup.UsernameTextbox.Text = (EmployeeGrid.SelectedCells[1].Column.GetCellContent(item) as TextBlock).Text;
+            popup.PasswordTextbox.Text = (EmployeeGrid.SelectedCells[2].Column.GetCellContent(item) as TextBlock).Text; 
+            popup.FirstNameTextbox.Text = (EmployeeGrid.SelectedCells[3].Column.GetCellContent(item) as TextBlock).Text; 
+            popup.LastNameTextbox.Text = (EmployeeGrid.SelectedCells[4].Column.GetCellContent(item) as TextBlock).Text; 
+            popup.AddressTextbox.Text = (EmployeeGrid.SelectedCells[5].Column.GetCellContent(item) as TextBlock).Text; 
+            popup.SubDistrictTextbox.Text = (EmployeeGrid.SelectedCells[6].Column.GetCellContent(item) as TextBlock).Text; 
+            popup.DistrictTextbox.Text = (EmployeeGrid.SelectedCells[7].Column.GetCellContent(item) as TextBlock).Text; 
+            popup.ProvinceTextbox.Text = (EmployeeGrid.SelectedCells[8].Column.GetCellContent(item) as TextBlock).Text; 
+            popup.PostalTextbox.Text = (EmployeeGrid.SelectedCells[9].Column.GetCellContent(item) as TextBlock).Text; 
+            popup.PhoneTextbox.Text = (EmployeeGrid.SelectedCells[10].Column.GetCellContent(item) as TextBlock).Text; 
+            popup.SalaryTextbox.Text = (EmployeeGrid.SelectedCells[11].Column.GetCellContent(item) as TextBlock).Text; 
+            popup.PositionCombo.SelectedValue = (EmployeeGrid.SelectedCells[12].Column.GetCellContent(item) as TextBlock).Text; 
             popup.Show();
         }
 
         private void EmployeeGrid_SelectedCellsChanged(object sender, SelectedCellsChangedEventArgs e)
         {
-            object item = EmployeeGrid.SelectedItem;
-            selectedId = (EmployeeGrid.SelectedCells[0].Column.GetCellContent(item) as TextBlock).Text;
-            savedId = Convert.ToInt32(selectedId);
+            //object item = EmployeeGrid.SelectedItem;
+            //selectedId = (EmployeeGrid.SelectedCells[0].Column.GetCellContent(item) as TextBlock).Text;
+            //savedId = Convert.ToInt32(selectedId);
         }
 
         private void Window_Loaded_1(object sender, RoutedEventArgs e)
         {
             EmployeeGrid.ItemsSource = _employeeService.Get();
+        }
+
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("Yakin ingin hapus?","Peringatan", MessageBoxButton.YesNo);
+            if (result == MessageBoxResult.Yes)
+            {
+                object item = EmployeeGrid.SelectedItem;
+                int id = Convert.ToInt16((EmployeeGrid.SelectedCells[0].Column.GetCellContent(item) as TextBlock).Text);
+                _employeeService.Delete(id);
+                EmployeeGrid.ItemsSource = _employeeService.Get();
+            }   
+        }
+
+        private void SearchButton_Click(object sender, RoutedEventArgs e)
+        {
+            EmployeeGrid.ItemsSource = _employeeService.Search(SearchTextBox.Text, SearchcomboBox.Text);
         }
     }
 }

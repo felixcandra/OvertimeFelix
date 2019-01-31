@@ -29,7 +29,7 @@ namespace Overtime.Common.Interface.Master
 
         public List<Employees> Get()
         {
-            var getAll = _context.Employees.Where(x => x.isDelete == false).ToList();
+            var getAll = _context.Employees.Where(x => x.isDelete != true).ToList();
             return getAll;
         }
 
@@ -68,22 +68,32 @@ namespace Overtime.Common.Interface.Master
         {
             if(cmb == "Id")
             {
-                var searchId = _context.Employees.Where(x => x.isDelete == false && x.Id.ToString().Contains(search)).ToList();
+                var searchId = _context.Employees.Where(x => x.isDelete != true && x.Id.ToString().Contains(search)).ToList();
                 return searchId;
             }
             else if (cmb == "First Name")
             {
-                var searchFirstName = _context.Employees.Where(x => x.isDelete == false && x.first_name.Contains(search)).ToList();
+                var searchFirstName = _context.Employees.Where(x => x.isDelete != true && x.first_name.Contains(search)).ToList();
                 return searchFirstName;
             }
             else if (cmb == "Last Name")
             {
-                var searchLastName = _context.Employees.Where(x => x.isDelete == false && x.last_name.Contains(search)).ToList();
+                var searchLastName = _context.Employees.Where(x => x.isDelete != true && x.last_name.Contains(search)).ToList();
                 return searchLastName;
+            }
+            else if (cmb == "Position")
+            {
+                var searchPos = _context.Employees.Where(x => x.isDelete != true && x.Position.name.Contains(search)).ToList();
+                return searchPos;
+            }
+            else if (cmb == "Salary")
+            {
+                var searchSal = _context.Employees.Where(x => x.isDelete != true && x.salary.ToString().Contains(search)).ToList();
+                return searchSal;
             }
             else
             {
-                var refresh = _context.Employees.Where(x => x.isDelete == false).ToList();
+                var refresh = _context.Employees.Where(x => x.isDelete != true).ToList();
                 return refresh;
             }
         }
@@ -105,6 +115,7 @@ namespace Overtime.Common.Interface.Master
             employee.phone = employeeParam.phone;
             employee.position_id = employeeParam.position_id;
             employee.updateDate = DateTimeOffset.Now.LocalDateTime;
+            _context.SaveChanges();
             if (result > 0)
             {
                 status = true;

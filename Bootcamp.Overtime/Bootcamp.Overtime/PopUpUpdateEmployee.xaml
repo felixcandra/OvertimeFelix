@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bootcamp.Overtime"
         mc:Ignorable="d"
-        Title="PopUpUpdateEmployee" Height="390.722" Width="375.258">
+        Title="PopUpUpdateEmployee" Height="390.722" Width="375.258"
+        Loaded="Window_Loaded">
     <Grid>
         <Label x:Name="Username" Content="Username" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="7,21,0,0"/>
         <TextBox x:Name="UsernameTextbox" HorizontalAlignment="Left" Height="23" Margin="78,24,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="85"/>
@@ -30,10 +31,10 @@
         <Label x:Name="Phone" Content="Phone" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="183,234,0,0"/>
         <TextBox x:Name="PhoneTextbox" HorizontalAlignment="Left" Height="23" Margin="261,237,-54,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="85"/>
         <Label x:Name="SubDistrict_Copy2" Content="Position" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="7,276,0,-33"/>
-        <ComboBox x:Name="PositionCombo" HorizontalAlignment="Left" VerticalAlignment="Top" Width="85" Margin="78,276,0,-29"/>
+        <ComboBox x:Name="PositionCombo" HorizontalAlignment="Left" VerticalAlignment="Top" Width="85" Margin="78,276,0,-29" DisplayMemberPath="name" SelectedValuePath="Id"/>
         <Button x:Name="SaveButton" Content="Save" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Margin="235,304,-54,-75" Height="40" Click="SaveButton_Click"/>
         <Label x:Name="ID" Content="ID" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="183,272,0,0"/>
-        <TextBox x:Name="IdTextbox" HorizontalAlignment="Left" Height="23" Margin="261,275,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="85"/>
+        <TextBox x:Name="IdTextbox" HorizontalAlignment="Left" Height="23" Margin="261,275,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="85" IsEnabled="False"/>
 
     </Grid>
 </Window>

@@ -13,9 +13,9 @@
     <Property Name="sub_district" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="district" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="province" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="postal_code" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="postal_code" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="salary" Type="Int32" />
-    <Property Name="phone" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+    <Property Name="phone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="position_id" Type="Int32" />
     <Property Name="isDelete" Type="Boolean" />
     <Property Name="createDate" Type="DateTimeOffset" Precision="7" />
@@ -34,7 +34,7 @@
     <Property Name="overtime_salary" Type="Int32" />
     <Property Name="difference" Type="Int32" />
     <Property Name="employee_id" Type="Int32" />
-    <Property Name="createDate" Type="DateTimeOffset" Precision="7" />
+    <Property Name="createDate" Type="DateTime" Precision="3" />
     <NavigationProperty Name="Employee" Relationship="Self.FK_Overtimes_ToEmployee" FromRole="Overtimes" ToRole="Employees" />
   </EntityType>
   <EntityType Name="Param">

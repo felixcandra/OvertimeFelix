@@ -9,7 +9,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="username" Type="varchar" MaxLength="15" />
           <Property Name="password" Type="varchar" MaxLength="8" />
           <Property Name="first_name" Type="varchar" MaxLength="50" />
@@ -18,9 +18,9 @@
           <Property Name="sub_district" Type="varchar" MaxLength="50" />
           <Property Name="district" Type="varchar" MaxLength="50" />
           <Property Name="province" Type="varchar" MaxLength="50" />
-          <Property Name="postal_code" Type="varchar" MaxLength="5" />
+          <Property Name="postal_code" Type="varchar" MaxLength="20" />
           <Property Name="salary" Type="int" />
-          <Property Name="phone" Type="varchar" MaxLength="13" />
+          <Property Name="phone" Type="varchar" MaxLength="20" />
           <Property Name="position_id" Type="int" />
           <Property Name="isDelete" Type="bit" />
           <Property Name="createDate" Type="datetimeoffset" Precision="7" />
@@ -31,19 +31,19 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="check_in" Type="datetimeoffset" Precision="7" />
           <Property Name="check_out" Type="datetimeoffset" Precision="7" />
           <Property Name="overtime_salary" Type="int" />
           <Property Name="difference" Type="int" />
           <Property Name="employee_id" Type="int" />
-          <Property Name="createDate" Type="datetimeoffset" Precision="7" />
+          <Property Name="createDate" Type="datetime" />
         </EntityType>
         <EntityType Name="Param">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="value" Type="int" />
           <Property Name="name" Type="varchar" MaxLength="10" />
         </EntityType>
@@ -51,7 +51,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="name" Type="varchar" MaxLength="25" />
           <Property Name="isDelete" Type="bit" />
           <Property Name="createDate" Type="datetimeoffset" Precision="7" />
@@ -113,9 +113,9 @@
           <Property Name="sub_district" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="district" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="province" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="postal_code" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="postal_code" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="salary" Type="Int32" />
-          <Property Name="phone" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="phone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="position_id" Type="Int32" />
           <Property Name="isDelete" Type="Boolean" />
           <Property Name="createDate" Type="DateTimeOffset" Precision="7" />
@@ -134,7 +134,7 @@
           <Property Name="overtime_salary" Type="Int32" />
           <Property Name="difference" Type="Int32" />
           <Property Name="employee_id" Type="Int32" />
-          <Property Name="createDate" Type="DateTimeOffset" Precision="7" />
+          <Property Name="createDate" Type="DateTime" Precision="3" />
           <NavigationProperty Name="Employee" Relationship="Self.FK_Overtimes_ToEmployee" FromRole="Overtimes" ToRole="Employees" />
         </EntityType>
         <EntityType Name="Param">

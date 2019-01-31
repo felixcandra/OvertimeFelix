@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-E:\Kerja\Bootcamp\OvertimeApplication\Overtime\OvertimeApplication\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\
+E:\Git\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\
 Bootcamp.Overtime
 none
 false
 DEBUG;TRACE
-E:\Kerja\Bootcamp\OvertimeApplication\Overtime\OvertimeApplication\Bootcamp.Overtime\Bootcamp.Overtime\App.xaml
+E:\Git\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\App.xaml
 544120345
 
-13-1626935961
-20-315075171
+13-1100675937
+20-309596939
 EmployeePage.xaml;MainWindow.xaml;PopUpInsertEmployee.xaml;PopUpUpdateEmployee.xaml;PositionPage.xaml;
 
-False
+True
 

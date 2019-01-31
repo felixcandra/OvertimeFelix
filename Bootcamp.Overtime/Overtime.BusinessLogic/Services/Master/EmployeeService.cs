@@ -40,7 +40,7 @@ namespace Overtime.BusinessLogic.Master
 
         public bool Update(int? id, EmployeeParam employeeParam)
         {
-            return _employeeRepository.Update(employeeParam.Id, employeeParam);
+            return _employeeRepository.Update(id, employeeParam);
         }
     }
 }

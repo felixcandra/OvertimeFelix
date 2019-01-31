@@ -49,7 +49,7 @@ namespace Bootcamp.Overtime
             var postal = PostalTextbox.Text;
             var salary = Convert.ToInt32(SalaryTextbox.Text);
             var phone = PhoneTextbox.Text;
-            var id = Convert.ToInt16(IdTextbox.Text);
+            //var id = Convert.ToInt16(IdTextbox.Text);
             //var position = Convert.ToInt32(PositionCombo.Text);
 
             if (string.IsNullOrWhiteSpace(username) == true)
@@ -84,10 +84,10 @@ namespace Bootcamp.Overtime
             {
                 MessageBox.Show("Province Field must not be empty or whitespace");
             }
-            else if (id == null)
-            {
-                MessageBox.Show("ID Field must not be empty");
-            }
+            //else if (id == null)
+            //{
+            //    MessageBox.Show("ID Field must not be empty");
+            //}
             else
             {
                 employeeParam.username = username;
@@ -101,18 +101,9 @@ namespace Bootcamp.Overtime
                 employeeParam.phone = phone;
                 employeeParam.postal_code = postal;
                 employeeParam.salary = salary;
-                employeeParam.Id = id;
-                //employeeParam.position_id = position;
+                //employeeParam.Id = id;
+                employeeParam.position_id = Convert.ToInt16(PositionCombo.SelectedValue);
                 _employeeService.Insert(employeeParam);
-                result = _context.SaveChanges();
-                if(result > 0)
-                {
-                    MessageBox.Show("Insert Succesful");
-                }
-                else
-                {
-                    MessageBox.Show("Insert Failed");
-                }
             }
             
         }

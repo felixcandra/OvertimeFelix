@@ -23,13 +23,23 @@
                             <DataGridTextColumn Header="District" Binding="{Binding Path=district}"/>
                             <DataGridTextColumn Header="Province" Binding="{Binding Path=province}"/>
                             <DataGridTextColumn Header="Postal Code" Binding="{Binding Path=postal_code}"/>
+                            <DataGridTextColumn Header="Phone" Binding="{Binding Path=phone}"/>
                             <DataGridTextColumn Header="Salary" Binding="{Binding Path=salary}"/>
-                            <DataGridTextColumn Header="Positon" Binding="{Binding Path=position_id}"/>
+                            <DataGridTextColumn Header="Positon" Binding="{Binding Path=Position.name}"/>
                         </DataGrid.Columns>
                     </DataGrid>
                     <Button x:Name="InsertButton" Content="Insert" HorizontalAlignment="Left" Margin="29,106,0,0" VerticalAlignment="Top" Width="75" Click="InsertButton_Click"/>
                     <Button x:Name="UpdateButton" Content="Update" HorizontalAlignment="Left" Margin="123,106,0,0" VerticalAlignment="Top" Width="75" Click="UpdateButton_Click"/>
-                    <Button x:Name="DeleteButton" Content="Delete" HorizontalAlignment="Left" Margin="220,106,0,0" VerticalAlignment="Top" Width="75"/>
+                    <Button x:Name="DeleteButton" Content="Delete" HorizontalAlignment="Left" Margin="220,106,0,0" VerticalAlignment="Top" Width="75" Click="DeleteButton_Click"/>
+                    <TextBox x:Name="SearchTextBox" HorizontalAlignment="Left" Height="23" Margin="507,106,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="166"/>
+                    <Button x:Name="SearchButton" Content="Search" HorizontalAlignment="Left" Margin="680,106,0,0" VerticalAlignment="Top" Width="75" Click="SearchButton_Click"/>
+                    <ComboBox x:Name="SearchcomboBox" HorizontalAlignment="Left" Margin="368,106,0,0" VerticalAlignment="Top" Width="120">
+                        <ComboBoxItem Content="Id" HorizontalAlignment="Left" Width="118"/>
+                        <ComboBoxItem Content="First Name" HorizontalAlignment="Left" Width="118"/>
+                        <ComboBoxItem Content="Last Name" HorizontalAlignment="Left" Width="118"/>
+                        <ComboBoxItem Content="Salary" HorizontalAlignment="Left" Width="118"/>
+                        <ComboBoxItem Content="Position" HorizontalAlignment="Left" Width="118"/>
+                    </ComboBox>
                 </Grid>
             </TabItem>
             <TabItem Header="TabItem">

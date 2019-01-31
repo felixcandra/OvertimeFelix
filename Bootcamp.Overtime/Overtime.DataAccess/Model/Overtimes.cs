@@ -20,7 +20,7 @@ namespace Overtime.DataAccess.Model
         public Nullable<int> overtime_salary { get; set; }
         public Nullable<int> difference { get; set; }
         public Nullable<int> employee_id { get; set; }
-        public Nullable<System.DateTimeOffset> createDate { get; set; }
+        public Nullable<System.DateTime> createDate { get; set; }
     
         public virtual Employees Employee { get; set; }
     }
