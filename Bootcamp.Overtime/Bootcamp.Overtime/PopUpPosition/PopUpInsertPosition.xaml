@@ -1,0 +1,19 @@
+﻿<Window x:Class="Bootcamp.Overtime.PopUpInsertPosition"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bootcamp.Overtime"
+        mc:Ignorable="d"
+        Title="PopUpInsertPosition" Height="159.023" Width="274.06">
+    <Grid Background="Wheat" Margin="0,0,2,8">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="181*"/>
+            <ColumnDefinition Width="83*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="PositionTextbox" PreviewTextInput="PositionTextbox_PreviewTextInput" HorizontalAlignment="Left" Height="30" Margin="121,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
+        <Button x:Name="SaveButton" Content="Save" HorizontalAlignment="Left" Height="33" Margin="165,77,0,0" VerticalAlignment="Top" Width="76" Click="SaveButton_Click" Grid.ColumnSpan="2"/>
+        <Label x:Name="labelPosition" Content="Position     :" HorizontalAlignment="Left" Margin="26,21,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

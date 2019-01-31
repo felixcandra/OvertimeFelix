@@ -12,9 +12,11 @@ namespace Overtime.BusinessLogic
     {
         bool Insert(EmployeeParam employeeParam);
         bool Update(int? id, EmployeeParam employeeParam);
+        bool UpdatePass(int? id, EmployeeParam employeeParam);
         bool Delete(int? id);
         List<Employees> Get();
         Employees Get(int? id);
         List<Employees> Search(string search, string cmb);
+        Employees Login(string username, string password);
     }
 }

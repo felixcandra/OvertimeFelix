@@ -113,9 +113,9 @@
           <Property Name="sub_district" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="district" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="province" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="postal_code" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="postal_code" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
           <Property Name="salary" Type="Int32" />
-          <Property Name="phone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="phone" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
           <Property Name="position_id" Type="Int32" />
           <Property Name="isDelete" Type="Boolean" />
           <Property Name="createDate" Type="DateTimeOffset" Precision="7" />
@@ -135,7 +135,7 @@
           <Property Name="difference" Type="Int32" />
           <Property Name="employee_id" Type="Int32" />
           <Property Name="createDate" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="Employee" Relationship="Self.FK_Overtimes_ToEmployee" FromRole="Overtimes" ToRole="Employees" />
+          <NavigationProperty Name="Employees" Relationship="Self.FK_Overtimes_ToEmployee" FromRole="Overtimes" ToRole="Employees" />
         </EntityType>
         <EntityType Name="Param">
           <Key>
@@ -159,7 +159,7 @@
         </EntityType>
         <Association Name="FK_Employees_ToPosition">
           <End Role="Position" Type="Self.Position" Multiplicity="0..1" />
-          <End Role="Employees" Type="OvertimeDBModel.Employees" Multiplicity="*" />
+          <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Position">
               <PropertyRef Name="Id" />
@@ -170,8 +170,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Overtimes_ToEmployee">
-          <End Role="Employees" Type="OvertimeDBModel.Employees" Multiplicity="0..1" />
-          <End Role="Overtimes" Type="OvertimeDBModel.Overtimes" Multiplicity="*" />
+          <End Role="Employees" Type="Self.Employees" Multiplicity="0..1" />
+          <End Role="Overtimes" Type="Self.Overtimes" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Employees">
               <PropertyRef Name="Id" />
@@ -182,17 +182,17 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="MyContex" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Employees1" EntityType="OvertimeDBModel.Employees" />
-          <EntitySet Name="Overtimes1" EntityType="OvertimeDBModel.Overtimes" />
-          <EntitySet Name="Params" EntityType="Self.Param" />
-          <EntitySet Name="Positions" EntityType="Self.Position" />
+          <EntitySet Name="Employees" EntityType="Self.Employees" />
+          <EntitySet Name="Overtimes" EntityType="Self.Overtimes" />
+          <EntitySet Name="Param" EntityType="Self.Param" />
+          <EntitySet Name="Position" EntityType="Self.Position" />
           <AssociationSet Name="FK_Employees_ToPosition" Association="Self.FK_Employees_ToPosition">
-            <End Role="Position" EntitySet="Positions" />
-            <End Role="Employees" EntitySet="Employees1" />
+            <End Role="Position" EntitySet="Position" />
+            <End Role="Employees" EntitySet="Employees" />
           </AssociationSet>
           <AssociationSet Name="FK_Overtimes_ToEmployee" Association="Self.FK_Overtimes_ToEmployee">
-            <End Role="Employees" EntitySet="Employees1" />
-            <End Role="Overtimes" EntitySet="Overtimes1" />
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="Overtimes" EntitySet="Overtimes" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -201,7 +201,7 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="OvertimeDBModelStoreContainer" CdmEntityContainer="MyContex">
-          <EntitySetMapping Name="Employees1">
+          <EntitySetMapping Name="Employees">
             <EntityTypeMapping TypeName="OvertimeDBModel.Employees">
               <MappingFragment StoreEntitySet="Employees">
                 <ScalarProperty Name="Id" ColumnName="Id" />
@@ -224,7 +224,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Overtimes1">
+          <EntitySetMapping Name="Overtimes">
             <EntityTypeMapping TypeName="OvertimeDBModel.Overtimes">
               <MappingFragment StoreEntitySet="Overtimes">
                 <ScalarProperty Name="Id" ColumnName="Id" />
@@ -237,7 +237,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Params">
+          <EntitySetMapping Name="Param">
             <EntityTypeMapping TypeName="OvertimeDBModel.Param">
               <MappingFragment StoreEntitySet="Param">
                 <ScalarProperty Name="Id" ColumnName="Id" />
@@ -246,7 +246,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Positions">
+          <EntitySetMapping Name="Position">
             <EntityTypeMapping TypeName="OvertimeDBModel.Position">
               <MappingFragment StoreEntitySet="Position">
                 <ScalarProperty Name="Id" ColumnName="Id" />
@@ -272,7 +272,7 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />

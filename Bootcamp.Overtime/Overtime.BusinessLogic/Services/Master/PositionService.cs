@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Overtime.DataAccess.Model;
-using Overtime.DataAccess.Param;
+﻿using System.Collections.Generic;
 using Overtime.Common.Interface.Master;
 using Overtime.Common.Interface;
+using Overtime.DataAccess.Model;
+using Overtime.DataAccess.Param;
 
 namespace Overtime.BusinessLogic.Services.Master
 {

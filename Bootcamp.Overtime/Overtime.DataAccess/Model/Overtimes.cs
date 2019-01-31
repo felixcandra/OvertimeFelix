@@ -22,6 +22,6 @@ namespace Overtime.DataAccess.Model
         public Nullable<int> employee_id { get; set; }
         public Nullable<System.DateTime> createDate { get; set; }
     
-        public virtual Employees Employee { get; set; }
+        public virtual Employees Employees { get; set; }
     }
 }

@@ -69,32 +69,22 @@ namespace Overtime.Common.Interface.Master
         {
             if(cmb == "Id")
             {
-                var searchId = _context.Employees.Where(x => x.isDelete != true && x.Id.ToString().Contains(search)).ToList();
+                var searchId = _context.Employees.Where(x => x.isDelete == false && x.Id.ToString().Contains(search)).ToList();
                 return searchId;
             }
             else if (cmb == "First Name")
             {
-                var searchFirstName = _context.Employees.Where(x => x.isDelete != true && x.first_name.Contains(search)).ToList();
+                var searchFirstName = _context.Employees.Where(x => x.isDelete == false && x.first_name.Contains(search)).ToList();
                 return searchFirstName;
             }
             else if (cmb == "Last Name")
             {
-                var searchLastName = _context.Employees.Where(x => x.isDelete != true && x.last_name.Contains(search)).ToList();
+                var searchLastName = _context.Employees.Where(x => x.isDelete == false && x.last_name.Contains(search)).ToList();
                 return searchLastName;
-            }
-            else if (cmb == "Position")
-            {
-                var searchPos = _context.Employees.Where(x => x.isDelete != true && x.Position.name.Contains(search)).ToList();
-                return searchPos;
-            }
-            else if (cmb == "Salary")
-            {
-                var searchSal = _context.Employees.Where(x => x.isDelete != true && x.salary.ToString().Contains(search)).ToList();
-                return searchSal;
             }
             else
             {
-                var refresh = _context.Employees.Where(x => x.isDelete != true).ToList();
+                var refresh = _context.Employees.Where(x => x.isDelete == false).ToList();
                 return refresh;
             }
         }
@@ -102,9 +92,11 @@ namespace Overtime.Common.Interface.Master
         public bool Update(int? id, EmployeeParam employeeParam)
         {
             var result = 0;
-            var employee = Get(id);
+            Employees employee = Get(id);
             employee.first_name = employeeParam.first_name;
             employee.last_name = employeeParam.last_name;
+            employee.username = employeeParam.username;
+            employee.password = employeeParam.password;
             employee.address = employeeParam.address;
             employee.sub_district = employeeParam.sub_district;
             employee.district = employeeParam.district;
@@ -115,6 +107,24 @@ namespace Overtime.Common.Interface.Master
             employee.position_id = employeeParam.position_id;
             employee.updateDate = DateTimeOffset.Now.LocalDateTime;
             _context.SaveChanges();
+            if (result > 0)
+            {
+                status = true;
+            }
+            return status;
+        }
+
+        public Employees Login(string username, string password)
+        {
+            return _context.Employees.FirstOrDefault(x => x.username == username && x.password == password);
+        }
+
+        public bool UpdatePass(int? id, EmployeeParam employeeParam)
+        {
+            var result = 0;
+            Employees employee = Get(id);
+            employee.password = employeeParam.password;
+            result = _context.SaveChanges();
             if (result > 0)
             {
                 status = true;

@@ -7,8 +7,8 @@
     <ProjectGuid>{780560D0-4715-4EF7-A476-B8006F1E29BD}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Bootcamp.Overtime</RootNamespace>
-    <AssemblyName>Bootcamp.Overtime</AssemblyName>
+    <RootNamespace>WPF.Overtime</RootNamespace>
+    <AssemblyName>WPF.Overtime</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -35,6 +35,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ControlzEx, Version=3.0.2.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ControlzEx.3.0.2.4\lib\net45\ControlzEx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
@@ -43,9 +47,17 @@
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="MahApps.Metro, Version=1.6.5.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.1.6.5\lib\net45\MahApps.Metro.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\ControlzEx.3.0.2.4\lib\net45\System.Windows.Interactivity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -70,18 +82,33 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChangeUserPass.xaml.cs">
+      <DependentUpon>ChangeUserPass.xaml</DependentUpon>
+    </Compile>
     <Compile Include="EmployeePage.xaml.cs">
       <DependentUpon>EmployeePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="PopUpInsertEmployee.xaml.cs">
+    <Compile Include="PopUpEmployee\PopUpInsertEmployee.xaml.cs">
       <DependentUpon>PopUpInsertEmployee.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PopUpUpdateEmployee.xaml.cs">
+    <Compile Include="PopUpEmployee\PopUpUpdateEmployee.xaml.cs">
       <DependentUpon>PopUpUpdateEmployee.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PopUpPosition\PopUpDeletePosition.xaml.cs">
+      <DependentUpon>PopUpDeletePosition.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PopUpPosition\PopUpInsertPosition.xaml.cs">
+      <DependentUpon>PopUpInsertPosition.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PopUpPosition\PopUpUpdatePosition.xaml.cs">
+      <DependentUpon>PopUpUpdatePosition.xaml</DependentUpon>
     </Compile>
     <Compile Include="PositionPage.xaml.cs">
       <DependentUpon>PositionPage.xaml</DependentUpon>
@@ -114,19 +141,39 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="ChangeUserPass.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="EmployeePage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="LoginPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MainWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PopUpInsertEmployee.xaml">
+    <Page Include="PopUpEmployee\PopUpInsertEmployee.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PopUpEmployee\PopUpUpdateEmployee.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PopUpPosition\PopUpDeletePosition.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PopUpUpdateEmployee.xaml">
+    <Page Include="PopUpPosition\PopUpInsertPosition.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PopUpPosition\PopUpUpdatePosition.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -144,15 +191,12 @@
       <Project>{386f0693-22ee-42bd-a304-38ec1664526f}</Project>
       <Name>Overtime.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Overtime.Core\Overtime.Core.csproj">
-      <Project>{d6b6c61b-fb73-4857-b76a-320f32171e82}</Project>
-      <Name>Overtime.Core</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Overtime.DataAccess\Overtime.DataAccess.csproj">
       <Project>{134d963c-d408-4777-a303-a4101378414e}</Project>
       <Name>Overtime.DataAccess</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

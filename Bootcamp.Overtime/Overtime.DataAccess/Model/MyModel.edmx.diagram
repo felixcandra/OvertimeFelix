@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="671d221467ea4198a1b93a1c26a0b122" Name="Diagram1">
+      <Diagram DiagramId="30e9f7a11b1c4b61bbf2ca954f92fa26" Name="Diagram1">
         <EntityTypeShape EntityType="OvertimeDBModel.Employees" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="OvertimeDBModel.Overtimes" Width="1.5" PointX="5.25" PointY="2.125" IsExpanded="true" />
         <EntityTypeShape EntityType="OvertimeDBModel.Param" Width="1.5" PointX="5.75" PointY="5.75" IsExpanded="true" />

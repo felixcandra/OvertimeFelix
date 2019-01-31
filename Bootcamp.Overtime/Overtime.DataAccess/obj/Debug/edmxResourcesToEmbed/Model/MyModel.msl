@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="OvertimeDBModelStoreContainer" CdmEntityContainer="MyContex">
-    <EntitySetMapping Name="Employees1">
+    <EntitySetMapping Name="Employees">
       <EntityTypeMapping TypeName="OvertimeDBModel.Employees">
         <MappingFragment StoreEntitySet="Employees">
           <ScalarProperty Name="Id" ColumnName="Id" />
@@ -24,7 +24,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Overtimes1">
+    <EntitySetMapping Name="Overtimes">
       <EntityTypeMapping TypeName="OvertimeDBModel.Overtimes">
         <MappingFragment StoreEntitySet="Overtimes">
           <ScalarProperty Name="Id" ColumnName="Id" />
@@ -37,7 +37,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Params">
+    <EntitySetMapping Name="Param">
       <EntityTypeMapping TypeName="OvertimeDBModel.Param">
         <MappingFragment StoreEntitySet="Param">
           <ScalarProperty Name="Id" ColumnName="Id" />
@@ -46,7 +46,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Positions">
+    <EntitySetMapping Name="Position">
       <EntityTypeMapping TypeName="OvertimeDBModel.Position">
         <MappingFragment StoreEntitySet="Position">
           <ScalarProperty Name="Id" ColumnName="Id" />

@@ -30,14 +30,14 @@ namespace Overtime.Common.Interface.Master
 
         public List<Position> Get()
         {
-            var getAll = _context.Positions.Where(x => x.isDelete == false).ToList();
+            var getAll = _context.Position.Where(x => x.isDelete == false).ToList();
             return getAll;
             //throw new NotImplementedException();
         }
 
         public Position Get(int? id)
         {
-            var get = _context.Positions.Find(id);
+            var get = _context.Position.Find(id);
             return get;
             //throw new NotImplementedException();
         }
@@ -47,6 +47,8 @@ namespace Overtime.Common.Interface.Master
             var result = 0;
             positions.name = positionParam.Name;
             positions.createDate = DateTimeOffset.Now.LocalDateTime;
+            positions.isDelete = false;
+            _context.Position.Add(positions);
             result = _context.SaveChanges();
             if(result > 0)
             {
@@ -58,19 +60,19 @@ namespace Overtime.Common.Interface.Master
 
         public List<Position> Search(string search, string cmb)
         {
-            if(cmb == "Name")
+            if(cmb == "Position")
             {
-                var searchName = _context.Positions.Where(x => x.isDelete == false && x.Id.ToString().Contains(search)).ToList();
+                var searchName = _context.Position.Where(x => x.isDelete != true && x.name.ToString().Contains(search)).ToList();
                 return searchName;
             }
             else if(cmb == "Id")
             {
-                var searchId = _context.Positions.Where(x => x.isDelete == false && x.name.ToString().Contains(search)).ToList();
+                var searchId = _context.Position.Where(x => x.isDelete != true && x.Id.ToString().Contains(search)).ToList();
                 return searchId;
             }
             else
             {
-                var refresh = _context.Positions.Where(x => x.isDelete == false ).ToList();
+                var refresh = _context.Position.Where(x => x.isDelete != true  ).ToList();
                 return refresh;
             }
             //throw new NotImplementedException();
@@ -81,6 +83,7 @@ namespace Overtime.Common.Interface.Master
             var result = 0;
             Position positions = Get(id);
             positions.name = positionParam.Name;
+            result = _context.SaveChanges();
             if(result > 0)
             {
                 status = true;

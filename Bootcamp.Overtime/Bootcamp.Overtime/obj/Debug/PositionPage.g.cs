@@ -52,7 +52,7 @@ namespace Bootcamp.Overtime {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Bootcamp.Overtime;component/positionpage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/WPF.Overtime;component/positionpage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\PositionPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
