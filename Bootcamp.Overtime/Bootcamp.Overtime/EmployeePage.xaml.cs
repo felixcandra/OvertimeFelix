@@ -36,7 +36,7 @@ namespace WPF.Overtime
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             int Id = Settings.Default.Id;
-            OvertimeEmployeeGrid.ItemsSource = overtimeService.Get();
+            OvertimeEmployeeGrid.ItemsSource = overtimeService.Get(Id);
         }
 
         private void LogoutButton_Click(object sender, RoutedEventArgs e)

@@ -20,6 +20,7 @@ using System.Windows.Shapes;
 using WPF.Overtime.Properties;
 using MahApps.Metro.Controls;
 using Bootcamp.Overtime;
+using WPF.Overtime.PopUpPassword;
 
 namespace WPF.Overtime
 {
@@ -58,15 +59,17 @@ namespace WPF.Overtime
                 overtimeParam.createDate = DateTime.Now.ToLocalTime();
                 _overtimeService.Insert(overtimeParam);
 
-                if (login.password == "bootcamp" && login.question == "")
+                if (login.password == "bootcamp" && login.question == null)
                 {
                     PasswordDefault pass = new PasswordDefault();
                     pass.Show();
                     this.Close();
                 }
-                else if (login.password != "bootcamp" && login.question == "")
+                else if (login.password != "bootcamp" && login.question == null)
                 {
-
+                    PopUpInsertQuestionAnswer popup = new PopUpInsertQuestionAnswer();
+                    popup.Show();
+                    this.Close();
                 }
                 else
                 {

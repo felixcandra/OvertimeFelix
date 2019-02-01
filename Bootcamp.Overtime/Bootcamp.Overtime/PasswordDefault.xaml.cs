@@ -37,42 +37,50 @@ namespace WPF.Overtime
         {
             if(PassConfirm.Password.Length <8 || PassTextBox.Password.Length < 8)
             {
-
+                MessageBox.Show("At least 8 Character");
             }
             else
             {
-                if (PassTextBox.Password == PassConfirm.Password)
+                if (string.IsNullOrWhiteSpace(OldCombobox.Text) == true || string.IsNullOrWhiteSpace(OldTextbox.Text) == true)
                 {
-                    int id = Settings.Default.Id;
-                    param.password = PassConfirm.Password;
-                    param.question = OldCombobox.Text;
-                    param.answer = OldTextbox.Text;
-                    _employeeService.UpdateBootcamp(id, param);
-                    Settings.Default.Password = PassConfirm.Password;
-                    Settings.Default.Question = OldCombobox.Text;
-                    Settings.Default.Answer = OldTextbox.Text;
-                    Settings.Default.Save();
-                    MessageBox.Show("Successfully change");
-
-                    if (Settings.Default.Position == "Admin")
-                    {
-                        MainWindow main = new MainWindow();
-                        main.Show();
-                        this.Close();
-                    }
-                    else
-                    {
-                        EmployeePage emp = new EmployeePage();
-                        emp.Show();
-                        this.Close();
-                    }
+                    MessageBox.Show("Answer Field must not be empty or whitespace");
                 }
                 else
                 {
-                    MessageBox.Show("Password and Confirm not match");
-                }
+                    if (PassTextBox.Password == PassConfirm.Password)
+                    {
+                        int id = Settings.Default.Id;
+                        param.password = PassConfirm.Password;
+                        param.question = OldCombobox.Text;
+                        param.answer = OldTextbox.Text;
+                        _employeeService.UpdateBootcamp(id, param);
+                        Settings.Default.Password = PassConfirm.Password;
+                        Settings.Default.Question = OldCombobox.Text;
+                        Settings.Default.Answer = OldTextbox.Text;
+                        Settings.Default.Save();
+                        MessageBox.Show("Successfully change");
 
+                        if (Settings.Default.Position == "Admin")
+                        {
+                            MainWindow main = new MainWindow();
+                            main.Show();
+                            this.Close();
+                        }
+                        else
+                        {
+                            EmployeePage emp = new EmployeePage();
+                            emp.Show();
+                            this.Close();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Password and Confirm not match");
+                    }
+
+                }
             }
+            
 
 
         }

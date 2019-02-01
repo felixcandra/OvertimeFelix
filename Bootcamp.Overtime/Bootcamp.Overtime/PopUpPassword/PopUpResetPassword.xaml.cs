@@ -23,7 +23,7 @@ namespace WPF.Overtime
     /// <summary>
     /// Interaction logic for PopUpForgetPassword.xaml
     /// </summary>
-    public partial class PopUpForgetPassword : MetroWindow
+    public partial class PopUpForgetPassword : Window
     {
         iEmployeeService _employeeService = new EmployeeService();
         EmployeeParam employeeParam = new EmployeeParam();

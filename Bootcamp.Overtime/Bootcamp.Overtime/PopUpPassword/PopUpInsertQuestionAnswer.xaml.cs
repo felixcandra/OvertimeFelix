@@ -78,7 +78,7 @@ namespace WPF.Overtime.PopUpPassword
                 {
                     EmployeePage emp = new EmployeePage();
                     emp.Show();
-                    emp.Close();
+                    this.Close();
                 }  
             }
             

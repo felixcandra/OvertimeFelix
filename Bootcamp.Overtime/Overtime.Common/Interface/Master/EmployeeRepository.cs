@@ -116,7 +116,7 @@ namespace Overtime.Common.Interface.Master
 
         public Employees Login(string username, string password)
         {
-            return _context.Employees.FirstOrDefault(x => x.username == username && x.password == password);
+            return _context.Employees.FirstOrDefault(x => x.username.Equals(username) && x.password.Equals(password));
         }
 
         public bool UpdatePass(int? id, EmployeeParam employeeParam)
@@ -131,12 +131,10 @@ namespace Overtime.Common.Interface.Master
             }
             return status;
         }
-<<<<<<< HEAD
 
-        public bool UpdateQuestion(int? id, EmployeeParam employeeParam)
-=======
+
         public bool UpdateQuestionAnswer(int? id, EmployeeParam employeeParam)
->>>>>>> ca724af08c94c12a47b98e0b48e52a6a4e2381b5
+
         {
             var result = 0;
             Employees employee = Get(id);
@@ -149,7 +147,7 @@ namespace Overtime.Common.Interface.Master
             }
             return status;
         }
-<<<<<<< HEAD
+
 
         public bool UpdateBootcamp(int? id, EmployeeParam employeeParam)
         {
@@ -165,8 +163,10 @@ namespace Overtime.Common.Interface.Master
             }
             return status;
         }
-=======
-       
->>>>>>> ca724af08c94c12a47b98e0b48e52a6a4e2381b5
+
+        public bool UpdateQuestion(int? id, EmployeeParam employeeParam)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

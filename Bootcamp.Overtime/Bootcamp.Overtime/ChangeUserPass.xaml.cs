@@ -65,8 +65,11 @@ namespace WPF.Overtime
 
         private void SaveQuestion_Click(object sender, RoutedEventArgs e)
         {
-
-                if (OldTextbox.Text == Settings.Default.Answer && OldCombobox.Text==Settings.Default.Question)
+            if (string.IsNullOrWhiteSpace(OldCombobox.Text) == true || string.IsNullOrWhiteSpace(OldTextbox.Text) == true || string.IsNullOrWhiteSpace(NewCombobox.Text) == true || string.IsNullOrWhiteSpace(NewTextbox.Text) == true)
+            {
+                MessageBox.Show("Answer Field must not be empty or whitespace");
+            }
+            else if(OldTextbox.Text == Settings.Default.Answer && OldCombobox.Text==Settings.Default.Question)
                 {
                     EmpParam.question = NewCombobox.Text;
                     EmpParam.answer = NewTextbox.Text;

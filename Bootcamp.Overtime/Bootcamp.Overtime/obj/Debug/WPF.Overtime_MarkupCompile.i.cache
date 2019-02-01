@@ -4,26 +4,17 @@
 winexe
 C#
 .cs
-D:\New folder (2)\New folder\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\
+E:\Git\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\
 WPF.Overtime
 none
 false
 DEBUG;TRACE
-<<<<<<< HEAD
 E:\Git\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\App.xaml
-92114640422
+11-1827719806
 
-171232420678
+1933991764
 221374508185
-ChangeUserPass.xaml;EmployeePage.xaml;LoginPage.xaml;MainWindow.xaml;PasswordDefault.xaml;PopUpEmployee\PopUpInsertEmployee.xaml;PopUpEmployee\PopUpUpdateEmployee.xaml;PopUpPosition\PopUpInsertPosition.xaml;PopUpPosition\PopUpUpdatePosition.xaml;
-=======
-D:\New folder (2)\New folder\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\App.xaml
-10592596324
-
-18847994144
-22-559582289
-ChangeUserPass.xaml;EmployeePage.xaml;LoginPage.xaml;MainWindow.xaml;PopUpEmployee\PopUpInsertEmployee.xaml;PopUpEmployee\PopUpUpdateEmployee.xaml;PopUpPassword\PopUpInsertQuestionAnswer.xaml;PopUpPassword\PopUpResetPassword.xaml;PopUpPosition\PopUpInsertPosition.xaml;PopUpPosition\PopUpUpdatePosition.xaml;
->>>>>>> ca724af08c94c12a47b98e0b48e52a6a4e2381b5
+ChangeUserPass.xaml;EmployeePage.xaml;LoginPage.xaml;MainWindow.xaml;PasswordDefault.xaml;PopUpEmployee\PopUpInsertEmployee.xaml;PopUpEmployee\PopUpUpdateEmployee.xaml;PopUpPassword\PopUpInsertQuestionAnswer.xaml;PopUpPassword\PopUpResetPassword.xaml;PopUpPosition\PopUpInsertPosition.xaml;PopUpPosition\PopUpUpdatePosition.xaml;
 
 True
 

@@ -27,18 +27,26 @@ namespace Overtime.Common.Interfaces.Master
 
         public bool Insert(OvertimeParam overtimeParam)
         {
-            var result = 0;
-            overtime.createDate = DateTimeOffset.Now.LocalDateTime;
-            overtime.check_in = overtimeParam.check_in;
-            overtime.employee_id = overtimeParam.employee_id;
-            _context.Overtimes.Add(overtime);
-            result = _context.SaveChanges();
-
-            if (result > 0)
+            try
             {
-                status = true;
-                MessageBox.Show("Login Successfully");
+                var result = 0;
+                overtime.createDate = DateTimeOffset.Now.LocalDateTime;
+                overtime.check_in = overtimeParam.check_in;
+                overtime.employee_id = overtimeParam.employee_id;
+                _context.Overtimes.Add(overtime);
+                result = _context.SaveChanges();
+
+                if (result > 0)
+                {
+                    status = true;
+                    MessageBox.Show("Login Successfully");
+                }
             }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.StackTrace);
+            }
+            
             return status;
 
         }
