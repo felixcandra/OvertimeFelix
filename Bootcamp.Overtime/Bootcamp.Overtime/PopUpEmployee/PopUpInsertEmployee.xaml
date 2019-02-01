@@ -6,7 +6,7 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:Bootcamp.Overtime"
         mc:Ignorable="d"
-        Title="PopUpInsertEmployee" Height="425.241" Width="521.113"
+        Title="Insert Employee" Height="425.241" Width="521.113"
         Loaded="Window_Loaded_1"
         >
     <Grid Margin="0,0,0,2">

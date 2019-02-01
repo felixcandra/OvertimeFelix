@@ -95,8 +95,6 @@ namespace Overtime.Common.Interface.Master
             Employees employee = Get(id);
             employee.first_name = employeeParam.first_name;
             employee.last_name = employeeParam.last_name;
-            employee.username = employeeParam.username;
-            employee.password = employeeParam.password;
             employee.address = employeeParam.address;
             employee.sub_district = employeeParam.sub_district;
             employee.district = employeeParam.district;
@@ -106,7 +104,7 @@ namespace Overtime.Common.Interface.Master
             employee.phone = employeeParam.phone;
             employee.position_id = employeeParam.position_id;
             employee.updateDate = DateTimeOffset.Now.LocalDateTime;
-            _context.SaveChanges();
+            result = _context.SaveChanges();
             if (result > 0)
             {
                 status = true;
