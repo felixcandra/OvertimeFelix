@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="OvertimeDBModelStoreContainer" CdmEntityContainer="MyContex">
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="OvertimeDBModel.Employees">
+        <MappingFragment StoreEntitySet="Employees">
+          <ScalarProperty Name="answer" ColumnName="answer" />
+          <ScalarProperty Name="question" ColumnName="question" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="sub_district" ColumnName="sub_district" />
+          <ScalarProperty Name="district" ColumnName="district" />
+          <ScalarProperty Name="province" ColumnName="province" />
+          <ScalarProperty Name="postal_code" ColumnName="postal_code" />
+          <ScalarProperty Name="salary" ColumnName="salary" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="position_id" ColumnName="position_id" />
+          <ScalarProperty Name="isDelete" ColumnName="isDelete" />
+          <ScalarProperty Name="createDate" ColumnName="createDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Overtimes">
+      <EntityTypeMapping TypeName="OvertimeDBModel.Overtimes">
+        <MappingFragment StoreEntitySet="Overtimes">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="check_in" ColumnName="check_in" />
+          <ScalarProperty Name="check_out" ColumnName="check_out" />
+          <ScalarProperty Name="overtime_salary" ColumnName="overtime_salary" />
+          <ScalarProperty Name="difference" ColumnName="difference" />
+          <ScalarProperty Name="employee_id" ColumnName="employee_id" />
+          <ScalarProperty Name="createDate" ColumnName="createDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Param">
+      <EntityTypeMapping TypeName="OvertimeDBModel.Param">
+        <MappingFragment StoreEntitySet="Param">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Position">
+      <EntityTypeMapping TypeName="OvertimeDBModel.Position">
+        <MappingFragment StoreEntitySet="Position">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="isDelete" ColumnName="isDelete" />
+          <ScalarProperty Name="createDate" ColumnName="createDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
