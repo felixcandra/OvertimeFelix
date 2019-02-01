@@ -4,6 +4,8 @@
     <EntitySetMapping Name="Employees">
       <EntityTypeMapping TypeName="OvertimeDBModel.Employees">
         <MappingFragment StoreEntitySet="Employees">
+          <ScalarProperty Name="answer" ColumnName="answer" />
+          <ScalarProperty Name="question" ColumnName="question" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="username" ColumnName="username" />
           <ScalarProperty Name="password" ColumnName="password" />

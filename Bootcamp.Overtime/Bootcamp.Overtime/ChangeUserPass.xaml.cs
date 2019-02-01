@@ -34,22 +34,24 @@ namespace WPF.Overtime
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
             
-            if (PassTextBox.Password.Length<8 || PassCConfirm.Password.Length<8)
+            if (PassTextBox.Password.Length<8 || PassConfirm.Password.Length<8)
             {
-                MessageBox.Show("At Least Min 8 Character");
+                MessageBox.Show("At Least 8 Character");
             }
             else
             {
-                if(PassTextBox.Password == PassCConfirm.Password)
+                if(PassTextBox.Password == Settings.Default.Password)
                 {
-                    EmpParam.password = PassTextBox.Password;
+                    EmpParam.password = PassConfirm.Password;
                     _employeeService.UpdatePass(Settings.Default.Id, EmpParam);
                     MessageBox.Show("Change Successfully");
+                    Settings.Default.Password = PassConfirm.Password;
+                    Settings.Default.Save();
                     this.Close();
                 }
                 else
                 {
-                    MessageBox.Show("Confirm Password not match");
+                    MessageBox.Show("Old Password not match");
                 }
                 
             }
@@ -58,7 +60,40 @@ namespace WPF.Overtime
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            PassTextBox.Password = Settings.Default.Password;
+            
+        }
+
+        private void SaveQuestion_Click(object sender, RoutedEventArgs e)
+        {
+
+                if (OldTextbox.Text == Settings.Default.Answer && OldCombobox.Text==Settings.Default.Question)
+                {
+                    EmpParam.question = NewCombobox.Text;
+                    EmpParam.answer = NewTextbox.Text;
+                    _employeeService.UpdatePass(Settings.Default.Id, EmpParam);
+                    MessageBox.Show("Change Successfully");
+                    Settings.Default.Question = NewCombobox.Text;
+                    Settings.Default.Answer = NewTextbox.Text;
+                    Settings.Default.Save();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Old Question and Answer not match");
+                }
+
+        }
+
+        private void PassConfirm_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            System.Text.RegularExpressions.Regex regex = new System.Text.RegularExpressions.Regex("^[a-zA-Z0-9]*$");
+            e.Handled = !regex.IsMatch((sender as TextBox).Text.Insert((sender as TextBox).SelectionStart, e.Text));
+        }
+
+        private void PassTextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            System.Text.RegularExpressions.Regex regex = new System.Text.RegularExpressions.Regex("^[a-zA-Z0-9]*$");
+            e.Handled = !regex.IsMatch((sender as TextBox).Text.Insert((sender as TextBox).SelectionStart, e.Text));
         }
     }
 }

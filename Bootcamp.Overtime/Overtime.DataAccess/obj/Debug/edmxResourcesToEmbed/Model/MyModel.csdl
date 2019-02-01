@@ -23,6 +23,8 @@
     <Property Name="deleteDate" Type="DateTimeOffset" Precision="7" />
     <NavigationProperty Name="Position" Relationship="Self.FK_Employees_ToPosition" FromRole="Employees" ToRole="Position" />
     <NavigationProperty Name="Overtimes" Relationship="Self.FK_Overtimes_ToEmployee" FromRole="Employees" ToRole="Overtimes" />
+    <Property Name="question" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="answer" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="Overtimes">
     <Key>

@@ -47,9 +47,19 @@ namespace Overtime.BusinessLogic.Master
             return _employeeRepository.Update(employeeParam.Id, employeeParam);
         }
 
+        public bool UpdateBootcamp(int? id, EmployeeParam employeeParam)
+        {
+            return _employeeRepository.UpdateBootcamp(id, employeeParam);
+        }
+
         public bool UpdatePass(int? id, EmployeeParam employeeParam)
         {
             return _employeeRepository.UpdatePass(id, employeeParam);
+        }
+
+        public bool UpdateQuestion(int? id, EmployeeParam employeeParam)
+        {
+            return _employeeRepository.UpdateQuestion(id, employeeParam);
         }
     }
 }

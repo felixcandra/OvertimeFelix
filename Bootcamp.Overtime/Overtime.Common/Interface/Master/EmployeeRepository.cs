@@ -131,5 +131,34 @@ namespace Overtime.Common.Interface.Master
             }
             return status;
         }
+
+        public bool UpdateQuestion(int? id, EmployeeParam employeeParam)
+        {
+            var result = 0;
+            Employees employee = Get(id);
+            employee.question = employeeParam.question;
+            employee.answer = employeeParam.answer;
+            result = _context.SaveChanges();
+            if (result > 0)
+            {
+                status = true;
+            }
+            return status;
+        }
+
+        public bool UpdateBootcamp(int? id, EmployeeParam employeeParam)
+        {
+            var result = 0;
+            Employees employee = Get(id);
+            employee.password = employeeParam.password;
+            employee.question = employeeParam.question;
+            employee.answer = employeeParam.answer;
+            result = _context.SaveChanges();
+            if (result > 0)
+            {
+                status = true;
+            }
+            return status;
+        }
     }
 }

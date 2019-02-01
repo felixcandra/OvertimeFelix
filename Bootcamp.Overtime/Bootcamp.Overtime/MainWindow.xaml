@@ -105,5 +105,7 @@
                 </Grid>
             </TabItem>
         </TabControl>
+        <Button x:Name="LogoutButton" Content="Log Out" HorizontalAlignment="Left" Margin="317,10,0,0" VerticalAlignment="Top" Width="75" Click="LogoutButton_Click" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Button x:Name="ChangeButton" Content="Change Password" HorizontalAlignment="Left" Margin="164,10,0,0" VerticalAlignment="Top" Width="143" Click="ChangeButton_Click" Grid.Column="1"/>
     </Grid>
 </Controls:MetroWindow>

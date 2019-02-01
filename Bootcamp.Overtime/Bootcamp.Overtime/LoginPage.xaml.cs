@@ -46,26 +46,42 @@ namespace WPF.Overtime
             }
             else
             {
+
                 Settings.Default.Id = login.Id;
                 Settings.Default.Position = login.Position.name;
                 Settings.Default.Username = UsernameBox.Text;
                 Settings.Default.Password = PasswordBox.Password;
+                
                 Settings.Default.Save();
                 overtimeParam.employee_id = login.Id;
                 overtimeParam.check_in = DateTimeOffset.Now.LocalDateTime;
                 overtimeParam.createDate = DateTime.Now.ToLocalTime();
                 _overtimeService.Insert(overtimeParam);
-                if (Settings.Default.Position == "Admin")
+
+                if (login.password == "bootcamp" && login.question == "")
                 {
-                    MainWindow main = new MainWindow();
-                    main.Show();
+                    PasswordDefault pass = new PasswordDefault();
+                    pass.Show();
                     this.Close();
+                }
+                else if (login.password != "bootcamp" && login.question == "")
+                {
+
                 }
                 else
                 {
-                    EmployeePage emp = new EmployeePage();
-                    emp.Show();
-                    this.Close();
+                    if (Settings.Default.Position == "Admin")
+                    {
+                        MainWindow main = new MainWindow();
+                        main.Show();
+                        this.Close();
+                    }
+                    else
+                    {
+                        EmployeePage emp = new EmployeePage();
+                        emp.Show();
+                        this.Close();
+                    }
                 }
                 
 

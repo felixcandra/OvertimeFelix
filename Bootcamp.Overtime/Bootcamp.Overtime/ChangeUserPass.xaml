@@ -6,12 +6,52 @@
         xmlns:local="clr-namespace:WPF.Overtime"
          xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         mc:Ignorable="d"
-        Title="Change Password" Height="195.531" Width="268.978"
+        Title="Change Password" Height="526.531" Width="453.978"
         Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
-        <Button x:Name="SaveButton" Content="Save" HorizontalAlignment="Left" Margin="28,98,0,0" VerticalAlignment="Top" Width="206" Height="36" Click="SaveButton_Click"/>
-        <PasswordBox x:Name="PassTextBox" HorizontalAlignment="Left" Margin="28,21,0,0" VerticalAlignment="Top" Width="206"/>
-        <PasswordBox x:Name="PassCConfirm" HorizontalAlignment="Left" Margin="28,52,0,0" VerticalAlignment="Top" Width="206"/>
+        <Rectangle Fill="#FFFFFF" HorizontalAlignment="Left" Height="271" Margin="10,217,0,0" Stroke="Black" VerticalAlignment="Top" Width="428"/>
+
+        <Rectangle Fill="#FFFFFF" HorizontalAlignment="Left" Height="146" Margin="10,36,0,0" Stroke="Black" VerticalAlignment="Top" Width="428"/>
+
+        <Button x:Name="SaveButton" Content="Save" HorizontalAlignment="Left" Margin="141,130,0,0" VerticalAlignment="Top" Width="288" Height="36" Click="SaveButton_Click"/>
+        <PasswordBox x:Name="PassTextBox" PreviewTextInput="PassTextBox_PreviewTextInput" HorizontalAlignment="Left" Margin="141,53,0,0" VerticalAlignment="Top" Width="288"/>
+        <PasswordBox x:Name="PassConfirm" PreviewTextInput="PassConfirm_PreviewTextInput" HorizontalAlignment="Left" Margin="141,84,0,0" VerticalAlignment="Top" Width="288"/>
+        <ComboBox x:Name="NewCombobox" HorizontalAlignment="Left" Margin="20,359,0,0" VerticalAlignment="Top" Width="409">
+            <ComboBoxItem Content="What is the name of your first pet?" HorizontalAlignment="Left" Width="409" Margin="0,0,-2,0"/>
+            <ComboBoxItem Content="What is the name of your favorite book?" HorizontalAlignment="Left" Width="409" Margin="0,0,-2,0"/>
+            <ComboBoxItem Content="What is the last name of your favorite musician?" HorizontalAlignment="Left" Width="405"/>
+            <ComboBoxItem Content="Who is your all-time favorite movie character?" HorizontalAlignment="Left" Width="408" Margin="0,0,-1,0"/>
+            <ComboBoxItem Content="What is the name of your favorite sports team?" HorizontalAlignment="Left" Width="406"/>
+            <ComboBoxItem Content="What was the last name of your favorite teacher?" HorizontalAlignment="Left" Width="407"/>
+            <ComboBoxItem Content="What was the last name of your best childhood friend?" HorizontalAlignment="Left" Width="406"/>
+            <ComboBoxItem Content="What was your favorite food as a child?" HorizontalAlignment="Left" Width="405"/>
+            <ComboBoxItem Content="Who was your childhood hero?" HorizontalAlignment="Left" Width="406"/>
+            <ComboBoxItem Content="Where was your best family vacation as a kid?" HorizontalAlignment="Left" Width="406"/>
+            <ComboBoxItem Content="When you were young,what did you want to be when you grew up?" HorizontalAlignment="Left" Width="407"/>
+        </ComboBox>
+        <ComboBox x:Name="OldCombobox" HorizontalAlignment="Left" Margin="20,262,0,0" VerticalAlignment="Top" Width="409">
+            <ComboBoxItem Content="What is the name of your first pet?" HorizontalAlignment="Left" Width="409" Margin="0,0,-2,0"/>
+            <ComboBoxItem Content="What is the name of your favorite book?" HorizontalAlignment="Left" Width="409" Margin="0,0,-2,0"/>
+            <ComboBoxItem Content="What is the last name of your favorite musician?" HorizontalAlignment="Left" Width="407"/>
+            <ComboBoxItem Content="Who is your all-time favorite movie character?" HorizontalAlignment="Left" Width="408" Margin="0,0,-1,0"/>
+            <ComboBoxItem Content="What is the name of your favorite sports team?" HorizontalAlignment="Left" Width="407"/>
+            <ComboBoxItem Content="What was the last name of your favorite teacher?" HorizontalAlignment="Left" Width="406"/>
+            <ComboBoxItem Content="What was the last name of your best childhood friend?" HorizontalAlignment="Left" Width="408" Margin="0,0,-1,0"/>
+            <ComboBoxItem Content="What was your favorite food as a child?" HorizontalAlignment="Left" Width="406"/>
+            <ComboBoxItem Content="Who was your childhood hero?" HorizontalAlignment="Left" Width="406"/>
+            <ComboBoxItem Content="Where was your best family vacation as a kid?" HorizontalAlignment="Left" Width="408" Margin="0,0,-1,0"/>
+            <ComboBoxItem Content="When you were young,what did you want to be when you grew up?" HorizontalAlignment="Left" Width="375" Margin="0,0,-24,0"/>
+        </ComboBox>
+        <TextBox x:Name="OldTextbox" HorizontalAlignment="Left" Height="23" Margin="20,293,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="409"/>
+        <TextBox x:Name="NewTextbox" HorizontalAlignment="Left" Height="23" Margin="20,390,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="409"/>
+        <Button x:Name="SaveQuestion" Content="Save" HorizontalAlignment="Left" Margin="20,438,0,0" VerticalAlignment="Top" Width="409" Height="36" Click="SaveQuestion_Click"/>
+        <Label x:Name="label" Content="Change Password" HorizontalAlignment="Left" Margin="172,5,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy" Content="Change Secret Question" HorizontalAlignment="Left" Margin="160,187,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy1" Content="Old Secret Question" HorizontalAlignment="Left" Margin="172,231,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.052,0.346"/>
+        <Label x:Name="label_Copy2" Content="New Secret Question" HorizontalAlignment="Left" Margin="167,328,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.052,0.346"/>
+        <Label x:Name="label_Copy3" Content="Old Password" HorizontalAlignment="Left" Margin="20,53,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy4" Content="New Password" HorizontalAlignment="Left" Margin="20,84,0,0" VerticalAlignment="Top"/>
+
 
 
     </Grid>

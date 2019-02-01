@@ -95,6 +95,9 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="PasswordDefault.xaml.cs">
+      <DependentUpon>PasswordDefault.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PopUpEmployee\PopUpInsertEmployee.xaml.cs">
       <DependentUpon>PopUpInsertEmployee.xaml</DependentUpon>
     </Compile>
@@ -148,6 +151,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PasswordDefault.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

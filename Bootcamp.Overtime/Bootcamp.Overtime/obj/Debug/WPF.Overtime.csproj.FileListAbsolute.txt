@@ -137,3 +137,5 @@ E:\Git\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\WPF.Overtime.
 E:\Git\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\WPF.Overtime.csproj.GenerateResource.Cache
 E:\Git\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\WPF.Overtime.exe
 E:\Git\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\WPF.Overtime.pdb
+E:\Git\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\PasswordDefault.g.cs
+E:\Git\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\PasswordDefault.baml

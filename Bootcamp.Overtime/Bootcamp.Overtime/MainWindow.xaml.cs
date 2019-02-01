@@ -20,6 +20,8 @@ using Overtime.DataAccess.Param;
 using Overtime.BusinessLogic.Master;
 using Overtime.BussinessLogic.Services;
 using Overtime.BussinessLogic.Services.Master;
+using WPF.Overtime.Properties;
+using WPF.Overtime;
 
 namespace Bootcamp.Overtime
 {
@@ -185,6 +187,26 @@ namespace Bootcamp.Overtime
         private void dataGrid1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+        private void ChangeButton_Click(object sender, RoutedEventArgs e)
+        {
+            ChangeUserPass change = new ChangeUserPass();
+            change.Show();
+        }
+
+        private void LogoutButton_Click(object sender, RoutedEventArgs e)
+        {
+            OvertimeParam overtimeParam = new OvertimeParam();
+            MessageBoxResult result = MessageBox.Show("Yakin ingin Log out?", "Peringatan", MessageBoxButton.YesNo);
+            if (result == MessageBoxResult.Yes)
+            {
+                overtimeParam.check_out = DateTimeOffset.Now.LocalDateTime;
+                _overtimeService.Update(Settings.Default.Id, overtimeParam);
+                LoginPage login = new LoginPage();
+                login.Show();
+                this.Close();
+            }
         }
     }
 }

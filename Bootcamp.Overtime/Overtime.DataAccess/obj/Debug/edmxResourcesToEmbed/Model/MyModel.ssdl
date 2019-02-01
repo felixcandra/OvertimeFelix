@@ -21,6 +21,8 @@
     <Property Name="createDate" Type="datetimeoffset" Precision="7" />
     <Property Name="updateDate" Type="datetimeoffset" Precision="7" />
     <Property Name="deleteDate" Type="datetimeoffset" Precision="7" />
+    <Property Name="question" Type="varchar" MaxLength="50" />
+    <Property Name="answer" Type="varchar" MaxLength="20" />
   </EntityType>
   <EntityType Name="Overtimes">
     <Key>

@@ -13,6 +13,8 @@ namespace Overtime.Common.Interface.Master
         bool Insert(EmployeeParam employeeParam);
         bool Update(int? id, EmployeeParam employeeParam);
         bool UpdatePass(int? id, EmployeeParam employeeParam);
+        bool UpdateBootcamp(int? id, EmployeeParam employeeParam);
+        bool UpdateQuestion(int? id, EmployeeParam employeeParam);
         bool Delete(int? id);
         List<Employees> Get();
         Employees Get(int? id);
