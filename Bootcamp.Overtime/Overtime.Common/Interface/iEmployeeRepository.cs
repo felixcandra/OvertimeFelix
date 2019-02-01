@@ -13,12 +13,11 @@ namespace Overtime.Common.Interface.Master
         bool Insert(EmployeeParam employeeParam);
         bool Update(int? id, EmployeeParam employeeParam);
         bool UpdatePass(int? id, EmployeeParam employeeParam);
+        bool UpdateQuestionAnswer(int? id, EmployeeParam employeeParam);
         bool Delete(int? id);
         List<Employees> Get();
         Employees Get(int? id);
         List<Employees> Search(string search, string cmb);
         Employees Login(string username, string password);
-        Employees getUser(string username, string question, string answer);
-        bool ResetPass(string username, string question, string answer, EmployeeParam employeeParam);
     }
 }

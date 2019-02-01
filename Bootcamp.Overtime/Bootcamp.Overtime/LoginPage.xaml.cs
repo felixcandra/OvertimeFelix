@@ -20,7 +20,6 @@ using System.Windows.Shapes;
 using WPF.Overtime.Properties;
 using MahApps.Metro.Controls;
 using Bootcamp.Overtime;
-using WPF.Overtime.ForgetPassword;
 
 namespace WPF.Overtime
 {
@@ -88,14 +87,6 @@ namespace WPF.Overtime
 
         private void UsernameBox_KeyUp(object sender, KeyEventArgs e)
         {
-        }
-
-        private void ForgetPassButton_Click(object sender, RoutedEventArgs e)
-        {
-            PopUpForgetPass forgetpass = new PopUpForgetPass();
-            forgetpass.Show();
-            this.Hide();
-            
         }
     }
 }

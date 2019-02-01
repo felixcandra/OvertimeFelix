@@ -95,6 +95,8 @@ namespace Overtime.Common.Interface.Master
             Employees employee = Get(id);
             employee.first_name = employeeParam.first_name;
             employee.last_name = employeeParam.last_name;
+            employee.username = employeeParam.username;
+            employee.password = employeeParam.password;
             employee.address = employeeParam.address;
             employee.sub_district = employeeParam.sub_district;
             employee.district = employeeParam.district;
@@ -104,7 +106,7 @@ namespace Overtime.Common.Interface.Master
             employee.phone = employeeParam.phone;
             employee.position_id = employeeParam.position_id;
             employee.updateDate = DateTimeOffset.Now.LocalDateTime;
-            result = _context.SaveChanges();
+            _context.SaveChanges();
             if (result > 0)
             {
                 status = true;
@@ -115,11 +117,6 @@ namespace Overtime.Common.Interface.Master
         public Employees Login(string username, string password)
         {
             return _context.Employees.FirstOrDefault(x => x.username == username && x.password == password);
-        }
-
-        public Employees getUser(string username, string question, string answer)
-        {
-            return _context.Employees.FirstOrDefault(x => x.username == username && x.question == question && x.answer == answer);
         }
 
         public bool UpdatePass(int? id, EmployeeParam employeeParam)
@@ -134,12 +131,12 @@ namespace Overtime.Common.Interface.Master
             }
             return status;
         }
-
-        public bool ResetPass(string username, string question, string answer, EmployeeParam employeeParam)
+        public bool UpdateQuestionAnswer(int? id, EmployeeParam employeeParam)
         {
             var result = 0;
-            Employees employee = getUser(username, question, answer);
-            employee.password = employeeParam.password;
+            Employees employee = Get(id);
+            employee.question = employeeParam.question;
+            employee.answer = employeeParam.answer;
             result = _context.SaveChanges();
             if (result > 0)
             {
@@ -147,5 +144,6 @@ namespace Overtime.Common.Interface.Master
             }
             return status;
         }
+       
     }
 }

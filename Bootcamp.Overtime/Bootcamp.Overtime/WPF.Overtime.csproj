@@ -88,12 +88,6 @@
     <Compile Include="EmployeePage.xaml.cs">
       <DependentUpon>EmployeePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ForgetPassword\PopUpForgetPass.xaml.cs">
-      <DependentUpon>PopUpForgetPass.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ForgetPassword\PopUpResetPassword.xaml.cs">
-      <DependentUpon>PopUpResetPassword.xaml</DependentUpon>
-    </Compile>
     <Compile Include="LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
@@ -106,6 +100,12 @@
     </Compile>
     <Compile Include="PopUpEmployee\PopUpUpdateEmployee.xaml.cs">
       <DependentUpon>PopUpUpdateEmployee.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PopUpPassword\PopUpInsertQuestionAnswer.xaml.cs">
+      <DependentUpon>PopUpInsertQuestionAnswer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PopUpPassword\PopUpResetPassword.xaml.cs">
+      <DependentUpon>PopUpResetPassword.xaml</DependentUpon>
     </Compile>
     <Compile Include="PopUpPosition\PopUpInsertPosition.xaml.cs">
       <DependentUpon>PopUpInsertPosition.xaml</DependentUpon>
@@ -149,14 +149,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="ForgetPassword\PopUpForgetPass.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ForgetPassword\PopUpResetPassword.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="LoginPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -172,6 +164,14 @@
     <Page Include="PopUpEmployee\PopUpUpdateEmployee.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PopUpPassword\PopUpInsertQuestionAnswer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PopUpPassword\PopUpResetPassword.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PopUpPosition\PopUpInsertPosition.xaml">
       <SubType>Designer</SubType>

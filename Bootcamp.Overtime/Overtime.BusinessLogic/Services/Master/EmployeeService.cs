@@ -51,14 +51,10 @@ namespace Overtime.BusinessLogic.Master
         {
             return _employeeRepository.UpdatePass(id, employeeParam);
         }
-        public Employees getUser(string username, string question, string answer)
-        {
-            return _employeeRepository.getUser(username, question, answer);
-        }
 
-        public bool ResetPass(string username, string question, string answer, EmployeeParam employeeParam)
+        public bool UpdateQuestionAnswer(int? id, EmployeeParam employeeParam)
         {
-            return _employeeRepository.ResetPass(username, question, answer, employeeParam);
+            return _employeeRepository.UpdateQuestionAnswer(id, employeeParam);
         }
     }
 }

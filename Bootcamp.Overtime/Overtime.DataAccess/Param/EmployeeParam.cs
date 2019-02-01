@@ -21,5 +21,7 @@ namespace Overtime.DataAccess.Param
         public int salary { get; set; }
         public string phone { get; set; }
         public int? position_id { get; set; }
+        public string question { get; set; }
+        public string answer { get; set; }
     }
 }
