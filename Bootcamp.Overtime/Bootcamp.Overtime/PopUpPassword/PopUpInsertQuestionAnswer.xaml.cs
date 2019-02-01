@@ -64,7 +64,11 @@ namespace WPF.Overtime.PopUpPassword
                 employeeParam.question = question;
                 _employeeService.UpdateQuestionAnswer(id, employeeParam);
                 MessageBox.Show("Data Saved");
-              if (Settings.Default.Position == "Admin")
+                Settings.Default.Question = comboBoxQuestion.Text;
+                Settings.Default.Answer = textBoxAnswer.Text;
+                Settings.Default.Save();
+
+                if (Settings.Default.Position == "Admin")
                 {
                     MainWindow main = new MainWindow();
                     main.Show();

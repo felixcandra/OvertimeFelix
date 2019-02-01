@@ -184,3 +184,6 @@ D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\WPF.Overti
 D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\WPF.Overtime.csproj.GenerateResource.Cache
 D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\PopUpPassword\PopUpInsertQuestionAnswer.g.cs
 D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\PopUpPassword\PopUpResetPassword.g.cs
+D:\New folder (2)\New folder\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\bin\Debug\WPF.Overtime.exe.config
+D:\New folder (2)\New folder\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\WPF.Overtime.exe
+D:\New folder (2)\New folder\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\WPF.Overtime.pdb

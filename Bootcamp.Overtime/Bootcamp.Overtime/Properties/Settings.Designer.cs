@@ -70,5 +70,29 @@ namespace WPF.Overtime.Properties {
                 this["Password"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Question {
+            get {
+                return ((string)(this["Question"]));
+            }
+            set {
+                this["Question"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Answer {
+            get {
+                return ((string)(this["Answer"]));
+            }
+            set {
+                this["Answer"] = value;
+            }
+        }
     }
 }
