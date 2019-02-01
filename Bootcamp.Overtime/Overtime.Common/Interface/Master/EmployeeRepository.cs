@@ -95,8 +95,6 @@ namespace Overtime.Common.Interface.Master
             Employees employee = Get(id);
             employee.first_name = employeeParam.first_name;
             employee.last_name = employeeParam.last_name;
-            employee.username = employeeParam.username;
-            employee.password = employeeParam.password;
             employee.address = employeeParam.address;
             employee.sub_district = employeeParam.sub_district;
             employee.district = employeeParam.district;
@@ -106,7 +104,7 @@ namespace Overtime.Common.Interface.Master
             employee.phone = employeeParam.phone;
             employee.position_id = employeeParam.position_id;
             employee.updateDate = DateTimeOffset.Now.LocalDateTime;
-            _context.SaveChanges();
+            _context.SaveChanges(); //kalau ada error box validation something itu berarti ada kolom yang akan diisi tapi tidak punya nilai / seharusnya tidak diupdate (username password)
             if (result > 0)
             {
                 status = true;
@@ -167,6 +165,24 @@ namespace Overtime.Common.Interface.Master
         public bool UpdateQuestion(int? id, EmployeeParam employeeParam)
         {
             throw new NotImplementedException();
+        }
+
+        public Employees getUser(string username, string question, string answer)
+        {
+            return _context.Employees.FirstOrDefault(x => x.username == username && x.question == question && x.answer == answer);
+        }
+
+        public bool ResetPass(string username, string question, string answer, EmployeeParam employeeParam)
+        {
+            var result = 0;
+            Employees employee = getUser(username, question, answer);
+            employee.password = employeeParam.password;
+            result = _context.SaveChanges();
+            if (result > 0)
+            {
+                status = true;
+            }
+            return status;
         }
     }
 }
