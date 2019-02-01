@@ -54,3 +54,17 @@ E:\Git\OvertimeFelix\Bootcamp.Overtime\Overtime.BusinessLogic\bin\Debug\EntityFr
 E:\Git\OvertimeFelix\Bootcamp.Overtime\Overtime.BusinessLogic\obj\Debug\Overtime.BusinessLogic.csprojResolveAssemblyReference.cache
 E:\Git\OvertimeFelix\Bootcamp.Overtime\Overtime.BusinessLogic\obj\Debug\Overtime.BusinessLogic.exe
 E:\Git\OvertimeFelix\Bootcamp.Overtime\Overtime.BusinessLogic\obj\Debug\Overtime.BusinessLogic.pdb
+D:\OvertimeFelix-master\Bootcamp.Overtime\Overtime.BusinessLogic\bin\Debug\Overtime.BusinessLogic.exe.config
+D:\OvertimeFelix-master\Bootcamp.Overtime\Overtime.BusinessLogic\bin\Debug\Overtime.BusinessLogic.exe
+D:\OvertimeFelix-master\Bootcamp.Overtime\Overtime.BusinessLogic\bin\Debug\Overtime.BusinessLogic.pdb
+D:\OvertimeFelix-master\Bootcamp.Overtime\Overtime.BusinessLogic\bin\Debug\EntityFramework.dll
+D:\OvertimeFelix-master\Bootcamp.Overtime\Overtime.BusinessLogic\bin\Debug\EntityFramework.SqlServer.dll
+D:\OvertimeFelix-master\Bootcamp.Overtime\Overtime.BusinessLogic\bin\Debug\Overtime.Common.exe
+D:\OvertimeFelix-master\Bootcamp.Overtime\Overtime.BusinessLogic\bin\Debug\Overtime.DataAccess.exe
+D:\OvertimeFelix-master\Bootcamp.Overtime\Overtime.BusinessLogic\bin\Debug\Overtime.Common.pdb
+D:\OvertimeFelix-master\Bootcamp.Overtime\Overtime.BusinessLogic\bin\Debug\Overtime.DataAccess.pdb
+D:\OvertimeFelix-master\Bootcamp.Overtime\Overtime.BusinessLogic\bin\Debug\EntityFramework.xml
+D:\OvertimeFelix-master\Bootcamp.Overtime\Overtime.BusinessLogic\bin\Debug\EntityFramework.SqlServer.xml
+D:\OvertimeFelix-master\Bootcamp.Overtime\Overtime.BusinessLogic\obj\Debug\Overtime.BusinessLogic.csprojResolveAssemblyReference.cache
+D:\OvertimeFelix-master\Bootcamp.Overtime\Overtime.BusinessLogic\obj\Debug\Overtime.BusinessLogic.exe
+D:\OvertimeFelix-master\Bootcamp.Overtime\Overtime.BusinessLogic\obj\Debug\Overtime.BusinessLogic.pdb

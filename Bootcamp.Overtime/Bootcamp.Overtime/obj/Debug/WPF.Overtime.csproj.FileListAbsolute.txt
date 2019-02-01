@@ -137,5 +137,58 @@ E:\Git\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\WPF.Overtime.
 E:\Git\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\WPF.Overtime.csproj.GenerateResource.Cache
 E:\Git\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\WPF.Overtime.exe
 E:\Git\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\WPF.Overtime.pdb
+<<<<<<< HEAD
 E:\Git\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\PasswordDefault.g.cs
 E:\Git\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\PasswordDefault.baml
+=======
+D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\bin\Debug\WPF.Overtime.exe.config
+D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\WPF.Overtime.exe
+D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\WPF.Overtime.pdb
+D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\bin\Debug\WPF.Overtime.exe
+D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\bin\Debug\WPF.Overtime.pdb
+D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\bin\Debug\ControlzEx.dll
+D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\bin\Debug\EntityFramework.dll
+D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\bin\Debug\EntityFramework.SqlServer.dll
+D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\bin\Debug\MahApps.Metro.dll
+D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\bin\Debug\Overtime.BusinessLogic.exe
+D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\bin\Debug\Overtime.Common.exe
+D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\bin\Debug\Overtime.DataAccess.exe
+D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\bin\Debug\System.Windows.Interactivity.dll
+D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\bin\Debug\Overtime.BusinessLogic.pdb
+D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\bin\Debug\Overtime.Common.pdb
+D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\bin\Debug\Overtime.DataAccess.pdb
+D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\bin\Debug\ControlzEx.pdb
+D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\bin\Debug\EntityFramework.xml
+D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\bin\Debug\EntityFramework.SqlServer.xml
+D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\bin\Debug\MahApps.Metro.pdb
+D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\bin\Debug\MahApps.Metro.xml
+D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\WPF.Overtime.csprojResolveAssemblyReference.cache
+D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\ChangeUserPass.g.cs
+D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\EmployeePage.g.cs
+D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\LoginPage.g.cs
+D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\MainWindow.g.cs
+D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\PopUpEmployee\PopUpInsertEmployee.g.cs
+D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\PopUpEmployee\PopUpUpdateEmployee.g.cs
+D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\PopUpPosition\PopUpInsertPosition.g.cs
+D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\PopUpPosition\PopUpUpdatePosition.g.cs
+D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\App.g.cs
+D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\WPF.Overtime_MarkupCompile.cache
+D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\WPF.Overtime_MarkupCompile.lref
+D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\App.baml
+D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\ChangeUserPass.baml
+D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\EmployeePage.baml
+D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\LoginPage.baml
+D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\MainWindow.baml
+D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\PopUpEmployee\PopUpInsertEmployee.baml
+D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\PopUpEmployee\PopUpUpdateEmployee.baml
+D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\PopUpPosition\PopUpInsertPosition.baml
+D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\PopUpPosition\PopUpUpdatePosition.baml
+D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\WPF.Overtime.g.resources
+D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\WPF.Overtime.Properties.Resources.resources
+D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\WPF.Overtime.csproj.GenerateResource.Cache
+D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\PopUpPassword\PopUpInsertQuestionAnswer.g.cs
+D:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\PopUpPassword\PopUpResetPassword.g.cs
+D:\New folder (2)\New folder\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\bin\Debug\WPF.Overtime.exe.config
+D:\New folder (2)\New folder\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\WPF.Overtime.exe
+D:\New folder (2)\New folder\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\WPF.Overtime.pdb
+>>>>>>> ca724af08c94c12a47b98e0b48e52a6a4e2381b5

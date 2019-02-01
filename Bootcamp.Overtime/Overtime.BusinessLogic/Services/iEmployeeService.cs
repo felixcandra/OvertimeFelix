@@ -18,7 +18,11 @@ namespace Overtime.BusinessLogic
         Employees Get(int? id);
         List<Employees> Search(string search, string cmb);
         Employees Login(string username, string password);
+<<<<<<< HEAD
         bool UpdateQuestion(int? id, EmployeeParam employeeParam);
         bool UpdateBootcamp(int? id, EmployeeParam employeeParam);
+=======
+        bool UpdateQuestionAnswer(int? id, EmployeeParam employeeParam);
+>>>>>>> ca724af08c94c12a47b98e0b48e52a6a4e2381b5
     }
 }

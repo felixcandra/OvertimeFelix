@@ -1,4 +1,5 @@
 ﻿
+<<<<<<< HEAD
 FE:\Git\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\App.xaml;;
 FE:\Git\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\ChangeUserPass.xaml;;
 FE:\Git\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\EmployeePage.xaml;;
@@ -9,4 +10,17 @@ FE:\Git\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\PopUpEmployee\PopUpIns
 FE:\Git\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\PopUpEmployee\PopUpUpdateEmployee.xaml;;
 FE:\Git\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\PopUpPosition\PopUpInsertPosition.xaml;;
 FE:\Git\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\PopUpPosition\PopUpUpdatePosition.xaml;;
+=======
+FD:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\App.xaml;;
+FD:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\ChangeUserPass.xaml;;
+FD:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\EmployeePage.xaml;;
+FD:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\LoginPage.xaml;;
+FD:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\MainWindow.xaml;;
+FD:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\PopUpEmployee\PopUpInsertEmployee.xaml;;
+FD:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\PopUpEmployee\PopUpUpdateEmployee.xaml;;
+FD:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\PopUpPosition\PopUpInsertPosition.xaml;;
+FD:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\PopUpPosition\PopUpUpdatePosition.xaml;;
+FD:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\PopUpPassword\PopUpInsertQuestionAnswer.xaml;;
+FD:\OvertimeFelix-master\Bootcamp.Overtime\Bootcamp.Overtime\PopUpPassword\PopUpResetPassword.xaml;;
+>>>>>>> ca724af08c94c12a47b98e0b48e52a6a4e2381b5
 

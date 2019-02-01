@@ -28,3 +28,13 @@ E:\Git\OvertimeFelix\Bootcamp.Overtime\Overtime.DataAccess\bin\Debug\EntityFrame
 E:\Git\OvertimeFelix\Bootcamp.Overtime\Overtime.DataAccess\obj\Debug\Overtime.DataAccess.csprojResolveAssemblyReference.cache
 E:\Git\OvertimeFelix\Bootcamp.Overtime\Overtime.DataAccess\obj\Debug\Overtime.DataAccess.exe
 E:\Git\OvertimeFelix\Bootcamp.Overtime\Overtime.DataAccess\obj\Debug\Overtime.DataAccess.pdb
+D:\OvertimeFelix-master\Bootcamp.Overtime\Overtime.DataAccess\bin\Debug\Overtime.DataAccess.exe.config
+D:\OvertimeFelix-master\Bootcamp.Overtime\Overtime.DataAccess\bin\Debug\Overtime.DataAccess.exe
+D:\OvertimeFelix-master\Bootcamp.Overtime\Overtime.DataAccess\bin\Debug\Overtime.DataAccess.pdb
+D:\OvertimeFelix-master\Bootcamp.Overtime\Overtime.DataAccess\bin\Debug\EntityFramework.dll
+D:\OvertimeFelix-master\Bootcamp.Overtime\Overtime.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+D:\OvertimeFelix-master\Bootcamp.Overtime\Overtime.DataAccess\bin\Debug\EntityFramework.xml
+D:\OvertimeFelix-master\Bootcamp.Overtime\Overtime.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+D:\OvertimeFelix-master\Bootcamp.Overtime\Overtime.DataAccess\obj\Debug\Overtime.DataAccess.csprojResolveAssemblyReference.cache
+D:\OvertimeFelix-master\Bootcamp.Overtime\Overtime.DataAccess\obj\Debug\Overtime.DataAccess.exe
+D:\OvertimeFelix-master\Bootcamp.Overtime\Overtime.DataAccess\obj\Debug\Overtime.DataAccess.pdb
