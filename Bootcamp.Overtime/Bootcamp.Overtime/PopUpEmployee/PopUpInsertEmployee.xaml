@@ -11,9 +11,9 @@
         >
     <Grid Margin="0,0,0,2">
         <Label x:Name="Username" Content="Username" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="26,24,0,0"/>
-        <TextBox x:Name="UsernameTextbox" HorizontalAlignment="Left" Height="23" Margin="102,24,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="145"/>
+        <TextBox x:Name="UsernameTextbox" MaxLength="15" HorizontalAlignment="Left" Height="23" Margin="102,24,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="145"/>
         <Label x:Name="Password" Content="Password" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="267,24,0,0"/>
-        <TextBox x:Name="PasswordTextbox" HorizontalAlignment="Left" Height="23" Margin="338,24,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="145"/>
+        <TextBox x:Name="PasswordTextbox" MaxLength="16" HorizontalAlignment="Left" Height="23" Margin="338,24,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="145"/>
         <Label x:Name="FirstName" Content="First Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="26,55,0,0"/>
         <TextBox x:Name="FirstNameTextbox" PreviewTextInput="FirstNameTextbox_PreviewTextInput" HorizontalAlignment="Left" Height="23" Margin="102,55,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="145"/>
         <Label x:Name="LastName" Content="Last Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="267,55,0,0"/>
