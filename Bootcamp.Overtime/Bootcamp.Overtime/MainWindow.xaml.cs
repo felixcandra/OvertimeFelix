@@ -18,6 +18,8 @@ using MahApps.Metro.Controls;
 using Overtime.BusinessLogic;
 using Overtime.DataAccess.Param;
 using Overtime.BusinessLogic.Master;
+using Overtime.BussinessLogic.Services;
+using Overtime.BussinessLogic.Services.Master;
 
 namespace Bootcamp.Overtime
 {
@@ -30,6 +32,7 @@ namespace Bootcamp.Overtime
         MyContex _context = new MyContex();
         iPositionService _positionService = new PositionService();
         iEmployeeService _employeeService = new EmployeeService();
+        IOvertimeService _overtimeService = new OvertimeService();
         EmployeeParam employeeParam = new EmployeeParam();
         public MainWindow()
         {
@@ -41,6 +44,7 @@ namespace Bootcamp.Overtime
         {
             dataGrid1.ItemsSource = _positionService.Get();
             EmployeeGrid.ItemsSource = _employeeService.Get();
+            OvertimeEmployeeGrid.ItemsSource = _overtimeService.Get();
         }
 
         private void buttonInsertPosition_Click(object sender, RoutedEventArgs e)
@@ -175,6 +179,12 @@ namespace Bootcamp.Overtime
         public void LoadGrid()
         {
             dataGrid1.ItemsSource = _positionService.Get();
+
+        }
+
+        private void dataGrid1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

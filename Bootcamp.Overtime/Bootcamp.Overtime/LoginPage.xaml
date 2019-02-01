@@ -6,7 +6,7 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:WPF.Overtime"
         mc:Ignorable="d"
-        Title="Login" Height="283" Width="324" HorizontalAlignment="Center" VerticalAlignment="Center">
+        Title="Login" Height="283" Width="324" HorizontalAlignment="Center" VerticalAlignment="Center" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
         <TextBox x:Name="UsernameBox" PreviewTextInput="UsernameBox_PreviewTextInput" Height="23" Margin="54,66,0,0" TextWrapping="Wrap" Text="" Width="211" VerticalAlignment="Top" HorizontalAlignment="Left" KeyUp="UsernameBox_KeyUp"/>
         <Button x:Name="LoginButton" Content="Login" Margin="54,170,0,0" Width="211" Height="38" Click="LoginButton_Click" HorizontalAlignment="Left" VerticalAlignment="Top"/>

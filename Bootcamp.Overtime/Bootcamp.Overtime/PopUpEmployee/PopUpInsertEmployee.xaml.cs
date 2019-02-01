@@ -16,13 +16,14 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MahApps.Metro.Controls;
 
 namespace Bootcamp.Overtime
 {
     /// <summary>
     /// Interaction logic for PopUpInsertEmployee.xaml
     /// </summary>
-    public partial class PopUpInsertEmployee : Window
+    public partial class PopUpInsertEmployee : MetroWindow
     {
         iEmployeeService _employeeService = new EmployeeService();
         iPositionService _positionService = new PositionService();

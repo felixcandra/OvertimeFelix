@@ -14,11 +14,12 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MahApps.Metro.Controls;
 
 namespace Bootcamp.Overtime
 {
     
-    public partial class PopUpInsertPosition : Window
+    public partial class PopUpInsertPosition : MetroWindow
     {
         iPositionService _positionService = new PositionService();
         MyContex _context = new MyContex();

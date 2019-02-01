@@ -53,8 +53,13 @@ namespace Overtime.Common.Interfaces.Master
                 int selisih = overtimeParam.check_out.Hour - 17;
                 double overtime_salary;
 
-                if (selisih >= 3)
+                if (selisih >= 3 && selisih<=5)
                 {
+                    overtime_salary = (1 * 1.5 * (1.0 / 173.0) * Convert.ToDouble(overtimes.Employees.salary)) + ((selisih - 1) * 2 * (1.0 / 173.0) * Convert.ToDouble(overtimes.Employees.salary));
+                }
+                else if (selisih>5)
+                {
+                    selisih = 5;
                     overtime_salary = (1 * 1.5 * (1.0 / 173.0) * Convert.ToDouble(overtimes.Employees.salary)) + ((selisih - 1) * 2 * (1.0 / 173.0) * Convert.ToDouble(overtimes.Employees.salary));
                 }
                 else

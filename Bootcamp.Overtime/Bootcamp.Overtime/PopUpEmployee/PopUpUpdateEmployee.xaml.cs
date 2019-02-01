@@ -15,13 +15,14 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MahApps.Metro.Controls;
 
 namespace Bootcamp.Overtime
 {
     /// <summary>
     /// Interaction logic for PopUpUpdateEmployee.xaml
     /// </summary>
-    public partial class PopUpUpdateEmployee : Window
+    public partial class PopUpUpdateEmployee : MetroWindow
     {
         iEmployeeService _employeeService = new EmployeeService();
         iPositionService _positionService = new PositionService();
@@ -153,6 +154,11 @@ namespace Bootcamp.Overtime
         {
             System.Text.RegularExpressions.Regex regex = new System.Text.RegularExpressions.Regex("^[0-9]*$");
             e.Handled = !regex.IsMatch((sender as TextBox).Text.Insert((sender as TextBox).SelectionStart, e.Text));
+        }
+
+        private void PhoneTextbox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

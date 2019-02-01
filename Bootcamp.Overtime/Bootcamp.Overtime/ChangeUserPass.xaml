@@ -6,12 +6,12 @@
         xmlns:local="clr-namespace:WPF.Overtime"
          xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         mc:Ignorable="d"
-        Title="Change Password" Height="250.054" Width="300"
-        Loaded="Window_Loaded">
+        Title="Change Password" Height="195.531" Width="268.978"
+        Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
-        <Button x:Name="SaveButton" Content="Save" HorizontalAlignment="Left" Margin="41,120,0,0" VerticalAlignment="Top" Width="206" Height="36" Click="SaveButton_Click"/>
-        <PasswordBox x:Name="PassTextBox" HorizontalAlignment="Left" Margin="41,43,0,0" VerticalAlignment="Top" Width="206"/>
-        <PasswordBox x:Name="PassCConfirm" HorizontalAlignment="Left" Margin="41,74,0,0" VerticalAlignment="Top" Width="206"/>
+        <Button x:Name="SaveButton" Content="Save" HorizontalAlignment="Left" Margin="28,98,0,0" VerticalAlignment="Top" Width="206" Height="36" Click="SaveButton_Click"/>
+        <PasswordBox x:Name="PassTextBox" HorizontalAlignment="Left" Margin="28,21,0,0" VerticalAlignment="Top" Width="206"/>
+        <PasswordBox x:Name="PassCConfirm" HorizontalAlignment="Left" Margin="28,52,0,0" VerticalAlignment="Top" Width="206"/>
 
 
     </Grid>

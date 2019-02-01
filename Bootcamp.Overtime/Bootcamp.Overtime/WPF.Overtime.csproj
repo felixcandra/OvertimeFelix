@@ -101,17 +101,11 @@
     <Compile Include="PopUpEmployee\PopUpUpdateEmployee.xaml.cs">
       <DependentUpon>PopUpUpdateEmployee.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PopUpPosition\PopUpDeletePosition.xaml.cs">
-      <DependentUpon>PopUpDeletePosition.xaml</DependentUpon>
-    </Compile>
     <Compile Include="PopUpPosition\PopUpInsertPosition.xaml.cs">
       <DependentUpon>PopUpInsertPosition.xaml</DependentUpon>
     </Compile>
     <Compile Include="PopUpPosition\PopUpUpdatePosition.xaml.cs">
       <DependentUpon>PopUpUpdatePosition.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PositionPage.xaml.cs">
-      <DependentUpon>PositionPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -165,19 +159,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="PopUpPosition\PopUpDeletePosition.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="PopUpPosition\PopUpInsertPosition.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PopUpPosition\PopUpUpdatePosition.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="PositionPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

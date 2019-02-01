@@ -13,13 +13,14 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MahApps.Metro.Controls;
 
 namespace Bootcamp.Overtime
 {
     /// <summary>
     /// Interaction logic for PopUpUpdatePosition.xaml
     /// </summary>
-    public partial class PopUpUpdatePosition : Window
+    public partial class PopUpUpdatePosition : MetroWindow
     {
         PositionParam positionParam = new PositionParam();
         iPositionService _positionService = new PositionService();

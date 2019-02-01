@@ -1,34 +1,35 @@
-﻿<Window x:Class="Bootcamp.Overtime.PopUpUpdateEmployee"
+﻿<Controls:MetroWindow x:Class="Bootcamp.Overtime.PopUpUpdateEmployee"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:Bootcamp.Overtime"
         mc:Ignorable="d"
-        Title="PopUpUpdateEmployee" Height="306.133" Width="375.258"
+        Title="PopUpUpdateEmployee" Height="401.241" Width="521.113"
         Loaded="Window_Loaded">
     <Grid>
-        <Label x:Name="FirstName" Content="First Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="7,14,0,0"/>
-        <TextBox x:Name="FirstNameTextbox" PreviewTextInput="FirstNameTextbox_PreviewTextInput" HorizontalAlignment="Left" Height="23" Margin="78,17,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="85"/>
-        <Label x:Name="LastName" Content="Last Name&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="183,14,0,0"/>
-        <TextBox x:Name="LastNameTextbox" PreviewTextInput="LastNameTextbox_PreviewTextInput" HorizontalAlignment="Left" Height="23" Margin="261,17,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="85"/>
-        <Label x:Name="Address" Content="Address" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="7,53,0,0"/>
-        <TextBox x:Name="AddressTextbox" HorizontalAlignment="Left" Height="23" Margin="78,56,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="268"/>
-        <Label x:Name="SubDistrict" Content="Sub District" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="7,95,0,0"/>
-        <TextBox x:Name="SubDistrictTextbox" PreviewTextInput="SubDistrictTextbox_PreviewTextInput" HorizontalAlignment="Left" Height="23" Margin="78,98,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="85"/>
-        <Label x:Name="District" Content="District" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="183,95,0,0"/>
-        <TextBox x:Name="DistrictTextbox" PreviewTextInput="DistrictTextbox_PreviewTextInput" HorizontalAlignment="Left" Height="23" Margin="261,98,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="85"/>
-        <Label x:Name="Province" Content="Province" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="7,134,0,0"/>
-        <TextBox x:Name="ProvinceTextbox" PreviewTextInput="ProvinceTextbox_PreviewTextInput" HorizontalAlignment="Left" Height="23" Margin="78,137,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="85"/>
-        <Label x:Name="PostalCode" Content="Postal Code" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="183,134,0,0"/>
-        <TextBox x:Name="PostalTextbox" MaxLength="5" PreviewTextInput="PostalTextbox_PreviewTextInput" HorizontalAlignment="Left" Height="23" Margin="261,137,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="85"/>
-        <Label x:Name="Salary" Content="Salary" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="7,173,0,0"/>
-        <TextBox x:Name="SalaryTextbox" PreviewTextInput="SalaryTextbox_PreviewTextInput" HorizontalAlignment="Left" Height="23" Margin="78,176,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="85"/>
-        <Label x:Name="Phone" Content="Phone" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="183,173,0,0"/>
-        <TextBox x:Name="PhoneTextbox" MaxLength="13" PreviewTextInput="PhoneTextbox_PreviewTextInput" HorizontalAlignment="Left" Height="23" Margin="261,176,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="85"/>
-        <Label x:Name="Position" Content="Position" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="7,215,0,0"/>
-        <ComboBox x:Name="PositionCombo" HorizontalAlignment="Left" VerticalAlignment="Top" Width="85" Margin="78,215,0,0" DisplayMemberPath="name" SelectedValuePath="Id"/>
-        <Button x:Name="SaveButton" Content="Save" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Margin="235,215,0,0" Height="40" Click="SaveButton_Click"/>
+        <Label x:Name="FirstName" Content="First Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="22,26,0,0"/>
+        <TextBox x:Name="FirstNameTextbox" PreviewTextInput="FirstNameTextbox_PreviewTextInput" HorizontalAlignment="Left" Height="23" Margin="100,29,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="145"/>
+        <Label x:Name="LastName" Content="Last Name&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="266,26,0,0"/>
+        <TextBox x:Name="LastNameTextbox" PreviewTextInput="LastNameTextbox_PreviewTextInput" HorizontalAlignment="Left" Height="23" Margin="337,29,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="145"/>
+        <Label x:Name="Address" Content="Address" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="22,60,0,0"/>
+        <TextBox x:Name="AddressTextbox" HorizontalAlignment="Left" Height="23" Margin="100,60,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="382"/>
+        <Label x:Name="SubDistrict" Content="Sub District" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="22,122,0,0"/>
+        <TextBox x:Name="SubDistrictTextbox" PreviewTextInput="SubDistrictTextbox_PreviewTextInput" HorizontalAlignment="Left" Height="23" Margin="100,122,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="381"/>
+        <Label x:Name="District" Content="District" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,91,444,0"/>
+        <TextBox x:Name="DistrictTextbox" PreviewTextInput="DistrictTextbox_PreviewTextInput" HorizontalAlignment="Left" Height="23" Margin="101,91,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="381"/>
+        <Label x:Name="Province" Content="Province" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="22,153,0,0"/>
+        <TextBox x:Name="ProvinceTextbox" PreviewTextInput="ProvinceTextbox_PreviewTextInput" HorizontalAlignment="Left" Height="23" Margin="100,153,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="381"/>
+        <Label x:Name="PostalCode" Content="Postal Code" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="22,215,0,0"/>
+        <TextBox x:Name="PostalTextbox" MaxLength="5" PreviewTextInput="PostalTextbox_PreviewTextInput" HorizontalAlignment="Left" Height="23" Margin="100,215,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="381"/>
+        <Label x:Name="Salary" Content="Salary" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="22,246,0,0"/>
+        <TextBox x:Name="SalaryTextbox" PreviewTextInput="SalaryTextbox_PreviewTextInput" HorizontalAlignment="Left" Height="23" Margin="100,246,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="381"/>
+        <Label x:Name="Phone" Content="Phone" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="22,184,0,0"/>
+        <TextBox x:Name="PhoneTextbox" MaxLength="13" PreviewTextInput="PhoneTextbox_PreviewTextInput" HorizontalAlignment="Left" Height="23" Margin="100,184,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="381" TextChanged="PhoneTextbox_TextChanged"/>
+        <Label x:Name="Position" Content="Position" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="22,277,0,0"/>
+        <ComboBox x:Name="PositionCombo" HorizontalAlignment="Left" VerticalAlignment="Top" Width="382" Margin="100,277,0,0" DisplayMemberPath="name" SelectedValuePath="Id"/>
+        <Button x:Name="SaveButton" Content="Save" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Margin="370,318,0,0" Height="40" Click="SaveButton_Click"/>
 
     </Grid>
-</Window>
+</Controls:MetroWindow>
