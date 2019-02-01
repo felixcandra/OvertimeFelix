@@ -35,6 +35,7 @@
         <Label x:Name="SubDistrict_Copy2" Content="Position" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="26,303,0,0"/>
         <ComboBox x:Name="PositionCombo" HorizontalAlignment="Left" VerticalAlignment="Top" Width="381" Margin="102,303,0,0" DisplayMemberPath="name" SelectedValuePath="Id"/>
         <Button x:Name="SaveButton" Content="Save" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Margin="372,342,0,0" Height="40" Click="SaveButton_Click"/>
+        <Button x:Name="CancelButton" Content="Cancel" HorizontalAlignment="Left" Margin="241,342,0,0" VerticalAlignment="Top" Width="101" Height="40" Click="CancelButton_Click"/>
 
     </Grid>
 </Controls:MetroWindow>

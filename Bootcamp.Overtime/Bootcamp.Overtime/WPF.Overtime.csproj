@@ -88,6 +88,12 @@
     <Compile Include="EmployeePage.xaml.cs">
       <DependentUpon>EmployeePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ForgetPassword\PopUpForgetPass.xaml.cs">
+      <DependentUpon>PopUpForgetPass.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ForgetPassword\PopUpResetPassword.xaml.cs">
+      <DependentUpon>PopUpResetPassword.xaml</DependentUpon>
+    </Compile>
     <Compile Include="LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
@@ -142,6 +148,14 @@
     <Page Include="EmployeePage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ForgetPassword\PopUpForgetPass.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ForgetPassword\PopUpResetPassword.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="LoginPage.xaml">
       <SubType>Designer</SubType>

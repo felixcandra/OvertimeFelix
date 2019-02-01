@@ -119,10 +119,28 @@ namespace Overtime.Common.Interface.Master
             return _context.Employees.FirstOrDefault(x => x.username == username && x.password == password);
         }
 
+        public Employees getUser(string username, string question, string answer)
+        {
+            return _context.Employees.FirstOrDefault(x => x.username == username && x.question == question && x.answer == answer);
+        }
+
         public bool UpdatePass(int? id, EmployeeParam employeeParam)
         {
             var result = 0;
             Employees employee = Get(id);
+            employee.password = employeeParam.password;
+            result = _context.SaveChanges();
+            if (result > 0)
+            {
+                status = true;
+            }
+            return status;
+        }
+
+        public bool ResetPass(string username, string question, string answer, EmployeeParam employeeParam)
+        {
+            var result = 0;
+            Employees employee = getUser(username, question, answer);
             employee.password = employeeParam.password;
             result = _context.SaveChanges();
             if (result > 0)

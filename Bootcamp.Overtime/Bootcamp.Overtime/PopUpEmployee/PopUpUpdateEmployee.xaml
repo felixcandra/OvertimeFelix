@@ -30,6 +30,7 @@
         <Label x:Name="Position" Content="Position" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="22,277,0,0"/>
         <ComboBox x:Name="PositionCombo" HorizontalAlignment="Left" VerticalAlignment="Top" Width="382" Margin="100,277,0,0" DisplayMemberPath="name" SelectedValuePath="Id"/>
         <Button x:Name="SaveButton" Content="Save" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Margin="370,318,0,0" Height="40" Click="SaveButton_Click"/>
+        <Button x:Name="CancelButton" Content="Cancel" HorizontalAlignment="Left" Margin="254,318,0,0" VerticalAlignment="Top" Width="101" Height="40" Click="CancelButton_Click"/>
 
     </Grid>
 </Controls:MetroWindow>

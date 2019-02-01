@@ -54,3 +54,17 @@ E:\Git\OvertimeFelix\Bootcamp.Overtime\Overtime.BusinessLogic\bin\Debug\EntityFr
 E:\Git\OvertimeFelix\Bootcamp.Overtime\Overtime.BusinessLogic\obj\Debug\Overtime.BusinessLogic.csprojResolveAssemblyReference.cache
 E:\Git\OvertimeFelix\Bootcamp.Overtime\Overtime.BusinessLogic\obj\Debug\Overtime.BusinessLogic.exe
 E:\Git\OvertimeFelix\Bootcamp.Overtime\Overtime.BusinessLogic\obj\Debug\Overtime.BusinessLogic.pdb
+E:\Kerja\Bootcamp\OvertimeJadi\OvertimeFelix\Bootcamp.Overtime\Overtime.BusinessLogic\bin\Debug\Overtime.BusinessLogic.exe.config
+E:\Kerja\Bootcamp\OvertimeJadi\OvertimeFelix\Bootcamp.Overtime\Overtime.BusinessLogic\bin\Debug\Overtime.BusinessLogic.exe
+E:\Kerja\Bootcamp\OvertimeJadi\OvertimeFelix\Bootcamp.Overtime\Overtime.BusinessLogic\bin\Debug\Overtime.BusinessLogic.pdb
+E:\Kerja\Bootcamp\OvertimeJadi\OvertimeFelix\Bootcamp.Overtime\Overtime.BusinessLogic\bin\Debug\EntityFramework.dll
+E:\Kerja\Bootcamp\OvertimeJadi\OvertimeFelix\Bootcamp.Overtime\Overtime.BusinessLogic\bin\Debug\EntityFramework.SqlServer.dll
+E:\Kerja\Bootcamp\OvertimeJadi\OvertimeFelix\Bootcamp.Overtime\Overtime.BusinessLogic\bin\Debug\Overtime.Common.exe
+E:\Kerja\Bootcamp\OvertimeJadi\OvertimeFelix\Bootcamp.Overtime\Overtime.BusinessLogic\bin\Debug\Overtime.DataAccess.exe
+E:\Kerja\Bootcamp\OvertimeJadi\OvertimeFelix\Bootcamp.Overtime\Overtime.BusinessLogic\bin\Debug\Overtime.Common.pdb
+E:\Kerja\Bootcamp\OvertimeJadi\OvertimeFelix\Bootcamp.Overtime\Overtime.BusinessLogic\bin\Debug\Overtime.DataAccess.pdb
+E:\Kerja\Bootcamp\OvertimeJadi\OvertimeFelix\Bootcamp.Overtime\Overtime.BusinessLogic\bin\Debug\EntityFramework.xml
+E:\Kerja\Bootcamp\OvertimeJadi\OvertimeFelix\Bootcamp.Overtime\Overtime.BusinessLogic\bin\Debug\EntityFramework.SqlServer.xml
+E:\Kerja\Bootcamp\OvertimeJadi\OvertimeFelix\Bootcamp.Overtime\Overtime.BusinessLogic\obj\Debug\Overtime.BusinessLogic.csprojResolveAssemblyReference.cache
+E:\Kerja\Bootcamp\OvertimeJadi\OvertimeFelix\Bootcamp.Overtime\Overtime.BusinessLogic\obj\Debug\Overtime.BusinessLogic.exe
+E:\Kerja\Bootcamp\OvertimeJadi\OvertimeFelix\Bootcamp.Overtime\Overtime.BusinessLogic\obj\Debug\Overtime.BusinessLogic.pdb

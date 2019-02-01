@@ -13,6 +13,7 @@
         <TextBox x:Name="idtextBox" IsReadOnly="True" HorizontalAlignment="Left" Height="23" Margin="89,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204"/>
         <Label x:Name="label1" Content="Position   " HorizontalAlignment="Left" Height="28" Margin="20,65,0,0" VerticalAlignment="Top" Width="64"/>
         <TextBox x:Name="textBoxPosition" PreviewTextInput="textBoxPosition_PreviewTextInput" HorizontalAlignment="Left" Height="28" Margin="89,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204"/>
+        <Button x:Name="CancelButton" Content="Cancel" HorizontalAlignment="Left" Margin="128,110,0,0" VerticalAlignment="Top" Width="75" Height="31" Click="CancelButton_Click"/>
 
     </Grid>
 </Controls:MetroWindow>

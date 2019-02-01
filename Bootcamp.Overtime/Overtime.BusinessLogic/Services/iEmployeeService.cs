@@ -18,5 +18,7 @@ namespace Overtime.BusinessLogic
         Employees Get(int? id);
         List<Employees> Search(string search, string cmb);
         Employees Login(string username, string password);
+        Employees getUser(string username, string question, string answer);
+        bool ResetPass(string username, string question, string answer, EmployeeParam employeeParam);
     }
 }

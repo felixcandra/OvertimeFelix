@@ -37,6 +37,8 @@ namespace Overtime.DataAccess.Model
         public Nullable<System.DateTimeOffset> createDate { get; set; }
         public Nullable<System.DateTimeOffset> updateDate { get; set; }
         public Nullable<System.DateTimeOffset> deleteDate { get; set; }
+        public string question { get; set; }
+        public string answer { get; set; }
     
         public virtual Position Position { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

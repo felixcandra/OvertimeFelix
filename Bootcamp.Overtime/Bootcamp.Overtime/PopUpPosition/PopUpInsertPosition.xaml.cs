@@ -54,5 +54,13 @@ namespace Bootcamp.Overtime
             System.Text.RegularExpressions.Regex regex = new System.Text.RegularExpressions.Regex("^[a-zA-Z]*$");
             e.Handled = !regex.IsMatch((sender as TextBox).Text.Insert((sender as TextBox).SelectionStart, e.Text));
         }
+
+        private void CancelButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+            MainWindow main = new MainWindow();
+            main.Show();
+            main.LoadGrid();
+        }
     }
 }

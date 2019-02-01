@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-E:\Git\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\
+E:\Kerja\Bootcamp\OvertimeJadi\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\
 WPF.Overtime
 none
 false
 DEBUG;TRACE
-E:\Git\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\App.xaml
-8239989256
+E:\Kerja\Bootcamp\OvertimeJadi\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\App.xaml
+101486890317
 
-12-935062054
-221374508185
-ChangeUserPass.xaml;EmployeePage.xaml;LoginPage.xaml;MainWindow.xaml;PopUpEmployee\PopUpInsertEmployee.xaml;PopUpEmployee\PopUpUpdateEmployee.xaml;PopUpPosition\PopUpInsertPosition.xaml;PopUpPosition\PopUpUpdatePosition.xaml;
+14511579559
+22-955283067
+ChangeUserPass.xaml;EmployeePage.xaml;ForgetPassword\PopUpForgetPass.xaml;ForgetPassword\PopUpResetPassword.xaml;LoginPage.xaml;MainWindow.xaml;PopUpEmployee\PopUpInsertEmployee.xaml;PopUpEmployee\PopUpUpdateEmployee.xaml;PopUpPosition\PopUpInsertPosition.xaml;PopUpPosition\PopUpUpdatePosition.xaml;
 
 False
 
