@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:Bootcamp.Overtime"
         mc:Ignorable="d"
         Title="Insert Employee" Height="425.241" Width="521.113"
-        Loaded="Window_Loaded_1"
+        Loaded="Window_Loaded_1" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
         >
     <Grid Margin="0,0,0,2">
         <Label x:Name="Username" Content="Username" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="26,24,0,0"/>

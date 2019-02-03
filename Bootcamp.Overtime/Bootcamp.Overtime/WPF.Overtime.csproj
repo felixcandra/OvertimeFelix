@@ -113,9 +113,6 @@
     <Compile Include="PopUpPassword\PopUpInsertQuestionAnswer.xaml.cs">
       <DependentUpon>PopUpInsertQuestionAnswer.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PopUpPassword\PopUpResetPassword.xaml.cs">
-      <DependentUpon>PopUpResetPassword.xaml</DependentUpon>
-    </Compile>
     <Compile Include="PopUpPosition\PopUpInsertPosition.xaml.cs">
       <DependentUpon>PopUpInsertPosition.xaml</DependentUpon>
     </Compile>
@@ -187,10 +184,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="PopUpPassword\PopUpInsertQuestionAnswer.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="PopUpPassword\PopUpResetPassword.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

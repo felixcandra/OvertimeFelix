@@ -82,3 +82,17 @@ E:\Kerja\Bootcamp\OvertimeFelix\OvertimeFelix\Bootcamp.Overtime\Overtime.Busines
 E:\Kerja\Bootcamp\OvertimeFelix\OvertimeFelix\Bootcamp.Overtime\Overtime.BusinessLogic\obj\Debug\Overtime.BusinessLogic.csprojResolveAssemblyReference.cache
 E:\Kerja\Bootcamp\OvertimeFelix\OvertimeFelix\Bootcamp.Overtime\Overtime.BusinessLogic\obj\Debug\Overtime.BusinessLogic.exe
 E:\Kerja\Bootcamp\OvertimeFelix\OvertimeFelix\Bootcamp.Overtime\Overtime.BusinessLogic\obj\Debug\Overtime.BusinessLogic.pdb
+E:\Git\TUGAS\OvertimeFelix\Bootcamp.Overtime\Overtime.BusinessLogic\bin\Debug\Overtime.BusinessLogic.exe.config
+E:\Git\TUGAS\OvertimeFelix\Bootcamp.Overtime\Overtime.BusinessLogic\bin\Debug\Overtime.BusinessLogic.exe
+E:\Git\TUGAS\OvertimeFelix\Bootcamp.Overtime\Overtime.BusinessLogic\bin\Debug\Overtime.BusinessLogic.pdb
+E:\Git\TUGAS\OvertimeFelix\Bootcamp.Overtime\Overtime.BusinessLogic\bin\Debug\EntityFramework.dll
+E:\Git\TUGAS\OvertimeFelix\Bootcamp.Overtime\Overtime.BusinessLogic\bin\Debug\EntityFramework.SqlServer.dll
+E:\Git\TUGAS\OvertimeFelix\Bootcamp.Overtime\Overtime.BusinessLogic\bin\Debug\Overtime.Common.exe
+E:\Git\TUGAS\OvertimeFelix\Bootcamp.Overtime\Overtime.BusinessLogic\bin\Debug\Overtime.DataAccess.exe
+E:\Git\TUGAS\OvertimeFelix\Bootcamp.Overtime\Overtime.BusinessLogic\bin\Debug\Overtime.Common.pdb
+E:\Git\TUGAS\OvertimeFelix\Bootcamp.Overtime\Overtime.BusinessLogic\bin\Debug\Overtime.DataAccess.pdb
+E:\Git\TUGAS\OvertimeFelix\Bootcamp.Overtime\Overtime.BusinessLogic\bin\Debug\EntityFramework.xml
+E:\Git\TUGAS\OvertimeFelix\Bootcamp.Overtime\Overtime.BusinessLogic\bin\Debug\EntityFramework.SqlServer.xml
+E:\Git\TUGAS\OvertimeFelix\Bootcamp.Overtime\Overtime.BusinessLogic\obj\Debug\Overtime.BusinessLogic.csprojResolveAssemblyReference.cache
+E:\Git\TUGAS\OvertimeFelix\Bootcamp.Overtime\Overtime.BusinessLogic\obj\Debug\Overtime.BusinessLogic.exe
+E:\Git\TUGAS\OvertimeFelix\Bootcamp.Overtime\Overtime.BusinessLogic\obj\Debug\Overtime.BusinessLogic.pdb

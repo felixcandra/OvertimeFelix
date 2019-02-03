@@ -25,7 +25,7 @@ namespace WPF.Overtime.PopUpPassword
     /// <summary>
     /// Interaction logic for PopUpInsertQuestionAnswer.xaml
     /// </summary>
-    public partial class PopUpInsertQuestionAnswer : Window
+    public partial class PopUpInsertQuestionAnswer : MetroWindow
     {
         iEmployeeService _employeeService = new EmployeeService();
         EmployeeParam employeeParam = new EmployeeParam();

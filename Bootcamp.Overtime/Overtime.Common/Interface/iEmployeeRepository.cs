@@ -15,7 +15,6 @@ namespace Overtime.Common.Interface.Master
         bool UpdatePass(int? id, EmployeeParam employeeParam);
 
         bool UpdateBootcamp(int? id, EmployeeParam employeeParam);
-        bool UpdateQuestion(int? id, EmployeeParam employeeParam);
 
         bool UpdateQuestionAnswer(int? id, EmployeeParam employeeParam);
 

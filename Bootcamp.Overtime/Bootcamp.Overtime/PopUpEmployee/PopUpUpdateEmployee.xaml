@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:Bootcamp.Overtime"
         mc:Ignorable="d"
         Title="Update Employee" Height="401.241" Width="521.113"
-        Loaded="Window_Loaded">
+        Loaded="Window_Loaded" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Label x:Name="FirstName" Content="First Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="22,26,0,0"/>
         <TextBox x:Name="FirstNameTextbox" PreviewTextInput="FirstNameTextbox_PreviewTextInput" HorizontalAlignment="Left" Height="23" Margin="100,29,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="145"/>

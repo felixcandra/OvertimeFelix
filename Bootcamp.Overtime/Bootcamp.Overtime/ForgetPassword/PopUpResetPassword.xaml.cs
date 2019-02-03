@@ -15,13 +15,15 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MahApps.Metro.Controls;
+using System.Text.RegularExpressions;
 
 namespace WPF.Overtime.ForgetPassword
 {
     /// <summary>
     /// Interaction logic for PopUpResetPassword.xaml
     /// </summary>
-    public partial class PopUpResetPassword : Window
+    public partial class PopUpResetPassword : MetroWindow
     {
         iEmployeeService _employeeService = new EmployeeService();
         EmployeeParam EmpParam = new EmployeeParam();
@@ -35,9 +37,9 @@ namespace WPF.Overtime.ForgetPassword
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
-            if (NewPassBox.Password.Length < 8 || ConfirmPassBox.Password.Length < 8)
+            if (NewPassBox.Password.Length < 8 || ConfirmPassBox.Password.Length < 8 || ConfirmPassBox.Password.Length > 16 || NewPassBox.Password.Length >16)
             {
-                MessageBox.Show("At Least Min 8 Character");
+                MessageBox.Show("At Least Min 8 - 16 Character");
             }
             else
             {
@@ -54,6 +56,24 @@ namespace WPF.Overtime.ForgetPassword
                 {
                     MessageBox.Show("Confirm Password not match");
                 }
+            }
+        }
+
+        private void NewPassBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[0-9a-zA-Z]+");
+            if (!regex.IsMatch(e.Text))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void ConfirmPassBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[0-9a-zA-Z]+");
+            if (!regex.IsMatch(e.Text))
+            {
+                e.Handled = true;
             }
         }
     }

@@ -10,17 +10,17 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="username" Type="varchar" MaxLength="15" Nullable="false" />
-          <Property Name="password" Type="varchar" MaxLength="16" />
+          <Property Name="username" Type="varchar" MaxLength="15" />
+          <Property Name="password" Type="varchar" MaxLength="8" />
           <Property Name="first_name" Type="varchar" MaxLength="50" />
           <Property Name="last_name" Type="varchar" MaxLength="50" />
           <Property Name="address" Type="varchar" MaxLength="50" />
           <Property Name="sub_district" Type="varchar" MaxLength="50" />
           <Property Name="district" Type="varchar" MaxLength="50" />
           <Property Name="province" Type="varchar" MaxLength="50" />
-          <Property Name="postal_code" Type="varchar" MaxLength="5" />
+          <Property Name="postal_code" Type="varchar" MaxLength="20" />
           <Property Name="salary" Type="int" />
-          <Property Name="phone" Type="varchar" MaxLength="13" />
+          <Property Name="phone" Type="varchar" MaxLength="20" />
           <Property Name="position_id" Type="int" />
           <Property Name="isDelete" Type="bit" />
           <Property Name="createDate" Type="datetimeoffset" Precision="7" />
@@ -45,7 +45,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="value" Type="int" />
           <Property Name="name" Type="varchar" MaxLength="10" />
         </EntityType>
@@ -107,17 +107,17 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" />
-          <Property Name="username" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="password" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="username" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="password" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
           <Property Name="first_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="last_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="sub_district" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="district" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="province" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="postal_code" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="postal_code" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
           <Property Name="salary" Type="Int32" />
-          <Property Name="phone" Type="String" MaxLength="13" Unicode="false" FixedLength="false" />
+          <Property Name="phone" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
           <Property Name="position_id" Type="Int32" />
           <Property Name="isDelete" Type="Boolean" />
           <Property Name="createDate" Type="DateTimeOffset" Precision="7" />

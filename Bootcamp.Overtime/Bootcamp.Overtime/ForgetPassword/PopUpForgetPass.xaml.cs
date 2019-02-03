@@ -14,13 +14,14 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MahApps.Metro.Controls;
 
 namespace WPF.Overtime.ForgetPassword
 {
     /// <summary>
     /// Interaction logic for PopUpForgetPass.xaml
     /// </summary>
-    public partial class PopUpForgetPass : Window
+    public partial class PopUpForgetPass : MetroWindow
     {
         public string currUsername;
         public string currQuestion;
@@ -51,6 +52,13 @@ namespace WPF.Overtime.ForgetPassword
                 resetpass.Show();
                 this.Close();
             }
+        }
+
+        private void Cancel_Click(object sender, RoutedEventArgs e)
+        {
+            LoginPage login = new LoginPage();
+            login.Show();
+            this.Close();
         }
     }
 }
