@@ -94,5 +94,29 @@ namespace Overtime.Common.Interfaces.Master
             var get = _context.Overtimes.FirstOrDefault(x => x.employee_id == Id && x.createDate.Value.Year == DateTime.Now.Year && x.createDate.Value.Month == DateTime.Now.Month && x.createDate.Value.Day == DateTime.Now.Day);
             return get;
         }
+
+        public List<Overtimes> GetSearch(string search, string cmb)
+        {
+            if (cmb == "First Name")
+            {
+                var searchName = _context.Overtimes.Where(x => x.createDate.Value.Month == DateTime.Now.Month && x.difference >=3 && x.Employees.first_name.ToString().Contains(search)).ToList();
+                return searchName;
+            }
+            else if (cmb == "Last Name")
+            {
+                var searchName = _context.Overtimes.Where(x => x.createDate.Value.Month == DateTime.Now.Month && x.difference >=3 && x.Employees.last_name.ToString().Contains(search)).ToList();
+                return searchName;
+            }
+            else if (cmb == "Id")
+            {
+                var searchId = _context.Overtimes.Where(x => x.createDate.Value.Month == DateTime.Now.Month && x.difference >=3 && x.employee_id.ToString().Contains(search)).ToList();
+                return searchId;
+            }
+            else
+            {
+                var refresh = Get();
+                return refresh;
+            }
+        }
     }
 }

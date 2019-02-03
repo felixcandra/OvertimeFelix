@@ -208,5 +208,10 @@ namespace Bootcamp.Overtime
                 this.Close();
             }
         }
+
+        private void SearchButton2_Click(object sender, RoutedEventArgs e)
+        {
+           OvertimeEmployeeGrid.ItemsSource = _overtimeService.GetSearch(SearchTextBox2.Text, SearchcomboBox2.Text);
+        }
     }
 }
