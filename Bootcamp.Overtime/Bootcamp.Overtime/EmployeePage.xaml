@@ -7,7 +7,9 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         mc:Ignorable="d"
         Title="EmployeePage" Height="624.342" Width="893.997"
-        Loaded="Window_Loaded" HorizontalAlignment="Center" VerticalAlignment="Center" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Loaded="Window_Loaded" HorizontalAlignment="Center" VerticalAlignment="Center" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+        Activated="MetroWindow_Activated">
+        
 
     <Grid Margin="0,0,0,1">
         <Grid.ColumnDefinitions>
@@ -19,10 +21,11 @@
 
         <DataGrid x:Name="OvertimeEmployeeGrid" IsReadOnly="True" GridLinesVisibility="All" BorderThickness="1" AutoGenerateColumns="False" HorizontalAlignment="Left" Margin="20,185,0,0" VerticalAlignment="Top" Height="389" Width="848" Grid.ColumnSpan="3">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Check In" Binding="{Binding check_in}" Width="*" HeaderStringFormat=""/>
-                <DataGridTextColumn Header="Check Out" Binding="{Binding check_out}" Width="*" HeaderStringFormat=""/>
-                <DataGridTextColumn Header="Hours" Binding="{Binding difference}" Width="*"/>
-                <DataGridTextColumn Header="Overtime Salary" Binding="{Binding overtime_salary}" Width="*"/>
+                <DataGridTextColumn Header="Check In" Binding="{Binding Overtime.check_in}" Width="*" HeaderStringFormat=""/>
+                <DataGridTextColumn Header="Check Out" Binding="{Binding Overtime.check_out}" Width="*" HeaderStringFormat=""/>
+                <DataGridTextColumn Header="Hours" Binding="{Binding Overtime.difference}" Width="*"/>
+                <DataGridTextColumn Header="Overtime Salary" Binding="{Binding Overtime.overtime_salary}" Width="*"/>
+                <DataGridTextColumn Header="Status" Binding="{Binding approval_status}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
         <Button x:Name="LogoutButton" Content="Log Out" HorizontalAlignment="Left" Margin="159,10,0,0" VerticalAlignment="Top" Width="75" Click="LogoutButton_Click" Grid.Column="2"/>
@@ -43,8 +46,8 @@
             <ComboBoxItem Content="12" HorizontalAlignment="Left" Width="50"/>
         </ComboBox>
         <Button x:Name="SearchButton" Content="Search" Grid.Column="2" HorizontalAlignment="Left" Margin="153,145,0,0" VerticalAlignment="Top" Width="75" Height="26" Click="SearchButton_Click"/>
-        <TextBox x:Name="ReasonTextBox" VerticalScrollBarVisibility="Visible" TextWrapping="Wrap" AcceptsReturn="True" HorizontalAlignment="Left" Height="61" Margin="12,55,0,0" Text="" VerticalAlignment="Top" Width="771" Grid.ColumnSpan="3" TextChanged="textBox_TextChanged"/>
-        <Button x:Name="CheckOut" Content="Check OUT" Grid.Column="2" HorizontalAlignment="Left" Margin="159,55,0,0" VerticalAlignment="Top" Width="75" Click="CheckOut_Click"/>
+        <TextBox x:Name="ReasonTextBox" VerticalScrollBarVisibility="Visible" TextWrapping="Wrap" AcceptsReturn="True" HorizontalAlignment="Left" Height="61" Margin="12,55,0,0" Text="" VerticalAlignment="Top" Width="771" Grid.ColumnSpan="3"/>
+        <Button x:Name="CheckOut" Content="Check OUT" Grid.Column="2" HorizontalAlignment="Left" Margin="159,55,0,0" VerticalAlignment="Top" Width="75" Click="CheckOut_Click" Height="61"/>
 
     </Grid>
 </Controls:MetroWindow>

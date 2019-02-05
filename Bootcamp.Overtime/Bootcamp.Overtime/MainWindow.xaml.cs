@@ -22,6 +22,7 @@ using Overtime.BussinessLogic.Services;
 using Overtime.BussinessLogic.Services.Master;
 using WPF.Overtime.Properties;
 using WPF.Overtime;
+using Overtime.BusinessLogic.Services;
 
 namespace Bootcamp.Overtime
 {
@@ -37,6 +38,10 @@ namespace Bootcamp.Overtime
         IOvertimeService _overtimeService = new OvertimeService();
         EmployeeParam employeeParam = new EmployeeParam();
         OvertimeParam overtimeParam = new OvertimeParam();
+        
+        ApprovalParam approvalParam = new ApprovalParam();
+        IOvertimeService overtimeService = new OvertimeService();
+        iApprovalService _approvalService = new ApprovalService();
         public MainWindow()
         {
             // 
@@ -47,7 +52,8 @@ namespace Bootcamp.Overtime
         {
             dataGrid1.ItemsSource = _positionService.Get();
             EmployeeGrid.ItemsSource = _employeeService.Get();
-            OvertimeEmployeeGrid.ItemsSource = _overtimeService.Get(Settings.Default.Id);
+            OvertimeEmployeeGrid.ItemsSource = _approvalService.GetOvertimeAll(Settings.Default.Id);
+            
         }
 
         private void buttonInsertPosition_Click(object sender, RoutedEventArgs e)
@@ -208,7 +214,7 @@ namespace Bootcamp.Overtime
         {
             if (String.IsNullOrWhiteSpace(SearchBox.Text) == false)
             {
-                OvertimeEmployeeGrid.ItemsSource = _overtimeService.GetSearch(Settings.Default.Id, Convert.ToInt16(SeachCombo.Text), Convert.ToInt16(SearchBox.Text));  
+                OvertimeEmployeeGrid.ItemsSource = _approvalService.GetOvertimeSearch(Settings.Default.Id, Convert.ToInt16(SeachCombo.Text), Convert.ToInt16(SearchBox.Text));  
             }
             else{
                 MessageBox.Show("Search box don't null or whitespace");
@@ -221,7 +227,7 @@ namespace Bootcamp.Overtime
         {
             if (SearchBox.Text == "")
             {
-                OvertimeEmployeeGrid.ItemsSource = _overtimeService.Get(Settings.Default.Id);
+                OvertimeEmployeeGrid.ItemsSource = _approvalService.GetOvertimeAll(Settings.Default.Id);
             }
         }
 
@@ -238,10 +244,50 @@ namespace Bootcamp.Overtime
 
         private void CheckOut_Click(object sender, RoutedEventArgs e)
         {
-            
-            overtimeParam.check_out = DateTimeOffset.Now.LocalDateTime;
-            _overtimeService.Update(Settings.Default.Id, overtimeParam);
-            MessageBox.Show("Check Out Successfully");
+            int? total = 0;
+            bool status = overtimeService.Update(Settings.Default.Id, total, overtimeParam);
+            var gettotal = _approvalService.GetTotal(Settings.Default.Id);
+            foreach (var hitung in gettotal)
+            {
+                total = total + hitung.Overtime.difference;
+            }
+
+            MessageBoxResult result = MessageBox.Show("Yakin ingin Check Out?", "Peringatan", MessageBoxButton.YesNo);
+            if (result == MessageBoxResult.Yes)
+            {
+                if (status == false)
+                {
+                    LoginPage login = new LoginPage();
+                    login.Show();
+                    this.Close();
+                }
+                else
+                {
+                    overtimeParam.check_out = DateTimeOffset.Now.LocalDateTime;
+                    overtimeService.Update(Settings.Default.Id, total, overtimeParam);
+                    int selisih = 0;
+                    selisih = DateTime.Now.Hour - 17;
+                    var approval = _approvalService.Get(Settings.Default.Id);
+                    if (approval == null)
+                    {
+                        if (selisih > 3)
+                        {
+                            approvalParam.employee_id = Settings.Default.Id;
+                            approvalParam.approval_status = "WAITING";
+                            approvalParam.reason = ReasonTextBox.Text;
+                            approvalParam.overtime_id = overtimeService.GetId(Settings.Default.Id).Id;
+                            _approvalService.insert(approvalParam);
+                        }
+                        int Id = Settings.Default.Id;
+                        OvertimeEmployeeGrid.ItemsSource = _approvalService.GetOvertimeAll(Id);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Already Check Out For This Day");
+                    }
+
+                }
+            }
         }
     }
 }

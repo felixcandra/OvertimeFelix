@@ -157,3 +157,5 @@ E:\Git\TUGAS\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\WPF.Ove
 E:\Git\TUGAS\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\WPF.Overtime.csproj.GenerateResource.Cache
 E:\Git\TUGAS\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\WPF.Overtime.exe
 E:\Git\TUGAS\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\WPF.Overtime.pdb
+E:\Git\TUGAS\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\ManagerPage.g.cs
+E:\Git\TUGAS\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\ManagerPage.baml
