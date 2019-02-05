@@ -53,9 +53,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interface\iApprovalRepository.cs" />
     <Compile Include="Interface\iEmployeeRepository.cs" />
     <Compile Include="Interface\IOvertimeRepository.cs" />
     <Compile Include="Interface\iPositionRepository.cs" />
+    <Compile Include="Interface\Master\ApprovalRepository.cs" />
     <Compile Include="Interface\Master\EmployeeRepository.cs" />
     <Compile Include="Interface\Master\OvertimeRepository.cs" />
     <Compile Include="Interface\Master\PositionRepository.cs" />

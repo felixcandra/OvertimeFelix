@@ -30,9 +30,9 @@ namespace Overtime.BussinessLogic.Services.Master
             return _overtimeRepository.GetId(Id);
         }
 
-        public List<Overtimes> GetSearch(int? id,int? bulan, int? tahun)
+        public List<Overtimes> GetSearch(int? id,string search, string cmb)
         {
-            return _overtimeRepository.GetSearch(id,bulan,tahun);
+            return _overtimeRepository.GetSearch(id,search,cmb);
         }
 
         public bool Insert(OvertimeParam overtimeParam)
@@ -40,9 +40,9 @@ namespace Overtime.BussinessLogic.Services.Master
             return _overtimeRepository.Insert(overtimeParam);
         }
 
-        public bool Update(int? Id, OvertimeParam overtimeParam)
+        public bool Update(int? Id,int? total, OvertimeParam overtimeParam)
         {
-            return _overtimeRepository.Update(Id, overtimeParam);
+            return _overtimeRepository.Update(Id,total, overtimeParam);
         }
     }
 }

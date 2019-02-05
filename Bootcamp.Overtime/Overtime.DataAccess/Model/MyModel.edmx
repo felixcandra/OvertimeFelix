@@ -5,6 +5,17 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="OvertimeDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Approvals">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="employee_id" Type="int" />
+          <Property Name="overtime_id" Type="int" />
+          <Property Name="reason" Type="varchar" MaxLength="60" />
+          <Property Name="approval_status" Type="varchar" MaxLength="8" />
+          <Property Name="isDelete" Type="bit" />
+        </EntityType>
         <EntityType Name="Employees">
           <Key>
             <PropertyRef Name="Id" />
@@ -28,6 +39,7 @@
           <Property Name="deleteDate" Type="datetimeoffset" Precision="7" />
           <Property Name="question" Type="varchar" MaxLength="50" />
           <Property Name="answer" Type="varchar" MaxLength="20" />
+          <Property Name="manager_id" Type="int" />
         </EntityType>
         <EntityType Name="Overtimes">
           <Key>
@@ -60,6 +72,30 @@
           <Property Name="updateDate" Type="datetimeoffset" Precision="7" />
           <Property Name="deleteDate" Type="datetimeoffset" Precision="7" />
         </EntityType>
+        <Association Name="FK_Approvals_ToEmployee">
+          <End Role="Employees" Type="Self.Employees" Multiplicity="0..1" />
+          <End Role="Approvals" Type="Self.Approvals" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Approvals">
+              <PropertyRef Name="employee_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Approvals_ToOvertime">
+          <End Role="Overtimes" Type="Self.Overtimes" Multiplicity="0..1" />
+          <End Role="Approvals" Type="Self.Approvals" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Overtimes">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Approvals">
+              <PropertyRef Name="overtime_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Employees_ToPosition">
           <End Role="Position" Type="Self.Position" Multiplicity="0..1" />
           <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
@@ -85,10 +121,19 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="OvertimeDBModelStoreContainer">
+          <EntitySet Name="Approvals" EntityType="Self.Approvals" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Employees" EntityType="Self.Employees" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Overtimes" EntityType="Self.Overtimes" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Param" EntityType="Self.Param" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Position" EntityType="Self.Position" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Approvals_ToEmployee" Association="Self.FK_Approvals_ToEmployee">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="Approvals" EntitySet="Approvals" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Approvals_ToOvertime" Association="Self.FK_Approvals_ToOvertime">
+            <End Role="Overtimes" EntitySet="Overtimes" />
+            <End Role="Approvals" EntitySet="Approvals" />
+          </AssociationSet>
           <AssociationSet Name="FK_Employees_ToPosition" Association="Self.FK_Employees_ToPosition">
             <End Role="Position" EntitySet="Position" />
             <End Role="Employees" EntitySet="Employees" />
@@ -127,6 +172,8 @@
           <NavigationProperty Name="Overtimes" Relationship="Self.FK_Overtimes_ToEmployee" FromRole="Employees" ToRole="Overtimes" />
           <Property Name="question" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="answer" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Approvals" Relationship="OvertimeDBModel.FK_Approvals_ToEmployee" FromRole="Employees" ToRole="Approval" />
+          <Property Name="manager_id" Type="Int32" />
         </EntityType>
         <EntityType Name="Overtimes">
           <Key>
@@ -140,6 +187,7 @@
           <Property Name="employee_id" Type="Int32" />
           <Property Name="createDate" Type="DateTime" Precision="3" />
           <NavigationProperty Name="Employees" Relationship="Self.FK_Overtimes_ToEmployee" FromRole="Overtimes" ToRole="Employees" />
+          <NavigationProperty Name="Approvals" Relationship="OvertimeDBModel.FK_Approvals_ToOvertime" FromRole="Overtimes" ToRole="Approval" />
         </EntityType>
         <EntityType Name="Param">
           <Key>
@@ -198,7 +246,53 @@
             <End Role="Employees" EntitySet="Employees" />
             <End Role="Overtimes" EntitySet="Overtimes" />
           </AssociationSet>
+          <EntitySet Name="Approvals1" EntityType="OvertimeDBModel.Approvals" />
+          <AssociationSet Name="FK_Approvals_ToEmployee" Association="OvertimeDBModel.FK_Approvals_ToEmployee">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="Approval" EntitySet="Approvals1" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Approvals_ToOvertime" Association="OvertimeDBModel.FK_Approvals_ToOvertime">
+            <End Role="Overtimes" EntitySet="Overtimes" />
+            <End Role="Approval" EntitySet="Approvals1" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="Approvals">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="employee_id" Type="Int32" />
+          <Property Name="overtime_id" Type="Int32" />
+          <Property Name="reason" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="approval_status" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="isDelete" Type="Boolean" />
+          <NavigationProperty Name="Employee" Relationship="OvertimeDBModel.FK_Approvals_ToEmployee" FromRole="Approval" ToRole="Employees" />
+          <NavigationProperty Name="Overtime" Relationship="OvertimeDBModel.FK_Approvals_ToOvertime" FromRole="Approval" ToRole="Overtimes" />
+        </EntityType>
+        <Association Name="FK_Approvals_ToEmployee">
+          <End Type="OvertimeDBModel.Employees" Role="Employees" Multiplicity="0..1" />
+          <End Type="OvertimeDBModel.Approvals" Role="Approval" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Approval">
+              <PropertyRef Name="employee_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Approvals_ToOvertime">
+          <End Type="OvertimeDBModel.Overtimes" Role="Overtimes" Multiplicity="0..1" />
+          <End Type="OvertimeDBModel.Approvals" Role="Approval" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Overtimes">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Approval">
+              <PropertyRef Name="overtime_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -208,6 +302,7 @@
           <EntitySetMapping Name="Employees">
             <EntityTypeMapping TypeName="OvertimeDBModel.Employees">
               <MappingFragment StoreEntitySet="Employees">
+                <ScalarProperty Name="manager_id" ColumnName="manager_id" />
                 <ScalarProperty Name="answer" ColumnName="answer" />
                 <ScalarProperty Name="question" ColumnName="question" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
@@ -261,6 +356,18 @@
                 <ScalarProperty Name="createDate" ColumnName="createDate" />
                 <ScalarProperty Name="updateDate" ColumnName="updateDate" />
                 <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Approvals1">
+            <EntityTypeMapping TypeName="OvertimeDBModel.Approvals">
+              <MappingFragment StoreEntitySet="Approvals">
+                <ScalarProperty Name="isDelete" ColumnName="isDelete" />
+                <ScalarProperty Name="approval_status" ColumnName="approval_status" />
+                <ScalarProperty Name="reason" ColumnName="reason" />
+                <ScalarProperty Name="overtime_id" ColumnName="overtime_id" />
+                <ScalarProperty Name="employee_id" ColumnName="employee_id" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -14,6 +14,12 @@ namespace Overtime.DataAccess.Model
     
     public partial class Overtimes
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Overtimes()
+        {
+            this.Approvals = new HashSet<Approvals>();
+        }
+    
         public int Id { get; set; }
         public Nullable<System.DateTimeOffset> check_in { get; set; }
         public Nullable<System.DateTimeOffset> check_out { get; set; }
@@ -23,5 +29,7 @@ namespace Overtime.DataAccess.Model
         public Nullable<System.DateTime> createDate { get; set; }
     
         public virtual Employees Employees { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Approvals> Approvals { get; set; }
     }
 }

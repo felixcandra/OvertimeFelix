@@ -52,7 +52,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Services\iApprovalService.cs" />
     <Compile Include="Services\iEmployeeService.cs" />
+    <Compile Include="Services\Master\ApprovalService.cs" />
     <Compile Include="Services\Master\EmployeeService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
