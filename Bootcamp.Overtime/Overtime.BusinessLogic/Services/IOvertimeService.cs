@@ -16,6 +16,6 @@ namespace Overtime.BussinessLogic.Services
         Overtimes GetId(int? Id);
         bool Insert(OvertimeParam overtimeParam);
         bool Update(int? Id,OvertimeParam overtimeParam);
-        List<Overtimes> GetSearch(string search, string cmb);
+        List<Overtimes> GetSearch(int? id,int? bulan, int? tahun);
     }
 }

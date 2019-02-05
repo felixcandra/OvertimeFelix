@@ -21,7 +21,7 @@ namespace Overtime.Common.Interfaces.Master
 
         public List<Overtimes> Get(int? Id)
         {
-            return _context.Overtimes.Where(x => x.employee_id == Id && x.createDate.Value.Month == DateTime.Now.Month && x.difference >=3).ToList();
+            return _context.Overtimes.Where(x => x.employee_id == Id && x.difference >=3).ToList();
         }
 
 
@@ -76,7 +76,7 @@ namespace Overtime.Common.Interfaces.Master
                 }
                 //Selisih ubah ke setting
 
-                overtimes.check_out = overtimeParam.check_out;
+                    overtimes.check_out = overtimeParam.check_out;
                     overtimes.difference = selisih;
                     overtimes.overtime_salary = Convert.ToInt32(overtime_salary);
                     result = _context.SaveChanges();
@@ -95,28 +95,10 @@ namespace Overtime.Common.Interfaces.Master
             return get;
         }
 
-        public List<Overtimes> GetSearch(string search, string cmb)
+        public List<Overtimes> GetSearch(int? id,int? bulan, int? tahun)
         {
-            if (cmb == "First Name")
-            {
-                var searchName = _context.Overtimes.Where(x => x.createDate.Value.Month == DateTime.Now.Month && x.difference >=3 && x.Employees.first_name.ToString().Contains(search)).ToList();
-                return searchName;
-            }
-            else if (cmb == "Last Name")
-            {
-                var searchName = _context.Overtimes.Where(x => x.createDate.Value.Month == DateTime.Now.Month && x.difference >=3 && x.Employees.last_name.ToString().Contains(search)).ToList();
-                return searchName;
-            }
-            else if (cmb == "Id")
-            {
-                var searchId = _context.Overtimes.Where(x => x.createDate.Value.Month == DateTime.Now.Month && x.difference >=3 && x.employee_id.ToString().Contains(search)).ToList();
-                return searchId;
-            }
-            else
-            {
-                var refresh = Get();
-                return refresh;
-            }
+            var searchOver = _context.Overtimes.Where(x => x.employee_id == id && x.createDate.Value.Month == bulan && x.difference >= 3 && x.createDate.Value.Year == tahun).ToList();
+            return searchOver;
         }
     }
 }

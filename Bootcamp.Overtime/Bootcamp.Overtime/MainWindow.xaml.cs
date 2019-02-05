@@ -36,6 +36,7 @@ namespace Bootcamp.Overtime
         iEmployeeService _employeeService = new EmployeeService();
         IOvertimeService _overtimeService = new OvertimeService();
         EmployeeParam employeeParam = new EmployeeParam();
+        OvertimeParam overtimeParam = new OvertimeParam();
         public MainWindow()
         {
             // 
@@ -46,7 +47,7 @@ namespace Bootcamp.Overtime
         {
             dataGrid1.ItemsSource = _positionService.Get();
             EmployeeGrid.ItemsSource = _employeeService.Get();
-            OvertimeEmployeeGrid.ItemsSource = _overtimeService.Get();
+            OvertimeEmployeeGrid.ItemsSource = _overtimeService.Get(Settings.Default.Id);
         }
 
         private void buttonInsertPosition_Click(object sender, RoutedEventArgs e)
@@ -158,11 +159,6 @@ namespace Bootcamp.Overtime
             }
         }
 
-        private void buttonRefresh_Click(object sender, RoutedEventArgs e)
-        {
-
-            dataGrid1.ItemsSource = _context.Position.Where(x => x.isDelete == false).ToList();
-        }
 
         private void buttonSearch_Click(object sender, RoutedEventArgs e)
         {
@@ -197,21 +193,55 @@ namespace Bootcamp.Overtime
 
         private void LogoutButton_Click(object sender, RoutedEventArgs e)
         {
-            OvertimeParam overtimeParam = new OvertimeParam();
             MessageBoxResult result = MessageBox.Show("Yakin ingin Log out?", "Peringatan", MessageBoxButton.YesNo);
             if (result == MessageBoxResult.Yes)
             {
-                overtimeParam.check_out = DateTimeOffset.Now.LocalDateTime;
-                _overtimeService.Update(Settings.Default.Id, overtimeParam);
                 LoginPage login = new LoginPage();
                 login.Show();
                 this.Close();
             }
+
+                  
         }
 
-        private void SearchButton2_Click(object sender, RoutedEventArgs e)
+        private void SearchButton_Copy_Click(object sender, RoutedEventArgs e)
         {
-           OvertimeEmployeeGrid.ItemsSource = _overtimeService.GetSearch(SearchTextBox2.Text, SearchcomboBox2.Text);
+            if (String.IsNullOrWhiteSpace(SearchBox.Text) == false)
+            {
+                OvertimeEmployeeGrid.ItemsSource = _overtimeService.GetSearch(Settings.Default.Id, Convert.ToInt16(SeachCombo.Text), Convert.ToInt16(SearchBox.Text));  
+            }
+            else{
+                MessageBox.Show("Search box don't null or whitespace");
+            }
+           
+        }
+
+
+        private void SearchBox_TextChanged_2(object sender, TextChangedEventArgs e)
+        {
+            if (SearchBox.Text == "")
+            {
+                OvertimeEmployeeGrid.ItemsSource = _overtimeService.Get(Settings.Default.Id);
+            }
+        }
+
+        private void SearchBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            System.Text.RegularExpressions.Regex regex = new System.Text.RegularExpressions.Regex("^[0-9]*$");
+            e.Handled = !regex.IsMatch((sender as TextBox).Text.Insert((sender as TextBox).SelectionStart, e.Text));
+        }
+
+        private void textBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void CheckOut_Click(object sender, RoutedEventArgs e)
+        {
+            
+            overtimeParam.check_out = DateTimeOffset.Now.LocalDateTime;
+            _overtimeService.Update(Settings.Default.Id, overtimeParam);
+            MessageBox.Show("Check Out Successfully");
         }
     }
 }

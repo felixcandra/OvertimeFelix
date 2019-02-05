@@ -13,7 +13,7 @@ namespace Overtime.Common.Interfaces
         List<Overtimes> Get();
 
         List<Overtimes> Get(int? Id);
-        List<Overtimes> GetSearch(string search, string cmb);
+        List<Overtimes> GetSearch(int? id,int? bulan, int? tahun);
         Overtimes GetId(int? Id);
 
         bool Insert(OvertimeParam overtimeParam);

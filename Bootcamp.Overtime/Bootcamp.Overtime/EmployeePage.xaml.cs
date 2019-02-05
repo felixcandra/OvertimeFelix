@@ -26,7 +26,9 @@ namespace WPF.Overtime
     public partial class EmployeePage : MetroWindow
     {
         MyContex _contex = new MyContex();
-        
+        int id = Settings.Default.Id;
+        OvertimeParam overtimeParam = new OvertimeParam();
+
         IOvertimeService overtimeService = new OvertimeService();
         public EmployeePage()
         {
@@ -41,12 +43,10 @@ namespace WPF.Overtime
 
         private void LogoutButton_Click(object sender, RoutedEventArgs e)
         {
-            OvertimeParam overtimeParam = new OvertimeParam();
+            
             MessageBoxResult result = MessageBox.Show("Yakin ingin Log out?", "Peringatan", MessageBoxButton.YesNo);
             if (result == MessageBoxResult.Yes)
             {
-                overtimeParam.check_out = DateTimeOffset.Now.LocalDateTime;
-                overtimeService.Update(Settings.Default.Id, overtimeParam);
                 LoginPage login = new LoginPage();
                 login.Show();
                 this.Close();
@@ -57,6 +57,39 @@ namespace WPF.Overtime
         {
             ChangeUserPass change = new ChangeUserPass();
             change.Show();
+        }
+
+        private void SearchButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(SearchBox.Text) == true)
+            {
+                MessageBox.Show("Search box don't null or whitespace");
+            }
+            else
+            {
+                OvertimeEmployeeGrid.ItemsSource = overtimeService.GetSearch(id, Convert.ToInt16(SeachCombo.Text), Convert.ToInt16(SearchBox.Text));
+            }
+            
+        }
+
+        private void SearchBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (SearchBox.Text == "")
+            {
+                OvertimeEmployeeGrid.ItemsSource = overtimeService.Get(id);
+            }
+        }
+
+        private void SearchBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            System.Text.RegularExpressions.Regex regex = new System.Text.RegularExpressions.Regex("^[0-9]*$");
+            e.Handled = !regex.IsMatch((sender as TextBox).Text.Insert((sender as TextBox).SelectionStart, e.Text));
+        }
+
+        private void CheckOut_Click(object sender, RoutedEventArgs e)
+        {
+            overtimeParam.check_out = DateTimeOffset.Now.LocalDateTime;
+            overtimeService.Update(Settings.Default.Id, overtimeParam);
         }
     }
 }
