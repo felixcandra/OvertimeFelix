@@ -105,8 +105,6 @@ E:\Kerja\Bootcamp\OvertimeFelix\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtim
 E:\Kerja\Bootcamp\OvertimeFelix\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\WPF.Overtime.Properties.Resources.resources
 E:\Kerja\Bootcamp\OvertimeFelix\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\WPF.Overtime.csproj.GenerateResource.Cache
 E:\Git\TUGAS\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\bin\Debug\WPF.Overtime.exe.config
-E:\Git\TUGAS\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\WPF.Overtime.exe
-E:\Git\TUGAS\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\WPF.Overtime.pdb
 E:\Git\TUGAS\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\bin\Debug\WPF.Overtime.exe
 E:\Git\TUGAS\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\bin\Debug\WPF.Overtime.pdb
 E:\Git\TUGAS\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\bin\Debug\ControlzEx.dll
@@ -157,3 +155,5 @@ E:\Git\TUGAS\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\PopUpPo
 E:\Git\TUGAS\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\WPF.Overtime.g.resources
 E:\Git\TUGAS\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\WPF.Overtime.Properties.Resources.resources
 E:\Git\TUGAS\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\WPF.Overtime.csproj.GenerateResource.Cache
+E:\Git\TUGAS\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\WPF.Overtime.exe
+E:\Git\TUGAS\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\WPF.Overtime.pdb

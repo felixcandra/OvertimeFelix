@@ -91,28 +91,37 @@
                         <ColumnDefinition Width="161*"/>
                         <ColumnDefinition Width="699*"/>
                     </Grid.ColumnDefinitions>
-                    <DataGrid x:Name="OvertimeEmployeeGrid" IsReadOnly="True" GridLinesVisibility="All" BorderThickness="1" AutoGenerateColumns="False" HorizontalAlignment="Left" Margin="10,54,0,0" VerticalAlignment="Top" Height="476" Width="840" Grid.ColumnSpan="2">
+                    <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="444" Margin="10,86,0,0" Stroke="Black" VerticalAlignment="Top" Width="840" Grid.ColumnSpan="2"/>
+                    <DataGrid x:Name="OvertimeEmployeeGrid" IsReadOnly="True" GridLinesVisibility="All" BorderThickness="1" AutoGenerateColumns="False" HorizontalAlignment="Left" Margin="22,138,0,0" VerticalAlignment="Top" Height="382" Width="817" Grid.ColumnSpan="2">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="Id" Binding="{Binding Path=employee_id}" Width="*"/>
-                            <DataGridTextColumn Header="Name" Binding="{Binding Path=Employees.first_name}" Width="*"/>
-                            <DataGridTextColumn Header="Check In" Binding="{Binding Path=check_in}" Width="*"/>
-                            <DataGridTextColumn Header="Check Out" Binding="{Binding Path=check_out}" Width="*"/>
-                            <DataGridTextColumn Header="Difference" Binding="{Binding Path=difference}" Width="*"/>
-                            <DataGridTextColumn Header="Overtime Salary" Binding="{Binding Path=overtime_salary}" Width="*"/>
+                            <DataGridTextColumn Header="Check In" Binding="{Binding check_in}" Width="*" HeaderStringFormat=""/>
+                            <DataGridTextColumn Header="Check Out" Binding="{Binding check_out}" Width="*" HeaderStringFormat=""/>
+                            <DataGridTextColumn Header="Hours" Binding="{Binding difference}" Width="*"/>
+                            <DataGridTextColumn Header="Overtime Salary" Binding="{Binding overtime_salary}" Width="*"/>
                         </DataGrid.Columns>
                     </DataGrid>
-                    <TextBox x:Name="SearchTextBox2" HorizontalAlignment="Left" Height="23" Margin="438,13,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="166" Grid.Column="1"/>
-                    <Button x:Name="SearchButton2" Content="Search" HorizontalAlignment="Left" Margin="611,13,0,0" VerticalAlignment="Top" Width="75" Grid.Column="1" Click="SearchButton2_Click"/>
-                    <ComboBox x:Name="SearchcomboBox2" HorizontalAlignment="Left" Margin="299,13,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1" Height="26">
-                        <ComboBoxItem Content="Id" HorizontalAlignment="Left" Width="118"/>
-                        <ComboBoxItem Content="First Name" HorizontalAlignment="Left" Width="118"/>
-                        <ComboBoxItem Content="Last Name" HorizontalAlignment="Left" Width="118"/>
-                        <ComboBoxItem Content="Refresh" HorizontalAlignment="Left" Width="118"/>
+                    <TextBox x:Name="SearchBox" Grid.Column="1" PreviewTextInput="SearchBox_PreviewTextInput" TextChanged="SearchBox_TextChanged_2"  HorizontalAlignment="Left" Height="23" Margin="487,98,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="99"/>
+                    <ComboBox x:Name="SeachCombo" HorizontalAlignment="Left" Margin="416,98,0,0" VerticalAlignment="Top" Width="66" Height="26" Grid.Column="1">
+                        <ComboBoxItem Content="01" HorizontalAlignment="Left" Width="50"/>
+                        <ComboBoxItem Content="02" HorizontalAlignment="Left" Width="50"/>
+                        <ComboBoxItem Content="03" HorizontalAlignment="Left" Width="50"/>
+                        <ComboBoxItem Content="04" HorizontalAlignment="Left" Width="50"/>
+                        <ComboBoxItem Content="05" HorizontalAlignment="Left" Width="50"/>
+                        <ComboBoxItem Content="06" HorizontalAlignment="Left" Width="50"/>
+                        <ComboBoxItem Content="07" HorizontalAlignment="Left" Width="50"/>
+                        <ComboBoxItem Content="08" HorizontalAlignment="Left" Width="50"/>
+                        <ComboBoxItem Content="09" HorizontalAlignment="Left" Width="50"/>
+                        <ComboBoxItem Content="10" HorizontalAlignment="Left" Width="50"/>
+                        <ComboBoxItem Content="11" HorizontalAlignment="Left" Width="50"/>
+                        <ComboBoxItem Content="12" HorizontalAlignment="Left" Width="50"/>
                     </ComboBox>
+                    <Button x:Name="SearchButton_Copy" Content="Search" Grid.Column="1" HorizontalAlignment="Left" Margin="602,98,0,0" VerticalAlignment="Top" Width="76" Height="26" Click="SearchButton_Copy_Click"/>
+                    <TextBox x:Name="ReasonTextBox" VerticalScrollBarVisibility="Visible" TextWrapping="Wrap" AcceptsReturn="True" HorizontalAlignment="Left" Height="61" Margin="10,10,0,0" Text="" VerticalAlignment="Top" Width="737" Grid.ColumnSpan="2" TextChanged="textBox_TextChanged"/>
+                    <Button x:Name="CheckOut" Content="Check OUT" Grid.Column="1" HorizontalAlignment="Left" Margin="603,10,0,0" VerticalAlignment="Top" Width="75" Click="CheckOut_Click"/>
                 </Grid>
             </TabItem>
         </TabControl>
-        <Button x:Name="LogoutButton" Content="Log Out" HorizontalAlignment="Left" Margin="317,10,0,0" VerticalAlignment="Top" Width="75" Click="LogoutButton_Click" Grid.Column="1" Grid.ColumnSpan="2"/>
-        <Button x:Name="ChangeButton" Content="Change Password" HorizontalAlignment="Left" Margin="164,10,0,0" VerticalAlignment="Top" Width="143" Click="ChangeButton_Click" Grid.Column="1"/>
+        <Button x:Name="LogoutButton" Content="Log Out" HorizontalAlignment="Left" Margin="298,10,0,0" VerticalAlignment="Top" Width="75" Click="LogoutButton_Click" Grid.Column="1" RenderTransformOrigin="0.853,0.593"/>
+        <Button x:Name="ChangeButton" Content="Change Password" HorizontalAlignment="Left" Margin="139,10,0,0" VerticalAlignment="Top" Width="143" Click="ChangeButton_Click" Grid.Column="1"/>
     </Grid>
 </Controls:MetroWindow>
