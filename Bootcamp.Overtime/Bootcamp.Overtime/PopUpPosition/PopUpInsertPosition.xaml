@@ -6,7 +6,7 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:Bootcamp.Overtime"
         mc:Ignorable="d"
-        Title="PopUpInsertPosition" Height="165.227" Width="324">
+        Title="PopUpInsertPosition" Height="165.227" Width="324" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="181*"/>

@@ -52,7 +52,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Services\iApprovalService.cs" />
     <Compile Include="Services\iEmployeeService.cs" />
+    <Compile Include="Services\Master\ApprovalService.cs" />
     <Compile Include="Services\Master\EmployeeService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -62,7 +64,9 @@
     <Compile Include="Services\Master\PositionService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />

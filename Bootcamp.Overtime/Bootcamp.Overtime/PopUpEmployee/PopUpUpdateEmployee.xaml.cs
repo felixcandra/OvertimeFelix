@@ -27,6 +27,7 @@ namespace Bootcamp.Overtime
         iEmployeeService _employeeService = new EmployeeService();
         iPositionService _positionService = new PositionService();
         EmployeeParam employeeParam = new EmployeeParam();
+        public string manager;
         public string position;
         public string id;
         public PopUpUpdateEmployee()
@@ -38,6 +39,8 @@ namespace Bootcamp.Overtime
            PositionCombo.ItemsSource = _positionService.Get();
             //PositionCombo.SelectedItem = PositionCombo.SelectedItem.ToString(position);
             PositionCombo.Text = position;
+            ManagerCombo.ItemsSource = _employeeService.GetManager();
+            ManagerCombo.Text = manager;
         }
 
 
@@ -92,6 +95,7 @@ namespace Bootcamp.Overtime
                 employeeParam.position_id = position;
                 employeeParam.phone = phone;
                 employeeParam.Id = Convert.ToInt16(id);
+                employeeParam.manager_id = Convert.ToInt16(ManagerCombo.SelectedValue);
                 _employeeService.Update(employeeParam.Id, employeeParam);
                 MessageBox.Show("Data Saved");
                 this.Close();

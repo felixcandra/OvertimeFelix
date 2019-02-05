@@ -57,10 +57,6 @@ namespace Overtime.BusinessLogic.Master
             return _employeeRepository.UpdatePass(id, employeeParam);
         }
 
-        public bool UpdateQuestion(int? id, EmployeeParam employeeParam)
-        {
-            return _employeeRepository.UpdateQuestion(id, employeeParam);
-        }
         public bool UpdateQuestionAnswer(int? id, EmployeeParam employeeParam)
         {
             return _employeeRepository.UpdateQuestionAnswer(id, employeeParam);
@@ -74,6 +70,11 @@ namespace Overtime.BusinessLogic.Master
         public bool ResetPass(string username, string question, string answer, EmployeeParam employeeParam)
         {
             return _employeeRepository.ResetPass(username, question, answer, employeeParam);
+        }
+
+        public List<Employees> GetManager()
+        {
+            return _employeeRepository.GetManager();
         }
     }
 }

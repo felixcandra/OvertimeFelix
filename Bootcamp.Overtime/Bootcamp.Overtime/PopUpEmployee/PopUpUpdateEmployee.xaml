@@ -6,8 +6,8 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:Bootcamp.Overtime"
         mc:Ignorable="d"
-        Title="Update Employee" Height="401.241" Width="521.113"
-        Loaded="Window_Loaded">
+        Title="Update Employee" Height="431.575" Width="521.113"
+        Loaded="Window_Loaded" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Label x:Name="FirstName" Content="First Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="22,26,0,0"/>
         <TextBox x:Name="FirstNameTextbox" PreviewTextInput="FirstNameTextbox_PreviewTextInput" HorizontalAlignment="Left" Height="23" Margin="100,29,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="145"/>
@@ -29,8 +29,10 @@
         <TextBox x:Name="PhoneTextbox" MaxLength="13" PreviewTextInput="PhoneTextbox_PreviewTextInput" HorizontalAlignment="Left" Height="23" Margin="100,184,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="381" TextChanged="PhoneTextbox_TextChanged"/>
         <Label x:Name="Position" Content="Position" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="22,277,0,0"/>
         <ComboBox x:Name="PositionCombo" HorizontalAlignment="Left" VerticalAlignment="Top" Width="382" Margin="100,277,0,0" DisplayMemberPath="name" SelectedValuePath="Id"/>
-        <Button x:Name="SaveButton" Content="Save" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Margin="370,318,0,0" Height="40" Click="SaveButton_Click"/>
-        <Button x:Name="CancelButton" Content="Cancel" HorizontalAlignment="Left" Margin="254,318,0,0" VerticalAlignment="Top" Width="101" Height="40" Click="CancelButton_Click"/>
+        <Button x:Name="SaveButton" Content="Save" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Margin="370,340,0,0" Height="40" Click="SaveButton_Click"/>
+        <Button x:Name="CancelButton" Content="Cancel" HorizontalAlignment="Left" Margin="254,340,0,0" VerticalAlignment="Top" Width="101" Height="40" Click="CancelButton_Click"/>
+        <Label x:Name="Position_Copy" Content="Manager" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,308,0,0"/>
+        <ComboBox x:Name="ManagerCombo" HorizontalAlignment="Left" VerticalAlignment="Top" Width="382" Margin="99,308,0,0" DisplayMemberPath="first_name" SelectedValuePath="Id"/>
 
     </Grid>
 </Controls:MetroWindow>

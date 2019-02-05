@@ -30,6 +30,11 @@ namespace Overtime.BussinessLogic.Services.Master
             return _overtimeRepository.GetId(Id);
         }
 
+        public List<Overtimes> GetSearch(string search, string cmb)
+        {
+            return _overtimeRepository.GetSearch(search, cmb);
+        }
+
         public bool Insert(OvertimeParam overtimeParam)
         {
             return _overtimeRepository.Insert(overtimeParam);

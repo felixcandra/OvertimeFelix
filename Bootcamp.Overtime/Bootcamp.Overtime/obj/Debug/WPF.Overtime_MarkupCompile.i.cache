@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-E:\Kerja\Bootcamp\OvertimeFelix\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\
+E:\Kerja\Bootcamp\OvertimeRevisi\Bootcamp.Overtime\Bootcamp.Overtime\obj\Debug\
 WPF.Overtime
 none
 false
 DEBUG;TRACE
-E:\Kerja\Bootcamp\OvertimeFelix\OvertimeFelix\Bootcamp.Overtime\Bootcamp.Overtime\App.xaml
-13-580818745
+E:\Kerja\Bootcamp\OvertimeRevisi\Bootcamp.Overtime\Bootcamp.Overtime\App.xaml
+13-360854009
 
-21954373353
-22677354186
-ChangeUserPass.xaml;EmployeePage.xaml;ForgetPassword\PopUpForgetPass.xaml;ForgetPassword\PopUpResetPassword.xaml;LoginPage.xaml;MainWindow.xaml;PasswordDefault.xaml;PopUpEmployee\PopUpInsertEmployee.xaml;PopUpEmployee\PopUpUpdateEmployee.xaml;PopUpPassword\PopUpInsertQuestionAnswer.xaml;PopUpPassword\PopUpResetPassword.xaml;PopUpPosition\PopUpInsertPosition.xaml;PopUpPosition\PopUpUpdatePosition.xaml;
+21-1644769344
+22-2114908211
+ChangeUserPass.xaml;EmployeePage.xaml;ForgetPassword\PopUpForgetPass.xaml;ForgetPassword\PopUpResetPassword.xaml;LoginPage.xaml;MainWindow.xaml;ManagerPage.xaml;PasswordDefault.xaml;PopUpEmployee\PopUpInsertEmployee.xaml;PopUpEmployee\PopUpUpdateEmployee.xaml;PopUpPassword\PopUpInsertQuestionAnswer.xaml;PopUpPosition\PopUpInsertPosition.xaml;PopUpPosition\PopUpUpdatePosition.xaml;
 
 True
 

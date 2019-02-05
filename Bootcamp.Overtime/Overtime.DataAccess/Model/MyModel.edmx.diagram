@@ -11,6 +11,11 @@
         <EntityTypeShape EntityType="OvertimeDBModel.Position" Width="1.5" PointX="0.75" PointY="2.25" IsExpanded="true" />
         <AssociationConnector Association="OvertimeDBModel.FK_Employees_ToPosition" ManuallyRouted="false" />
         <AssociationConnector Association="OvertimeDBModel.FK_Overtimes_ToEmployee" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="OvertimeDBModel.Approvals" Width="1.5" PointX="7.5" PointY="1.375" />
+        <AssociationConnector Association="OvertimeDBModel.FK_Approvals_ManagerAsEmployee" />
+        <AssociationConnector Association="OvertimeDBModel.FK_Approvals_ToEmployee" />
+        <AssociationConnector Association="OvertimeDBModel.FK_Approvals_ToOvertime" />
+        <AssociationConnector Association="OvertimeDBModel.FK_Employees_ToEmployee" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

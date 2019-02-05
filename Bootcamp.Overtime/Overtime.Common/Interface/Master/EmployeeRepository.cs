@@ -54,6 +54,7 @@ namespace Overtime.Common.Interface.Master
             employee.salary = employeeParam.salary;
             employee.phone = employeeParam.phone;
             employee.position_id = employeeParam.position_id;
+            employee.manager_id = employeeParam.manager_id;
             employee.createDate = DateTimeOffset.Now.LocalDateTime;
             employee.isDelete = false;
             _context.Employees.Add(employee);
@@ -103,6 +104,7 @@ namespace Overtime.Common.Interface.Master
             employee.salary = employeeParam.salary;
             employee.phone = employeeParam.phone;
             employee.position_id = employeeParam.position_id;
+            employee.manager_id = employeeParam.manager_id;
             employee.updateDate = DateTimeOffset.Now.LocalDateTime;
             _context.SaveChanges(); //kalau ada error box validation something itu berarti ada kolom yang akan diisi tapi tidak punya nilai / seharusnya tidak diupdate (username password)
             if (result > 0)
@@ -114,7 +116,7 @@ namespace Overtime.Common.Interface.Master
 
         public Employees Login(string username, string password)
         {
-            return _context.Employees.FirstOrDefault(x => x.username.Equals(username) && x.password.Equals(password));
+            return _context.Employees.FirstOrDefault(x => x.username.Equals(username) && x.password.Equals(password) && x.isDelete==false);
         }
 
         public bool UpdatePass(int? id, EmployeeParam employeeParam)
@@ -151,20 +153,15 @@ namespace Overtime.Common.Interface.Master
         {
             var result = 0;
             Employees employee = Get(id);
-            employee.password = employeeParam.password;
             employee.question = employeeParam.question;
             employee.answer = employeeParam.answer;
+            employee.password= employeeParam.password;
             result = _context.SaveChanges();
             if (result > 0)
             {
                 status = true;
             }
             return status;
-        }
-
-        public bool UpdateQuestion(int? id, EmployeeParam employeeParam)
-        {
-            throw new NotImplementedException();
         }
 
         public Employees getUser(string username, string question, string answer)
@@ -183,6 +180,12 @@ namespace Overtime.Common.Interface.Master
                 status = true;
             }
             return status;
+        }
+
+        public List<Employees> GetManager()
+        {
+            var getManager = _context.Employees.Where(x => x.position_id == 5 && x.isDelete == false).ToList();
+            return getManager;
         }
     }
 }

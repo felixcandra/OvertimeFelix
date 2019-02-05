@@ -16,6 +16,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using WPF.Overtime.Properties;
 using MahApps.Metro.Controls;
+using System.Text.RegularExpressions;
 
 namespace WPF.Overtime
 {
@@ -34,9 +35,9 @@ namespace WPF.Overtime
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
             
-            if (PassTextBox.Password.Length<8 || PassConfirm.Password.Length<8)
+            if (PassTextBox.Password.Length<8 || PassConfirm.Password.Length<8 || PassConfirm.Password.Length > 16 || PassTextBox.Password.Length > 16)
             {
-                MessageBox.Show("At Least 8 Character");
+                MessageBox.Show("At Least 8 - 16 Character");
             }
             else
             {
@@ -51,7 +52,7 @@ namespace WPF.Overtime
                 }
                 else
                 {
-                    MessageBox.Show("Old Password not match");
+                    MessageBox.Show("Old Password Wrong");
                 }
                 
             }
@@ -73,7 +74,7 @@ namespace WPF.Overtime
                 {
                     EmpParam.question = NewCombobox.Text;
                     EmpParam.answer = NewTextbox.Text;
-                    _employeeService.UpdatePass(Settings.Default.Id, EmpParam);
+                    _employeeService.UpdateQuestionAnswer(Settings.Default.Id, EmpParam);
                     MessageBox.Show("Change Successfully");
                     Settings.Default.Question = NewCombobox.Text;
                     Settings.Default.Answer = NewTextbox.Text;
@@ -82,21 +83,27 @@ namespace WPF.Overtime
                 }
                 else
                 {
-                    MessageBox.Show("Old Question and Answer not match");
+                    MessageBox.Show("Old Question and Answer Wrong");
                 }
 
         }
 
         private void PassConfirm_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
-            System.Text.RegularExpressions.Regex regex = new System.Text.RegularExpressions.Regex("^[a-zA-Z0-9]*$");
-            e.Handled = !regex.IsMatch((sender as TextBox).Text.Insert((sender as TextBox).SelectionStart, e.Text));
+            Regex regex = new Regex("[0-9a-zA-Z]+");
+            if (!regex.IsMatch(e.Text))
+            {
+                e.Handled = true;
+            }
         }
 
         private void PassTextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
-            System.Text.RegularExpressions.Regex regex = new System.Text.RegularExpressions.Regex("^[a-zA-Z0-9]*$");
-            e.Handled = !regex.IsMatch((sender as TextBox).Text.Insert((sender as TextBox).SelectionStart, e.Text));
+            Regex regex = new Regex("[0-9a-zA-Z]+");
+            if (!regex.IsMatch(e.Text))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

@@ -101,6 +101,9 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ManagerPage.xaml.cs">
+      <DependentUpon>ManagerPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PasswordDefault.xaml.cs">
       <DependentUpon>PasswordDefault.xaml</DependentUpon>
     </Compile>
@@ -112,9 +115,6 @@
     </Compile>
     <Compile Include="PopUpPassword\PopUpInsertQuestionAnswer.xaml.cs">
       <DependentUpon>PopUpInsertQuestionAnswer.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PopUpPassword\PopUpResetPassword.xaml.cs">
-      <DependentUpon>PopUpResetPassword.xaml</DependentUpon>
     </Compile>
     <Compile Include="PopUpPosition\PopUpInsertPosition.xaml.cs">
       <DependentUpon>PopUpInsertPosition.xaml</DependentUpon>
@@ -147,7 +147,9 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Page Include="ChangeUserPass.xaml">
@@ -174,6 +176,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ManagerPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PasswordDefault.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -187,10 +193,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="PopUpPassword\PopUpInsertQuestionAnswer.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="PopUpPassword\PopUpResetPassword.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -6,8 +6,8 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:Bootcamp.Overtime"
         mc:Ignorable="d"
-        Title="Insert Employee" Height="425.241" Width="521.113"
-        Loaded="Window_Loaded_1"
+        Title="Insert Employee" Height="451.545" Width="521.113"
+        Loaded="Window_Loaded_1" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
         >
     <Grid Margin="0,0,0,2">
         <Label x:Name="Username" Content="Username" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="26,24,0,0"/>
@@ -34,8 +34,10 @@
         <TextBox x:Name="PhoneTextbox" MaxLength="13" PreviewTextInput="PhoneTextbox_PreviewTextInput" HorizontalAlignment="Left" Height="23" Margin="102,210,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="381"/>
         <Label x:Name="SubDistrict_Copy2" Content="Position" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="26,303,0,0"/>
         <ComboBox x:Name="PositionCombo" HorizontalAlignment="Left" VerticalAlignment="Top" Width="381" Margin="102,303,0,0" DisplayMemberPath="name" SelectedValuePath="Id"/>
-        <Button x:Name="SaveButton" Content="Save" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Margin="372,342,0,0" Height="40" Click="SaveButton_Click"/>
-        <Button x:Name="CancelButton" Content="Cancel" HorizontalAlignment="Left" Margin="241,342,0,0" VerticalAlignment="Top" Width="101" Height="40" Click="CancelButton_Click"/>
+        <Button x:Name="SaveButton" Content="Save" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Margin="363,371,0,0" Height="40" Click="SaveButton_Click"/>
+        <Button x:Name="CancelButton" Content="Cancel" HorizontalAlignment="Left" Margin="232,371,0,0" VerticalAlignment="Top" Width="101" Height="40" Click="CancelButton_Click"/>
+        <Label x:Name="SubDistrict_Copy" Content="Manager" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="26,334,0,0"/>
+        <ComboBox x:Name="ManagerCombo" HorizontalAlignment="Left" VerticalAlignment="Top" Width="381" Margin="102,334,0,0" DisplayMemberPath="first_name" SelectedValuePath="Id"/>
 
     </Grid>
 </Controls:MetroWindow>

@@ -101,6 +101,7 @@ namespace Bootcamp.Overtime
                 popup.PhoneTextbox.Text = (EmployeeGrid.SelectedCells[8].Column.GetCellContent(item) as TextBlock).Text;
                 popup.SalaryTextbox.Text = (EmployeeGrid.SelectedCells[9].Column.GetCellContent(item) as TextBlock).Text;
                 popup.position = (EmployeeGrid.SelectedCells[10].Column.GetCellContent(item) as TextBlock).Text;
+                popup.manager = (EmployeeGrid.SelectedCells[11].Column.GetCellContent(item) as TextBlock).Text;
                 popup.Show();
                 this.Hide();
             }
@@ -207,6 +208,11 @@ namespace Bootcamp.Overtime
                 login.Show();
                 this.Close();
             }
+        }
+
+        private void SearchButton2_Click(object sender, RoutedEventArgs e)
+        {
+           OvertimeEmployeeGrid.ItemsSource = _overtimeService.GetSearch(SearchTextBox2.Text, SearchcomboBox2.Text);
         }
     }
 }

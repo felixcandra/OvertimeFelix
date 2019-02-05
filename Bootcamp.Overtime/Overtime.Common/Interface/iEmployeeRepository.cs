@@ -15,7 +15,6 @@ namespace Overtime.Common.Interface.Master
         bool UpdatePass(int? id, EmployeeParam employeeParam);
 
         bool UpdateBootcamp(int? id, EmployeeParam employeeParam);
-        bool UpdateQuestion(int? id, EmployeeParam employeeParam);
 
         bool UpdateQuestionAnswer(int? id, EmployeeParam employeeParam);
 
@@ -26,5 +25,6 @@ namespace Overtime.Common.Interface.Master
         Employees Login(string username, string password);
         Employees getUser(string username, string question, string answer);
         bool ResetPass(string username, string question, string answer, EmployeeParam employeeParam);
+        List<Employees> GetManager();
     }
 }

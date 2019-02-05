@@ -34,3 +34,33 @@ E:\Git\OvertimeFelix\Bootcamp.Overtime\Overtime.Core\bin\Debug\EntityFramework.S
 E:\Git\OvertimeFelix\Bootcamp.Overtime\Overtime.Core\obj\Debug\Overtime.Core.csprojResolveAssemblyReference.cache
 E:\Git\OvertimeFelix\Bootcamp.Overtime\Overtime.Core\obj\Debug\Overtime.Core.exe
 E:\Git\OvertimeFelix\Bootcamp.Overtime\Overtime.Core\obj\Debug\Overtime.Core.pdb
+E:\Git\TUGAS\OvertimeFelix\Bootcamp.Overtime\Overtime.Core\bin\Debug\Overtime.Core.exe.config
+E:\Git\TUGAS\OvertimeFelix\Bootcamp.Overtime\Overtime.Core\bin\Debug\Overtime.Core.exe
+E:\Git\TUGAS\OvertimeFelix\Bootcamp.Overtime\Overtime.Core\bin\Debug\Overtime.Core.pdb
+E:\Git\TUGAS\OvertimeFelix\Bootcamp.Overtime\Overtime.Core\bin\Debug\EntityFramework.dll
+E:\Git\TUGAS\OvertimeFelix\Bootcamp.Overtime\Overtime.Core\bin\Debug\EntityFramework.SqlServer.dll
+E:\Git\TUGAS\OvertimeFelix\Bootcamp.Overtime\Overtime.Core\bin\Debug\EntityFramework.xml
+E:\Git\TUGAS\OvertimeFelix\Bootcamp.Overtime\Overtime.Core\bin\Debug\EntityFramework.SqlServer.xml
+E:\Git\TUGAS\OvertimeFelix\Bootcamp.Overtime\Overtime.Core\obj\Debug\Overtime.Core.csprojResolveAssemblyReference.cache
+E:\Git\TUGAS\OvertimeFelix\Bootcamp.Overtime\Overtime.Core\obj\Debug\Overtime.Core.exe
+E:\Git\TUGAS\OvertimeFelix\Bootcamp.Overtime\Overtime.Core\obj\Debug\Overtime.Core.pdb
+E:\Kerja\Bootcamp\New folder\OvertimeFelix\Bootcamp.Overtime\Overtime.Core\bin\Debug\Overtime.Core.exe.config
+E:\Kerja\Bootcamp\New folder\OvertimeFelix\Bootcamp.Overtime\Overtime.Core\bin\Debug\Overtime.Core.exe
+E:\Kerja\Bootcamp\New folder\OvertimeFelix\Bootcamp.Overtime\Overtime.Core\bin\Debug\Overtime.Core.pdb
+E:\Kerja\Bootcamp\New folder\OvertimeFelix\Bootcamp.Overtime\Overtime.Core\bin\Debug\EntityFramework.dll
+E:\Kerja\Bootcamp\New folder\OvertimeFelix\Bootcamp.Overtime\Overtime.Core\bin\Debug\EntityFramework.SqlServer.dll
+E:\Kerja\Bootcamp\New folder\OvertimeFelix\Bootcamp.Overtime\Overtime.Core\bin\Debug\EntityFramework.xml
+E:\Kerja\Bootcamp\New folder\OvertimeFelix\Bootcamp.Overtime\Overtime.Core\bin\Debug\EntityFramework.SqlServer.xml
+E:\Kerja\Bootcamp\New folder\OvertimeFelix\Bootcamp.Overtime\Overtime.Core\obj\Debug\Overtime.Core.csprojResolveAssemblyReference.cache
+E:\Kerja\Bootcamp\New folder\OvertimeFelix\Bootcamp.Overtime\Overtime.Core\obj\Debug\Overtime.Core.exe
+E:\Kerja\Bootcamp\New folder\OvertimeFelix\Bootcamp.Overtime\Overtime.Core\obj\Debug\Overtime.Core.pdb
+E:\Kerja\Bootcamp\OvertimeRevisi\Bootcamp.Overtime\Overtime.Core\bin\Debug\Overtime.Core.exe.config
+E:\Kerja\Bootcamp\OvertimeRevisi\Bootcamp.Overtime\Overtime.Core\bin\Debug\Overtime.Core.exe
+E:\Kerja\Bootcamp\OvertimeRevisi\Bootcamp.Overtime\Overtime.Core\bin\Debug\Overtime.Core.pdb
+E:\Kerja\Bootcamp\OvertimeRevisi\Bootcamp.Overtime\Overtime.Core\bin\Debug\EntityFramework.dll
+E:\Kerja\Bootcamp\OvertimeRevisi\Bootcamp.Overtime\Overtime.Core\bin\Debug\EntityFramework.SqlServer.dll
+E:\Kerja\Bootcamp\OvertimeRevisi\Bootcamp.Overtime\Overtime.Core\bin\Debug\EntityFramework.xml
+E:\Kerja\Bootcamp\OvertimeRevisi\Bootcamp.Overtime\Overtime.Core\bin\Debug\EntityFramework.SqlServer.xml
+E:\Kerja\Bootcamp\OvertimeRevisi\Bootcamp.Overtime\Overtime.Core\obj\Debug\Overtime.Core.csprojResolveAssemblyReference.cache
+E:\Kerja\Bootcamp\OvertimeRevisi\Bootcamp.Overtime\Overtime.Core\obj\Debug\Overtime.Core.exe
+E:\Kerja\Bootcamp\OvertimeRevisi\Bootcamp.Overtime\Overtime.Core\obj\Debug\Overtime.Core.pdb

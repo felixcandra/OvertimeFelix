@@ -18,6 +18,9 @@ namespace Overtime.DataAccess.Model
         public Employees()
         {
             this.Overtimes = new HashSet<Overtimes>();
+            this.Approvals = new HashSet<Approvals>();
+            this.Approvals1 = new HashSet<Approvals>();
+            this.Employees1 = new HashSet<Employees>();
         }
     
         public int Id { get; set; }
@@ -39,9 +42,17 @@ namespace Overtime.DataAccess.Model
         public Nullable<System.DateTimeOffset> deleteDate { get; set; }
         public string question { get; set; }
         public string answer { get; set; }
+        public Nullable<int> manager_id { get; set; }
     
         public virtual Position Position { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Overtimes> Overtimes { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Approvals> Approvals { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Approvals> Approvals1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Employees> Employees1 { get; set; }
+        public virtual Employees Employee1 { get; set; }
     }
 }

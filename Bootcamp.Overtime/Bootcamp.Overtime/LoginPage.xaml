@@ -6,14 +6,14 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:WPF.Overtime"
         mc:Ignorable="d"
-        Title="Login" Height="283" Width="324" HorizontalAlignment="Center" VerticalAlignment="Center" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="Login" Height="302.149" Width="324" HorizontalAlignment="Center" VerticalAlignment="Center" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
-        <TextBox x:Name="UsernameBox" PreviewTextInput="UsernameBox_PreviewTextInput" Height="23" Margin="54,66,0,0" TextWrapping="Wrap" Text="" Width="211" VerticalAlignment="Top" HorizontalAlignment="Left" KeyUp="UsernameBox_KeyUp"/>
-        <Button x:Name="LoginButton" Content="Login" Margin="54,170,0,0" Width="211" Height="38" Click="LoginButton_Click" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <PasswordBox x:Name="PasswordBox" Margin="54,123,0,0" Width="211" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <Label x:Name="label" Content="Username" HorizontalAlignment="Left" Margin="54,40,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label_Copy" Content="Password" HorizontalAlignment="Left" Margin="54,97,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="ForgetPassButton" Content="Forget Password" HorizontalAlignment="Left" VerticalAlignment="Top" Width="110" Margin="103,219,0,0" Height="20" Click="ForgetPassButton_Click"/>
+        <TextBox x:Name="UsernameBox" PreviewTextInput="UsernameBox_PreviewTextInput" Height="23" Margin="53,48,0,0" TextWrapping="Wrap" Text="" Width="211" VerticalAlignment="Top" HorizontalAlignment="Left" KeyUp="UsernameBox_KeyUp"/>
+        <Button x:Name="LoginButton" Content="Login" Margin="53,152,0,0" Width="211" Height="38" Click="LoginButton_Click" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <PasswordBox x:Name="PasswordBox" PreviewTextInput="PasswordBox_PreviewTextInput" Margin="53,105,0,0" Width="211" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label x:Name="label" Content="Username"  HorizontalAlignment="Left" Margin="53,22,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy" Content="Password" HorizontalAlignment="Left" Margin="53,79,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="ForgetPassButton" Content="Forget Password" HorizontalAlignment="Left" VerticalAlignment="Top" Width="211" Margin="53,210,0,0" Height="29" Click="ForgetPassButton_Click"/>
     </Grid>
 </Controls:MetroWindow>
 

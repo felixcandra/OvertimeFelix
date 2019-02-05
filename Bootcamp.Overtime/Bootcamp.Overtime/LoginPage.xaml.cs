@@ -22,6 +22,7 @@ using MahApps.Metro.Controls;
 using Bootcamp.Overtime;
 using WPF.Overtime.PopUpPassword;
 using WPF.Overtime.ForgetPassword;
+using System.Text.RegularExpressions;
 
 namespace WPF.Overtime
 {
@@ -53,7 +54,9 @@ namespace WPF.Overtime
                 Settings.Default.Position = login.Position.name;
                 Settings.Default.Username = UsernameBox.Text;
                 Settings.Default.Password = PasswordBox.Password;
-                
+                Settings.Default.Answer = login.answer;
+                Settings.Default.Question = login.question;
+
                 Settings.Default.Save();
                 overtimeParam.employee_id = login.Id;
                 overtimeParam.check_in = DateTimeOffset.Now.LocalDateTime;
@@ -99,21 +102,25 @@ namespace WPF.Overtime
 
         }
 
-        private void PasswordBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
-        {
-            System.Text.RegularExpressions.Regex regex = new System.Text.RegularExpressions.Regex("^[a-zA-Z0-9]*$");
-            e.Handled = !regex.IsMatch((sender as TextBox).Text.Insert((sender as TextBox).SelectionStart, e.Text));
-        }
 
         private void UsernameBox_KeyUp(object sender, KeyEventArgs e)
         {
         }
 
         private void ForgetPassButton_Click(object sender, RoutedEventArgs e)
-        {
+        {   
             PopUpForgetPass forgetpass = new PopUpForgetPass();
             forgetpass.Show();
             this.Hide();
+        }
+
+        private void PasswordBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[0-9a-zA-Z]+");
+            if (!regex.IsMatch(e.Text))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

@@ -85,6 +85,10 @@ namespace Bootcamp.Overtime
             {
                 MessageBox.Show("Province Field must not be empty or whitespace");
             }
+            else if (SalaryTextbox.Text.Length <= 6) //revs no 1
+            {
+                MessageBox.Show("Salary Field must be filled with minimal of 7 digits");
+            }
             //else if (id == null)
             //{
             //    MessageBox.Show("ID Field must not be empty");
@@ -102,6 +106,7 @@ namespace Bootcamp.Overtime
                 employeeParam.phone = phone;
                 employeeParam.postal_code = postal;
                 employeeParam.salary = salary;
+                employeeParam.manager_id = Convert.ToInt16(ManagerCombo.SelectedValue);
                 //employeeParam.Id = id;
                 employeeParam.position_id = Convert.ToInt16(PositionCombo.SelectedValue);
                 _employeeService.Insert(employeeParam);
@@ -117,6 +122,7 @@ namespace Bootcamp.Overtime
         private void Window_Loaded_1(object sender, RoutedEventArgs e)
         {
             PositionCombo.ItemsSource = _positionService.Get();
+            ManagerCombo.ItemsSource = _employeeService.GetManager();
         }
 
         private void FirstNameTextbox_PreviewTextInput(object sender, TextCompositionEventArgs e)

@@ -17,13 +17,14 @@ using System.Windows.Shapes;
 using WPF.Overtime.Properties;
 using MahApps.Metro.Controls;
 using Bootcamp.Overtime;
+using System.Text.RegularExpressions;
 
 namespace WPF.Overtime
 {
     /// <summary>
     /// Interaction logic for PasswordDefault.xaml
     /// </summary>
-    public partial class PasswordDefault : Window
+    public partial class PasswordDefault : MetroWindow
     {
         public PasswordDefault()
         {
@@ -35,9 +36,9 @@ namespace WPF.Overtime
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
-            if(PassConfirm.Password.Length <8 || PassTextBox.Password.Length < 8)
+            if (PassTextBox.Password.Length < 8 || PassConfirm.Password.Length < 8 || PassConfirm.Password.Length > 16 || PassTextBox.Password.Length > 16)
             {
-                MessageBox.Show("At least 8 Character");
+                MessageBox.Show("At Least 8 - 16 Character");
             }
             else
             {
@@ -50,11 +51,11 @@ namespace WPF.Overtime
                     if (PassTextBox.Password == PassConfirm.Password)
                     {
                         int id = Settings.Default.Id;
-                        param.password = PassConfirm.Password;
+                        param.password = PassTextBox.Password;
                         param.question = OldCombobox.Text;
                         param.answer = OldTextbox.Text;
                         _employeeService.UpdateBootcamp(id, param);
-                        Settings.Default.Password = PassConfirm.Password;
+                        Settings.Default.Password = PassTextBox.Password;
                         Settings.Default.Question = OldCombobox.Text;
                         Settings.Default.Answer = OldTextbox.Text;
                         Settings.Default.Save();
@@ -83,6 +84,24 @@ namespace WPF.Overtime
             
 
 
+        }
+
+        private void PassTextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[0-9a-zA-Z]+");
+            if (!regex.IsMatch(e.Text))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void PassConfirm_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[0-9a-zA-Z]+");
+            if (!regex.IsMatch(e.Text))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
